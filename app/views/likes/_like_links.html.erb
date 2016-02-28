@@ -1,0 +1,6 @@
+<% if current_user.likes.find_by(note_id:note.id) %>
+<%= link_to "いいね済み", unlike_path(note.id), class: "fa fa-thumbs-o-up", :style=>"color:#808080;",method: :delete, remote: true %></span>
+
+<% else %>
+<%=link_to "いいね！", like_path(note.id), class: "fa fa-thumbs-o-up", :style=>"color:#3b5998;", method: :post, remote: true %>
+<% end %>

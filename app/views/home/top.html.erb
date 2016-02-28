@@ -1,0 +1,64 @@
+<div class= "top-wrapper">
+	<div class="container">
+		<h1>
+			まちづくりをもっとみんなの手で
+		</h1>
+		<p>
+			このWebsiteは、まちづくりのアイディアや発想を共有するための投稿サイトです。まちづくりをもっと楽しく。まちづくりをもっとみんなの手で。
+		</p>
+		<a>
+			<%= link_to "新規登録はこちら", new_user_registration_path, class: "btn signup", :style=>"text-decoration:none; color:white;" %>
+		</a>
+		<p>
+			すでに登録済みの方は
+		</p>
+		<a>
+		 <span class="fa fa-facebook">
+			<%= link_to "Facebbokでログイン", new_user_session_path, class: "btn facebook", :style=>"color:white;" %>
+		 </span>
+		</a>
+		<a>
+		<span class="fa fa-twitter">
+		 <%=link_to "Twitterでログイン", new_user_session_path, class: "btn twitter", :style=>"color:white;" %>
+		</span>
+		</a>
+	</div>
+</div>
+
+<div class="hint-wrapper">
+	<div class="container">
+		<div class="heading">
+			<h2>まちづくりのヒント</h2>
+			<p>あなたの「いいなぁ」をもっとみんなに。</p>
+		</div>
+		<div class="hints">
+			<div class="hint-contents">
+				<h3>素敵なまちのアイディア。<br>そんな一瞬を切り取ってみんなに共有しませんか。</h3>
+				<p>例えば、ふとまちを歩いてる時に出会った素敵な瞬間、素敵なアイディア。初めての旅行先で見る少し日本ではあまり見られない素敵な粋なまちづくりの取り組み、発想など。そんな一瞬を切り取って是非みんなにシェアしましょう。</p>
+			</div>
+			<a>
+			<%= link_to "投稿一覧を見る", notes_path, class: "icon hint" %>
+	     	</a>
+		</div>
+	</div>
+</div>
+
+<div class="idea-wrapper">
+	<div class="container">
+		<div class="heading">
+			<h2>「いいね」な記事</h2>
+			<p>みんなの「いいね」な記事をもっとシェアしよう。</p>
+		</div>
+		<div class="ideas">
+			<div class="idea-contents">
+				<h3>世界中の素敵な取り組み<br>そんな「いいね」な記事をもっとみんなに共有しよう。</h3>
+				<p>建築、アート、デザイン、そんな切り口からユニークな取り組みを実践している人たち。暮らしの中のちょっとしたワンシーンに、いろどりを与えてくれる新しい取り組み。そんなみんなのアイディア、取り組み記事を是非みんなにもシェアしましょう。</p>
+			</div>
+			<a class="icon idea">
+				記事一覧を見る
+			</a>
+		</div>
+	</div>
+</div>
+
+

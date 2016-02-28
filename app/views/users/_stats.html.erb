@@ -1,0 +1,20 @@
+<% @user ||= current_user %>
+<table class="stats">
+
+  <tr>
+  	<td style="border-right:1px solid #808080;">
+  	 <a class="stat" >
+       <%=link_to @user.following.count, following_user_path(@user), id:"following", :style=>"color:#808080;" %>
+     </a><br>
+       following
+    </td>
+    
+    <td>
+     <a class="stat" >
+      <%=link_to @user.followers.count, followers_user_path(@user), id:"followers" , :style=>"color:#808080;" %>
+     </a><br>
+    followers
+    </td>
+  </tr>
+
+</table>

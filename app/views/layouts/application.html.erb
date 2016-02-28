@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sample</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class = "header">
+		<a class = "header-left">
+		 <span class="fa fa-spinner">
+		 <%= link_to "Think Town", home_top_path, class: "header-left", :style=> "color:black" %>
+		 </span>
+	    </a>
+
+	    <div class = "header-right">
+			<% if user_signed_in? %>
+				<ul>
+					<li>
+	                <%= link_to "ログアウト", destroy_user_session_path, method: :delete, :style=>"color:#808080;" %>
+                    </li>
+                    <li>
+                    <%= link_to "My page", current_user, :style=>"color:#808080;" %>
+                    </li>
+                    <li>
+					<%=link_to "ユーザー一覧", users_path, :style=>"color:#808080;" %>
+				    </li>
+				    <li>
+					<%=link_to "記事作成", new_note_path, :style=>"color:#808080;" %>
+				    </li>
+					<li>
+					<%=link_to "記事一覧", notes_path, :style=>"color:#808080;" %>
+					</li>
+				</ul>
+
+				<% else %>
+
+		    	<ul>
+					<li>
+					<%=link_to "新規登録", new_user_registration_path, :style=>"color:#808080;" %>
+					</li>
+					<li>
+					<%=link_to "ログイン", new_user_session_path, :style=>"color:#808080;" %>
+				    </li>
+				</ul>
+			<% end %>
+	    </div>
+	</div>
+
+<div class="container">
+
+<a><%= alert %></a>
+
+</div>
+
+<%= yield %>
+
+<div class = "footer">
+	<div class="footer-left">
+		<ul>
+			<li>会社概要</li>
+			<li>サービスについて</li>
+			<li>お問い合わせ</li>
+		</ul>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,463 @@
+li {
+	list-style:none;
+	margin:0px;
+    list-style-position:none;
+}
+
+ul{
+	padding:0px;
+	margin:0px;
+}
+
+a {
+	text-decoration:none;
+}
+
+.header {
+	height:60px;
+	border-bottom:1px solid #808080;
+	background-color:white;
+}
+
+.header-right{
+	float: right;
+}
+
+.header-right li{
+	float:right;
+	padding:17px 30px;
+	border-left:1px solid #808080;
+	font-size:18px;
+}
+
+.header-left{
+	float:left;
+	padding: 8px 3px 8px 0px;
+	font-size:30px;
+}
+
+.fa{
+	padding-right:5px;
+}
+
+.fa-spinner{
+	font-size:30px;
+}
+
+
+.footer {
+	display:block;
+	border-top:1px solid #808080;
+	clear:left;
+	padding-left:15px;
+	padding-top:15px;
+}
+
+.footer-left li{
+	margin-top:10px;
+	border-bottom:1px dotted #808080;
+	color:#808080;
+	width:200px;
+	font-size:15px;
+}
+
+.contents{
+	padding-top:0px;
+}
+
+.sidebar{
+	width:300px;
+	height:100%;
+	float:left;
+	margin-top:10px;
+	border:1px solid #808080;
+	border-radius:5px 5px 0px 0px;
+}
+
+.sidebar img{
+	width:300px;
+	height: 220px;
+	border-radius:5px 5px 0px 0px;
+
+}
+
+.sidebar li{
+	padding:12px 0px;
+	border-top:1px solid #808080;
+	text-align:center;
+	color:#808080;
+}
+
+.sidebar p{
+	font-size:12px;
+	padding-left:5px;
+}
+
+.stats {
+	border-bottom:1px solid #808080;
+}
+
+.stats td{
+	padding:0px 75px 0px 5px;
+	font-size:15px;
+}
+
+.follow-button{
+	display:inline-block;
+	width:270px;
+	height:40px;
+	background-color:#3b5998;
+	margin-top:5px;
+	border-radius:5px;
+	opacity:0.8;
+	font-size:15px;
+	color:white;
+	cursor:pointer;
+}
+
+.unfollow{
+	background-color:#239b76;
+	opacity:0.8;
+}
+
+.sidebar_mypage{
+	height:170px;
+	border-bottom:1px solid #808080;
+}
+
+.sidebar_mypage_left {
+	font-size:13px;
+	text-align:left;
+	padding-top:15px;
+	width:263px;
+	height:155px;
+	text-align:center;
+
+}
+
+.sidebar_mypage_left img{
+
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.sidebar_mypage_right{
+	float:left;
+}
+
+.under_bar{
+	height:50px;
+	border-bottom:1px solid #808080;
+	clear:left;
+}
+
+.under_bar_left li {
+	float:left;
+	padding:13px 40px;
+	border-left:1px solid #808080;
+}
+
+.under_bar_right li{
+	float:right;
+	padding:1px 50px 1px 10px;
+	border-left:1px solid #808080;
+}
+
+.under_bar_follow{
+	text-align:center;
+}
+
+.note-content {
+	float:left;
+	width:300px;
+	height:450px;
+    border:1px solid #808080;
+    padding:0px;
+    margin:10px 10px 10px 20px; 
+    position:relative;
+    border-radius:5px 5px 10px 10px;
+}
+
+.note-content li{
+	padding:0px 5px 10px 5px;
+	font-size:12px;
+}
+
+.note-content-photo{
+	border-radius:10px 10px 0px 0px;
+	padding:0px;
+}
+
+.note-content-icon {
+	position:absolute;
+	right:5px;
+	bottom:30px;
+	font-size:13px;
+}
+
+.time {
+	position:absolute;
+    bottom:3px;
+    left:8px;
+	font-size:12px;
+	color:#808080;
+}
+
+.user-image-position{
+	position:absolute;
+	left:8px;
+	bottom:30px;
+	font-size:13px;
+}
+
+.user-like-position{
+	color:#808080;
+	font-size:13px;
+	position:absolute;
+	bottom:3px;
+	right:5px;
+	width:285px;
+	border-top:1px dotted #808080;
+	text-align:right;
+	padding-top:3px;
+}
+
+.note-title{
+	font-size:15px;
+}
+
+.hint-contents{
+	float:left;
+}
+
+.image-index{
+	height:50px;
+	width:50px;
+	border-radius:50%;
+}
+
+.show-note-content{
+	width:820px;
+	display:block;
+	margin:0 auto;
+	margin-bottom:30px;
+	border:1px solid #808080;
+	border-radius:10px;
+	position:relative;
+}
+
+.show-note-content li{
+	margin:10px;
+	border-bottom:1px dotted #808080;
+}
+
+.like-box{
+	position:absolute;
+	bottom:50px;
+	right:15px;
+	font-size:12px;
+}
+
+.time-note-show{
+	color:#808080;
+	font-size:13px;
+	position:absolute;
+	left:10px;
+	bottom:15px;
+}
+
+.post-list {
+	margin-bottom:10px;
+}
+
+.user-index-table tr{
+	padding:10px 5px 7px 5px;
+	border-top:1px dotted #808080;
+	display:block;
+}
+
+.user-index-email{
+	width:250px;
+}
+
+.user-index-name {
+	width:130px;
+}
+
+.top-wrapper {
+	background-image:url(https://upload.wikimedia.org/wikipedia/commons/a/a8/Serpentine_Gallery_Pavilion_2013.jpg);
+	background-size:cover;
+	color:white;
+	text-align:center;
+	padding:200px 0px 70px 0px;
+	border-bottom:1px solid #808080;
+	opacity:0.9;
+}
+
+.container{
+	margin:0 auto;
+}
+
+.container h1 {
+	letter-spacing:6px;
+	font-size:40px;
+}
+
+.btn{
+	padding:8px 25px 8px 25px;
+	display:inline-block;
+	border-radius:5px;
+	cursor:pointer;
+	opacity:0.9;
+}
+
+.btn:hover{
+	opacity:1.0;
+}
+
+.facebook{
+	background-color:#3b5998;
+	margin-right:20px;
+	margin-top:30px;
+}
+
+.twitter{
+	background-color:#55acee;
+	margin-top:30px;
+}
+
+.signup{
+	margin-top:40px;
+	background-color:#239b76;
+}
+
+.heading {
+	padding:50px 0px 50px 0px;
+	text-align:center;
+	color:#808080;
+}
+
+.hints {
+	background-image:url(http://www.mca.com.au/media/uploads/images/GP361_The_Annunciation_of_the_Virgin_Deal_2012_FULL.jpg);
+	background-size:cover;
+	height:400px;
+	text-align:center;
+	opacity:0.8;
+	border-bottom:1px solid #808080;
+}
+
+.icon {
+	display:inline-block;
+	padding:25px 130px 25px 130px;
+	font-size:20px;
+	cursor:pointer;
+	border-radius:5px;
+	margin-top:50px;
+	color:#808080;
+	box-shadow:0px 5px #808080;
+}
+
+.hint-contents {
+	padding:50px 200px 0px 200px;
+	text-align:center;
+	color:white;
+}
+
+
+.ideas{
+	background-image:url(http://www.wallpaper-wallpaper.com/wp-content/uploads/images/art-illustration-paint/art-illustration-paint-photo-wallpaper-desktop-2.jpg);
+	background-size:cover;
+	height:400px;
+	text-align:center;
+	opacity:0.8;
+}
+
+.idea-contents {
+	padding:50px 200px 0px 200px;
+	text-align:center;
+	color:#808080;
+}
+
+.hint {
+	background-color:pink;
+	opacity:0.9;
+}
+
+.icon :active{
+	position:relative;
+	top:5px;
+	box-shadow:none;
+}
+
+.idea {
+	background-color:purple;
+	opacity:0.9;
+	box-shadow:0px 5px #808080;
+}
+
+.note {
+	width:1000px;
+	margin:0 auto;
+	padding:10px 50px 10px 50px;
+}
+
+.field{
+	padding-bottom:15px;
+	}
+
+.form-control-title {
+	width:1000px;
+	height:30px;
+	border:1px solid #808080;
+	border-radius:5px;
+	margin-bottom:15px;
+	font-size:14px;
+}
+
+.form-control-content{
+	width:1000px;
+	height:200px;
+	border-radius:5px;
+	font-size:14px;
+	border:1px solid #808080;
+}
+
+.form-control-icon {
+	display:inline-block;
+    padding:10px 40px 10px 40px;
+    margin-top:10px;
+	background-color:#239b76;
+	opacity:0.9;
+	color:white;
+	border:1px solid #808080;
+	border-radius:5px;
+	font-size:15px;
+}
+
+.actions {
+	margin-bottom:10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,42 @@
+<div class="note-content">
+
+    <a>
+    	<%=link_to image_tag(note.photo.url(:thumb)), note_path(note), :style=>"border-radius:10px 10px 0px 0px; padding:0px;" %>
+    </a>
+     <ul>
+    <li>
+    	<span class="note-title">
+    	<%=link_to note.title, note_path(note), :style=> "color:#808080;" %>
+    	</span>
+    </li>
+    <li>
+    	<%=link_to note.content.truncate(150), note_path(note), :style=> "color:black;" %>
+    </li>
+ </ul>
+
+
+ <div class="user-image-position">
+ 	<a><%=link_to image_for(note.user), user_path(note.user) %></a>
+ 	<a><%=link_to note.user.name, user_path(note.user), :style=>"color:black;" %></a>
+ </div>
+
+
+ <div class="user-like-position">
+<%=link_to note.likes.count, liking_users_note_path(note.id), class: "fa fa-thumbs-o-up", :style=>"color:#808080;" %>
+ <a style ="color:#808080; font-size:12px;">コメント <%= note.posts.count %>件</a>
+ </div>
+
+<div class="note-content-icon"> 
+  <div id="like-link" >
+  <% if !current_user?(note.user) %>
+   <%= render 'likes/like_links', note:note %>
+<% end %>
+ </div>
+</div>
+
+<div class="time">
+  <%= note.created_at.to_formatted_s(:without_second) %>
+</div>
+
+</div>
+
