@@ -17,12 +17,12 @@
 
 	    <div class = "header-right">
 			<% if user_signed_in? %>
-				<ul>
+				<a>
+	             <%= link_to image_for(current_user), current_user, class: "image-index photo-user" %>
+	            </a>
+	            <ul>
 					<li>
 	                <%= link_to "ログアウト", destroy_user_session_path, method: :delete, :style=>"color:#808080;" %>
-                    </li>
-                    <li>
-                    <%= link_to "My page", current_user, :style=>"color:#808080;" %>
                     </li>
                     <li>
 					<%=link_to "ユーザー一覧", users_path, :style=>"color:#808080;" %>
@@ -30,7 +30,7 @@
 				    <li>
 					<%=link_to "記事作成", new_note_path, :style=>"color:#808080;" %>
 				    </li>
-					<li>
+					<li style= "border-left:1px solid #808080;">
 					<%=link_to "記事一覧", notes_path, :style=>"color:#808080;" %>
 					</li>
 				</ul>

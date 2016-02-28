@@ -21,13 +21,20 @@ a {
 
 .header-right{
 	float: right;
+	margin-right:110px;
 }
 
 .header-right li{
 	float:right;
 	padding:17px 30px;
-	border-left:1px solid #808080;
+	border-right:1px solid #808080;
 	font-size:18px;
+}
+
+.photo-user {
+	position:absolute;
+	top:13px;
+	right:40px;
 }
 
 .header-left{
@@ -62,14 +69,14 @@ a {
 }
 
 .contents{
-	padding-top:0px;
+	padding-top:20px;
 }
 
 .sidebar{
 	width:300px;
 	height:100%;
 	float:left;
-	margin-top:10px;
+	margin:20px 0px 20px 10px;
 	border:1px solid #808080;
 	border-radius:5px 5px 0px 0px;
 }
@@ -104,15 +111,14 @@ a {
 
 .follow-button{
 	display:inline-block;
-	width:270px;
+	width:300px;
 	height:40px;
 	background-color:#3b5998;
-	margin-top:5px;
-	border-radius:5px;
 	opacity:0.8;
 	font-size:15px;
 	color:white;
 	cursor:pointer;
+	border:0px solid white;
 }
 
 .unfollow{
@@ -120,53 +126,6 @@ a {
 	opacity:0.8;
 }
 
-.sidebar_mypage{
-	height:170px;
-	border-bottom:1px solid #808080;
-}
-
-.sidebar_mypage_left {
-	font-size:13px;
-	text-align:left;
-	padding-top:15px;
-	width:263px;
-	height:155px;
-	text-align:center;
-
-}
-
-.sidebar_mypage_left img{
-
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-}
-
-.sidebar_mypage_right{
-	float:left;
-}
-
-.under_bar{
-	height:50px;
-	border-bottom:1px solid #808080;
-	clear:left;
-}
-
-.under_bar_left li {
-	float:left;
-	padding:13px 40px;
-	border-left:1px solid #808080;
-}
-
-.under_bar_right li{
-	float:right;
-	padding:1px 50px 1px 10px;
-	border-left:1px solid #808080;
-}
-
-.under_bar_follow{
-	text-align:center;
-}
 
 .note-content {
 	float:left;
@@ -174,7 +133,7 @@ a {
 	height:450px;
     border:1px solid #808080;
     padding:0px;
-    margin:10px 10px 10px 20px; 
+    margin:0px 10px 20px 20px; 
     position:relative;
     border-radius:5px 5px 10px 10px;
 }
@@ -430,9 +389,9 @@ a {
 	background-color:#239b76;
 	opacity:0.9;
 	color:white;
-	border:1px solid #808080;
 	border-radius:5px;
 	font-size:15px;
+	border:0px solid white;
 }
 
 .actions {
