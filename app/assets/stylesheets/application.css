@@ -21,20 +21,19 @@ a {
 
 .header-right{
 	float: right;
-	margin-right:110px;
 }
 
 .header-right li{
 	float:right;
 	padding:17px 30px;
-	border-right:1px solid #808080;
+	border-left:1px solid #808080;
 	font-size:18px;
 }
 
 .photo-user {
 	position:absolute;
 	top:13px;
-	right:35px;
+	right:620px;
 }
 
 .header-left{

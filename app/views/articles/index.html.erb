@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Articles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Photo</th>
+      <th>Title</th>
+      <th>Content</th>
+      <th>Url</th>
+      <th>Source</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%=image_tag article.photo %></td>
+        <td><%= article.title %></td>
+        <td><%= article.content.truncate(30) %></td>
+        <td><%= article.source %></td>
+        <td><%= link_to 'Show', article %></td>
+        <td><%= link_to 'Edit', edit_article_path(article) %></td>
+        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Article', new_article_path %>
