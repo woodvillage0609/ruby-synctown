@@ -397,20 +397,19 @@ a {
 	margin-bottom:10px;
 }
 
-.article-content {
+.article-content li{
+	height:250px;
 	float:left;
-	width:300px;
-	height:450px;
-    border:1px solid #808080;
-    padding:0px;
-    margin:0px 10px 20px 20px; 
-    position:relative;
+	border-top:1px solid #808080;
+	border-bottom:1px solid #808080;
 }
 
-.article-index-photo {
-	width:300px; 
-	height:200px;
+.article-content {
+	display:inline-block;
+	margin:0px 10px 20px 10px; 
 }
+
+
 
 
 
