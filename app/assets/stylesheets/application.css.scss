@@ -1,3 +1,7 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
 li {
 	list-style:none;
 	margin:0px;
@@ -12,6 +16,8 @@ ul{
 a {
 	text-decoration:none;
 }
+
+/* header */
 
 .header {
 	height:60px;
@@ -32,8 +38,8 @@ a {
 
 .photo-user {
 	position:absolute;
-	top:13px;
-	right:620px;
+	top:5px;
+	right:610px;
 }
 
 .header-left{
@@ -42,13 +48,133 @@ a {
 	font-size:30px;
 }
 
-.fa{
-	padding-right:5px;
-}
+/* top page */
+
 
 .fa-spinner{
 	font-size:30px;
+	padding-right:5px;
 }
+
+.fa-facebook, .fa-twitter{
+	color:white;
+}
+
+.top-wrapper {
+	background-image:url(https://upload.wikimedia.org/wikipedia/commons/a/a8/Serpentine_Gallery_Pavilion_2013.jpg);
+	height:700px;
+	background-size:cover;
+	color:white;
+	text-align:center;
+	padding:200px 0px 70px 0px;
+	border-bottom:1px solid #808080;
+	opacity:0.9;
+}
+
+.container{
+	margin:0 auto;
+}
+
+.container h1 {
+	letter-spacing:6px;
+	font-size:40px;
+}
+
+.btn{
+	padding:8px 25px 8px 25px;
+	display:inline-block;
+	border-radius:5px;
+	cursor:pointer;
+	opacity:0.9;
+}
+
+.btn:hover{
+	opacity:1.0;
+}
+
+.facebook{
+	background-color:#3b5998;
+	margin-right:20px;
+	margin-top:30px;
+}
+
+.twitter{
+	background-color:#55acee;
+	margin-top:30px;
+}
+
+.signup{
+	margin-top:40px;
+	background-color:#239b76;
+}
+
+.heading {
+	padding:50px 0px 50px 0px;
+	text-align:center;
+	color:#808080;
+}
+
+.hints {
+	background-image:url(http://www.mca.com.au/media/uploads/images/GP361_The_Annunciation_of_the_Virgin_Deal_2012_FULL.jpg);
+	background-size:cover;
+	height:400px;
+	text-align:center;
+	opacity:0.8;
+	border-bottom:1px solid #808080;
+}
+
+.icon {
+	display:inline-block;
+	padding:25px 130px 25px 130px;
+	font-size:20px;
+	cursor:pointer;
+	border-radius:5px;
+	margin-top:50px;
+	color:#808080;
+	box-shadow:0px 5px #808080;
+}
+
+.hint-contents {
+	padding:50px 200px 0px 200px;
+	text-align:center;
+	color:white;
+}
+
+
+.ideas{
+	background-image:url(http://www.wallpaper-wallpaper.com/wp-content/uploads/images/art-illustration-paint/art-illustration-paint-photo-wallpaper-desktop-2.jpg);
+	background-size:cover;
+	height:400px;
+	text-align:center;
+	opacity:0.8;
+}
+
+.idea-contents {
+	padding:50px 200px 0px 200px;
+	text-align:center;
+	color:#808080;
+}
+
+.hint {
+	background-color:pink;
+	opacity:0.9;
+}
+
+.icon :active{
+	position:relative;
+	top:5px;
+	box-shadow:none;
+}
+
+.idea {
+	background-color:purple;
+	opacity:0.9;
+	box-shadow:0px 5px #808080;
+}
+
+
+
+/* footer */
 
 
 .footer {
@@ -67,12 +193,14 @@ a {
 	font-size:15px;
 }
 
+/* contents */
+
 .contents{
 	padding-top:20px;
 }
 
 .sidebar{
-	width:300px;
+	width:302px;
 	height:100%;
 	float:left;
 	margin:20px 0px 20px 10px;
@@ -104,7 +232,7 @@ a {
 }
 
 .stats td{
-	padding:0px 75px 0px 5px;
+	padding:0px 84px 0px 5px;
 	font-size:15px;
 }
 
@@ -125,10 +253,11 @@ a {
 	opacity:0.8;
 }
 
+/* note index */
 
 .note-content {
 	float:left;
-	width:300px;
+	width:302px;
 	height:450px;
     border:1px solid #808080;
     padding:0px;
@@ -243,117 +372,6 @@ a {
 	width:130px;
 }
 
-.top-wrapper {
-	background-image:url(https://upload.wikimedia.org/wikipedia/commons/a/a8/Serpentine_Gallery_Pavilion_2013.jpg);
-	background-size:cover;
-	color:white;
-	text-align:center;
-	padding:200px 0px 70px 0px;
-	border-bottom:1px solid #808080;
-	opacity:0.9;
-}
-
-.container{
-	margin:0 auto;
-}
-
-.container h1 {
-	letter-spacing:6px;
-	font-size:40px;
-}
-
-.btn{
-	padding:8px 25px 8px 25px;
-	display:inline-block;
-	border-radius:5px;
-	cursor:pointer;
-	opacity:0.9;
-}
-
-.btn:hover{
-	opacity:1.0;
-}
-
-.facebook{
-	background-color:#3b5998;
-	margin-right:20px;
-	margin-top:30px;
-}
-
-.twitter{
-	background-color:#55acee;
-	margin-top:30px;
-}
-
-.signup{
-	margin-top:40px;
-	background-color:#239b76;
-}
-
-.heading {
-	padding:50px 0px 50px 0px;
-	text-align:center;
-	color:#808080;
-}
-
-.hints {
-	background-image:url(http://www.mca.com.au/media/uploads/images/GP361_The_Annunciation_of_the_Virgin_Deal_2012_FULL.jpg);
-	background-size:cover;
-	height:400px;
-	text-align:center;
-	opacity:0.8;
-	border-bottom:1px solid #808080;
-}
-
-.icon {
-	display:inline-block;
-	padding:25px 130px 25px 130px;
-	font-size:20px;
-	cursor:pointer;
-	border-radius:5px;
-	margin-top:50px;
-	color:#808080;
-	box-shadow:0px 5px #808080;
-}
-
-.hint-contents {
-	padding:50px 200px 0px 200px;
-	text-align:center;
-	color:white;
-}
-
-
-.ideas{
-	background-image:url(http://www.wallpaper-wallpaper.com/wp-content/uploads/images/art-illustration-paint/art-illustration-paint-photo-wallpaper-desktop-2.jpg);
-	background-size:cover;
-	height:400px;
-	text-align:center;
-	opacity:0.8;
-}
-
-.idea-contents {
-	padding:50px 200px 0px 200px;
-	text-align:center;
-	color:#808080;
-}
-
-.hint {
-	background-color:pink;
-	opacity:0.9;
-}
-
-.icon :active{
-	position:relative;
-	top:5px;
-	box-shadow:none;
-}
-
-.idea {
-	background-color:purple;
-	opacity:0.9;
-	box-shadow:0px 5px #808080;
-}
-
 .note {
 	width:1000px;
 	margin:0 auto;
@@ -408,6 +426,7 @@ a {
 	display:inline-block;
 	margin:0px 10px 20px 10px; 
 }
+
 
 
 

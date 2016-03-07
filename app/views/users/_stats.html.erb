@@ -6,14 +6,14 @@
   	 <a class="stat" >
        <%=link_to @user.following.count, following_user_path(@user), id:"following", :style=>"color:#808080;" %>
      </a><br>
-       following
+       <a>following</a>
     </td>
     
     <td>
      <a class="stat" >
       <%=link_to @user.followers.count, followers_user_path(@user), id:"followers" , :style=>"color:#808080;" %>
      </a><br>
-    followers
+    <a>followers</a>
     </td>
   </tr>
 
