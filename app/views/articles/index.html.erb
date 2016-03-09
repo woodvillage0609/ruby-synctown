@@ -2,24 +2,53 @@
 
 <h1>Listing Articles</h1>
 
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel", style="height:500px; width:800px; margin: 0 auto;">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
     <li data-target="#carousel-example-generic" data-slide-to="1"></li>
     <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
   </ol>
-
   <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-  	<%= @articles.each do |article| %>
+  <div class="carousel-inner" role="listbox", c>
+
     <div class="item active">
+      <% @articles.limit(1).offset(0).each do |article| %>
+        <%= image_tag article.photo, :style=>"height:500px; width:800px;" %>
+      <div class="carousel-caption">
+        <h3><%=link_to article.title, article, :style=>"color:white;" %></h3>
+      </div>
+      <% end %>
+    </div>
+
+    <div class="item">
+    <% @articles.limit(1).offset(1).each do |article| %>
      <%= image_tag article.photo, :style=>"height:500px; width:800px;" %>
       <div class="carousel-caption">
-        <h3><%= article.title %></h3>
+        <h3><%= link_to article.title, article, :style=>"color:white;" %></h3>
       </div>
-    </div>
     <% end %>
+    </div>
+
+     <div class="item">
+        <% @articles.limit(1).offset(2).each do |article| %>
+         <%= image_tag article.photo, :style=>"height:500px; width:800px;" %>
+          <div class="carousel-caption">
+            <h3><%= link_to article.title, article, :style=>"color:white;" %></h3>
+          </div>
+        <% end %>
+     </div>
+
+      <div class="item">
+        <% @articles.limit(1).offset(3).each do |article| %>
+         <%= image_tag article.photo, :style=>"height:500px; width:800px;" %>
+          <div class="carousel-caption">
+            <h3><%= link_to article.title, article, :style=>"color:white;" %></h3>
+          </div>
+        <% end %>
+     </div>
+
   </div>
 
   <!-- Controls -->

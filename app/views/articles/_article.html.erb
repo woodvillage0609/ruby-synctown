@@ -1,15 +1,17 @@
 <div class="article-content">
+
 <ul>
 	 <li>
-	     <%=image_tag article.photo, :style=>"width:250px; height:250px; border-left:1px solid #808080;" %>
+	     <%=image_tag article.photo, :style=> "width:298px; height:180px; padding-bottom:15px;" %>
    </li>
-   <li style="width:250px; border-right:1px solid #808080; padding:0px 10px; position:relative;">
-        <h3>
-          <%=link_to article.title, article, :style=>"font-size:18px; color:black; margin-top:10px;" %>
-        </h3>
+   <li>
         <a>
-          <%=link_to article.content.truncate(50), article, :style=>"color:black; font-size:13px;" %>
+          <%=link_to article.title, article, :style=>"font-size:18px; color:black;" %>
+        </a><br><br>
+        <a>
+          <%=link_to article.content.truncate(30), article, :style=>"color:black; font-size:13px;" %>
         </a>
+  </li>    
 
         <a style="font-size:13px; color:#808080; position:absolute; bottom:5px; left:10px;">
           <span class="fa fa-connectdevelop">
@@ -19,6 +21,7 @@
         <a style="font-size:13px; color:#808080; position:absolute; bottom:5px; right:10px;">
            <%= article.created_at.to_formatted_s(:without_second) %>
         </a>
-   </li>
+
 </ul>
+
 </div>

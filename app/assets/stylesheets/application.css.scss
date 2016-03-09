@@ -415,17 +415,17 @@ a {
 	margin-bottom:10px;
 }
 
-.article-content li{
-	height:250px;
-	float:left;
-	border-top:1px solid #808080;
-	border-bottom:1px solid #808080;
-}
+/* article content */
 
 .article-content {
+    position:relative;
+	height:400px;
+	width:300px;
+	border:1px solid #808080;
 	display:inline-block;
 	margin:0px 10px 20px 10px; 
 }
+
 
 
 
