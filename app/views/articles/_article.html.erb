@@ -1,15 +1,16 @@
+<% @articles.limit(nil).offset(6).each do |article| %>
+
 <div class="article-content">
 
-<ul>
-	 <li>
-	     <%=image_tag article.photo, :style=> "width:298px; height:180px; padding-bottom:15px;" %>
-   </li>
+<%= image_tag article.photo, :style=> "height:180px; width: 298px; padding-bottom:15px;" %>
+
+<ul style="padding:0px 10px;">
    <li>
         <a>
           <%=link_to article.title, article, :style=>"font-size:18px; color:black;" %>
         </a><br><br>
         <a>
-          <%=link_to article.content.truncate(30), article, :style=>"color:black; font-size:13px;" %>
+          <%=link_to article.content.truncate(30), article, :style=>"color:black; font-size:13px; padding:0px 5px;" %>
         </a>
   </li>    
 
@@ -25,3 +26,5 @@
 </ul>
 
 </div>
+
+<% end %>
