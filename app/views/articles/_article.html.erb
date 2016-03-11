@@ -2,7 +2,7 @@
 
 <div class="article-content">
 
-<%= image_tag article.photo, :style=> "height:180px; width: 298px; padding-bottom:15px;" %>
+<%= link_to image_tag(article.photo, {:style=> "height:180px; width: 298px; padding-bottom:15px;"}), article %>
 
 <ul style="padding:0px 10px;">
    <li>

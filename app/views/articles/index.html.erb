@@ -1,7 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Articles</h1>
-
 <div class="article-top-wrapper" style=" height: 550px; margin-left:250px; width: 100%;">
 
 <ul>
@@ -20,7 +18,7 @@
 
     <div class="item active">
       <% @articles.limit(1).offset(0).each do |article| %>
-        <%= image_tag article.photo, :style=>"height:500px; width:800px;" %>
+      <%= link_to image_tag(article.photo, {:style=>"height:500px; width:800px;"}), article %>
       <div class="carousel-caption">
         <h3><%=link_to article.title, article, :style=>"color:white;" %></h3>
       </div>
@@ -29,7 +27,7 @@
 
     <div class="item">
     <% @articles.limit(1).offset(1).each do |article| %>
-     <%=image_tag article.photo,  :style=>"height:500px; width:800px;" %>
+      <%= link_to image_tag(article.photo, {:style=>"height:500px; width:800px;"}), article %>
       <div class="carousel-caption">
         <h3><%= link_to article.title, article, :style=>"color:white;" %></h3>
       </div>
@@ -38,7 +36,7 @@
 
      <div class="item">
         <% @articles.limit(1).offset(2).each do |article| %>
-        <%=image_tag article.photo,  :style=>"height:500px; width:800px;" %>
+        <%= link_to image_tag(article.photo, {:style=>"height:500px; width:800px;"}), article %>
           <div class="carousel-caption">
             <h3><%= link_to article.title, article, :style=>"color:white;" %></h3>
           </div>
@@ -47,7 +45,7 @@
 
       <div class="item">
         <% @articles.limit(1).offset(3).each do |article| %>
-        <%= image_tag article.photo, :style=>"height:500px; width:800px;" %>
+        <%= link_to image_tag(article.photo, {:style=>"height:500px; width:800px;"}), article %>
           <div class="carousel-caption">
             <h3><%= link_to article.title, article, :style=>"color:white;" %></h3>
           </div>
@@ -74,7 +72,7 @@
     <ul>
       <% @articles.limit(2).offset(4).each do |article| %>
       <li>
-        <%= image_tag article.photo, :style=> "height:248px; width:400px;" %>
+        <%= link_to image_tag(article.photo, {:style=> "height:248px; width:400px;"}), article %>
         <%= link_to article.title, article, :style=>"color:white; position:absolute; bottom:30px; padding:0px 18px; font-size:20px;" %>
       </li>
       <% end %>
