@@ -134,6 +134,7 @@ a {
 	color:#808080;
 	background-color:white;
 	border:1px solid #808080;
+	opacity:0.9;
 }
 
 .hint-contents {
@@ -356,6 +357,8 @@ a {
 	width:130px;
 }
 
+/* note login signin fotmat  */
+
 .note {
 	width:1000px;
 	margin:0 auto;
@@ -398,6 +401,22 @@ a {
 .actions {
 	margin-bottom:10px;
 }
+
+.login-note {
+	width:700px;
+	margin:0 auto;
+	padding:10px 50px 10px 50px;
+}
+
+.login-form-control-title {
+	width:700px;
+	height:30px;
+	border:1px solid #808080;
+	border-radius:5px;
+	margin-bottom:15px;
+	font-size:14px;
+}
+
 
 /* article content */
 
