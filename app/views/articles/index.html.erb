@@ -1,128 +1,28 @@
-<p id="notice"><%= notice %></p>
-
 <div class="row">
 
-    <div class="col-md-2" style="height:850px; border:1px solid #808080;">
+  <div class="col-md-2" style="padding:0px;">
 
-      <% if user_signed_in? %>
-        <div class="article-sidebar" style="width:269px;">
+   <% if user_signed_in? %>
+     <%= render "sidebar" %>
+   <% end %>
 
-            <div class="article-side-photo" style="height:200px; padding-top:60px; ;border-bottom:1px solid #808080; text-align:center;">
-                <%=link_to image_for(current_user), user_path(current_user) %><br>
-                <%=link_to current_user.name, user_path(current_user), :style=>"color:black;" %>
-            </div>
+  </div>
 
-            <p style="padding:10px; text-align:center;"><strong>あなたのPick記事一覧</strong></p>
+  <div class="col-md-10">
 
-              <div class="article-side-list" style="padding:0px 10px;">
-               <% current_user.comment_articles.limit(6).each do |article| %>
-                  <h5><strong><%=link_to article.title, article, :style=>"color:black;" %></strong></h5>
-                  <p style="font-size:12px; border-bottom:1px dotted #808080; margin-bottom:20px; padding-bottom:15px;">
-                    <%= article.content.truncate(30) %>
-                  </p>
-               <% end %>
-              </div>
+      <div class="row">
+       <%= render "slideshow" %>
+      </div> 
 
-        </div>
-      <% end %>
-    
-    </div>
-
-    <div class="col-md-10">
-
-      <div class="article-top-wrapper" style="height:600px; width: 100%;">
-
-          <ul>
-          <li>
-
-          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel", style="height:550px; width:900px;">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-              <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-            </ol>
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-
-              <div class="item active">
-                <% @articles.limit(1).offset(0).each do |article| %>
-                <%= link_to image_tag(article.photo, {:style=>"height:550px; width:900px;"}), article %>
-                <div class="carousel-caption">
-                  <h3><%=link_to article.title, article, :style=>"color:white;" %></h3>
-                </div>
-                <% end %>
-              </div>
-
-              <div class="item">
-              <% @articles.limit(1).offset(1).each do |article| %>
-                <%= link_to image_tag(article.photo, {:style=>"height:550px; width:900px;"}), article %>
-                <div class="carousel-caption">
-                  <h3><%= link_to article.title, article, :style=>"color:white;" %></h3>
-                </div>
-              <% end %>
-              </div>
-
-               <div class="item">
-                  <% @articles.limit(1).offset(2).each do |article| %>
-                  <%= link_to image_tag(article.photo, {:style=>"height:550px; width:900px;"}), article %>
-                    <div class="carousel-caption">
-                      <h3><%= link_to article.title, article, :style=>"color:white;" %></h3>
-                    </div>
-                  <% end %>
-               </div>
-
-                <div class="item">
-                  <% @articles.limit(1).offset(3).each do |article| %>
-                  <%= link_to image_tag(article.photo, {:style=>"height:550px; width:900px;"}), article %>
-                    <div class="carousel-caption">
-                      <h3><%= link_to article.title, article, :style=>"color:white;" %></h3>
-                    </div>
-                  <% end %>
-               </div>
-            </div>
-
-            <!-- Controls -->
-            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
-
-          </li>
-
-          <li>
-
-          <div class="article-side-wrapper" >
-              <ul>
-                <% @articles.limit(2).offset(4).each do |article| %>
-                <li>
-                  <%= link_to image_tag(article.photo, {:style=> "height:273px; width:450px;"}), article %>
-                  <%= link_to article.title, article, :style=>"color:white; position:absolute; bottom:30px; padding:0px 18px; font-size:20px;" %>
-                </li>
-                <% end %>
-              </ul>
-          </div>
-
-          </li>
-          </ul>
-
+      <div class="article-contents">
+       <%= render "article" %>
       </div>
-
-        <div class="article-contents">
-
-        <%= render "article" %>
-
-        </div>
 
         <%= link_to 'New Article', new_article_path %>
 
-    </div>
+  </div>
+
+</div>
 
 </div>
 

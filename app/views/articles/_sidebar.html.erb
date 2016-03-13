@@ -1,0 +1,20 @@
+<div class="article-sidebar"  style="height:875px; border-bottom:1px solid #808080; border-right:1px solid #808080;">
+
+  <div class="article-side-photo" style="height:200px; padding-top:60px; ;border-bottom:1px solid #808080; text-align:center;">
+      <%=link_to image_for(current_user), user_path(current_user) %><br>
+      <%=link_to current_user.name, user_path(current_user), :style=>"color:black;" %>
+  </div>
+
+  <p style="padding:10px; text-align:center;"><strong>あなたのPick記事一覧</strong></p>
+
+    <div class="article-side-list" style="padding:0px 20px;">
+     <% current_user.comment_articles.limit(6).each do |article| %>
+        <h5><strong><%=link_to article.title, article, :style=>"color:black;" %></strong></h5>
+        <p style="font-size:12px; border-bottom:1px dotted #808080; margin-bottom:20px; padding-bottom:15px;">
+          <%= article.content.truncate(30) %>
+        </p>
+     <% end %>
+    </div>
+
+</div>
+
