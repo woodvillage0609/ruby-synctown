@@ -1,0 +1,10 @@
+  <p>
+<%= form_for([@article, @article.comments.build]) do |f| %>
+  
+    <%= f.text_area :body, :style=>"width:500px; height:50px; border-radius:5px; border-color:#808080;" %>
+  </p>
+
+  <p>
+    <%= f.submit "Pickする", class:"form-control-icon", :style=>"background-color:#3b5998;" %>
+  </p>
+<% end %>

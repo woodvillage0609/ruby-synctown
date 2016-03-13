@@ -12,13 +12,13 @@
                 <%=link_to current_user.name, user_path(current_user), :style=>"color:black;" %>
             </div>
 
-            <p style="padding:10px; text-align:center;"><strong>あなたのPick一覧</strong></p>
+            <p style="padding:10px; text-align:center;"><strong>あなたのPick記事一覧</strong></p>
 
               <div class="article-side-list" style="padding:0px 10px;">
-               <% current_user.like_notes.limit(6).each do |note| %>
-                  <h5><%= note.title %></h5>
+               <% current_user.comment_articles.limit(6).each do |article| %>
+                  <h5><strong><%=link_to article.title, article, :style=>"color:black;" %></strong></h5>
                   <p style="font-size:12px; border-bottom:1px dotted #808080; margin-bottom:20px; padding-bottom:15px;">
-                    <%= note.content.truncate(30) %>
+                    <%= article.content.truncate(30) %>
                   </p>
                <% end %>
               </div>

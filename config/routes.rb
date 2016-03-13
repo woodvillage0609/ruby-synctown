@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
-  resources :articles
+  resources :articles do
+    resources :comments
+  end
+  
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
 
@@ -11,6 +14,7 @@ Rails.application.routes.draw do
       get:following
       get:followers
       get:subscribed
+
   end
     collection do 
       post:search

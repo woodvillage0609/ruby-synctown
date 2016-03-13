@@ -23,6 +23,9 @@ class User < ActiveRecord::Base
 
   has_many :subscribed, class_name: "Relationship", foreign_key: "followed_id" 
 
+  has_many :comments
+  has_many :comment_articles, through: :comments, source: :article
+
 # ユーザーをフォローする
   def follow(other_user)
     active_relationships.create(followed_id: other_user.id)
