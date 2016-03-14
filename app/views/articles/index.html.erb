@@ -1,14 +1,19 @@
 <div class="row">
 
-  <div class="col-md-2" style="padding:0px;">
+<% if user_signed_in? %>
 
-   <% if user_signed_in? %>
+  <div class="col-lg-2 " style="position:fixed; z-index:5; left:0px; padding:0px; background-color:white;">
+
      <%= render "sidebar" %>
-   <% end %>
 
   </div>
+<% end %>
 
-  <div class="col-md-10">
+  <div class="col-lg-2" >
+  </div>
+
+
+  <div class="col-lg-10 " >
 
       <div class="row">
        <%= render "slideshow" %>
@@ -24,5 +29,4 @@
 
 </div>
 
-</div>
 

@@ -23,6 +23,9 @@ a {
 	height:60px;
 	border-bottom:1px solid #808080;
 	background-color:white;
+	position:fixed;
+	z-index:5;
+	width:100%;
 }
 
 .header-right{
@@ -61,8 +64,10 @@ a {
 }
 
 .top-wrapper {
+    margin-top:60px;
 	background-image:url(https://upload.wikimedia.org/wikipedia/commons/a/a8/Serpentine_Gallery_Pavilion_2013.jpg);
 	height:700px;
+	width:100%;
 	background-size:cover;
 	color:white;
 	text-align:center;
@@ -71,8 +76,8 @@ a {
 	opacity:0.9;
 }
 
-.container{
-	margin:0 auto;
+.container {
+	margin-bottom:60px;
 }
 
 .container h1 {
@@ -437,7 +442,7 @@ a {
 }
 
 .show-article-content{
-	width:800px;
+	width:80%;
 	display:block;
 	margin:0 auto;
 	margin-bottom:30px;

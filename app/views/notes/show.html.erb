@@ -1,58 +1,63 @@
 <p id="notice"><%= notice %></p>
 
+<div class="show-container" style="padding-top:20px;">
 
 <div class="show-note-content">
 
 <div class="like-box">
 
-<div id="like-link">
-<% if !current_user?(@note.user) %>
-<%= render 'likes/like_links', note:@note %>
-<% end %>
-</div>
+	<div id="like-link">
+		<% if !current_user?(@note.user) %>
+		<%= render 'likes/like_links', note:@note %>
+		<% end %>
+	</div>
 
-<%=link_to @note.likes.count, liking_users_note_path(@note.id), id:'like-count' %>人がいいね！と言っています。
+	<%=link_to @note.likes.count, liking_users_note_path(@note.id), id:'like-count' %>人がいいね！と言っています。
 
 </div>
 
 <ul>
-<li>
-  <h3>
-  <%= @note.title %>
-  </h3>
-</li>
-<li>
-   <%= image_tag @note.photo.url(:large) %>
-</li>
+	<li>
+	  <h3>
+	  <%= @note.title %>
+	  </h3>
+	</li>
+	<li>
+	   <%= image_tag @note.photo.url(:large) %>
+	</li>
 
-<li style ="padding-bottom:10px;">
-  <%= @note.content %>
-</li>
+	<li style ="padding-bottom:10px;">
+	  <%= @note.content %>
+	</li>
 
-<li style = "font-size:9px; text-align:center;" >
-  <%=link_to image_for(@note.user), user_path(@note.user) %><br><%=@note.user.name %>
-</li>
+	<li style = "font-size:9px; text-align:center;" >
+	  <%=link_to image_for(@note.user), user_path(@note.user) %><br><%=@note.user.name %>
+	</li>
 
-<li>
-<p style="text-align:center;"> コメント一覧　<%= @note.posts.count %>件</p>
-<%= render @note.posts %>
-</li>
+	<li>
+	<p style="text-align:center;"> コメント一覧　<%= @note.posts.count %>件</p>
+	<%= render @note.posts %>
+	</li>
 
-<li>
-<p>コメントを書く</p>
-<%= render 'posts/form' %>
-</li>
+	<li>
+	<p>コメントを書く</p>
+	<%= render 'posts/form' %>
+	</li>
 
 
-<li style = "text-align:right;" >
-<a class="time-note-show" ><%= @note.created_at.to_formatted_s(:without_second) %></a>
-<% if current_user?(@note.user) %>
-<%= link_to 'Edit', edit_note_path(@note) %> |
-<%= link_to 'Destroy', note_path(@note.id), method: :delete, data: { confirm: 'Are you sure?' } %> |
-<% end %>
+	<li style = "text-align:right;" >
+	<a class="time-note-show" ><%= @note.created_at.to_formatted_s(:without_second) %></a>
+	<% if current_user?(@note.user) %>
+	<%= link_to 'Edit', edit_note_path(@note) %> |
+	<%= link_to 'Destroy', note_path(@note.id), method: :delete, data: { confirm: 'Are you sure?' } %> |
+	<% end %>
 
-<%= link_to 'Back', notes_path %> 
-</li>
+	<%= link_to 'Back', notes_path %> 
+	</li>
 
 </ul>
+
 </div>
+
+</div>
+

@@ -1,0 +1,41 @@
+<div class="article-container" style="padding-top:20px;">
+
+		<div class="show-article-content">
+
+		   <%= link_to image_tag(@article.photo, {:style=> "width:100%; height:450px; border-radius:5px 5px 0px 0px;"}), @article.url, :target=>"_blank" %>
+		  
+			<ul>
+			  <li>
+			   <%= link_to @article.title, @article.url, :style=> "font-size:20px; color:black;", :target=>"_blank" %>
+			  </li>
+
+			<li>
+			  <%= @article.content.truncate(150) %>
+			</li>
+
+			<li>
+			  <a><%= link_to "続きを読む", @article.url, :style=> "display:inline-block; color:white; text-align:center; padding:15px 200px 15px 200px; margin-left:130px; background-color:#239b76; cursor:pointer; opacity:0.7;", :target=>"_blank" %></a>
+			</li>
+
+			<li style="color:#808080;">
+			  <span class="fa fa-connectdevelop"></span>
+			  <%= @article.source %>
+			</li>
+
+			<li>
+			<p style="text-align:center;"> コメント一覧　<%= @article.comments.count %>件</p>
+			<%= render @article.comments %>
+			</li>
+
+			<li>
+			<p>コメントを書く</p>
+			<%= render 'comments/form' %>
+			</li>
+
+			<%= link_to 'Edit', edit_article_path(@article) %> |
+			<%= link_to 'Back', articles_path %> |
+			<%= link_to 'Destroy', article_path(@article), method: :delete, data: { confirm: 'Are you sure?' } %>
+
+		</div>
+
+	</div>
