@@ -1,63 +1,36 @@
 <p id="notice"><%= notice %></p>
 
-<div class="show-container" style="padding-top:20px;">
+<div class="row">
 
-<div class="show-note-content">
+<% if user_signed_in? %>
+   <div class="col-lg-2" style="position:fixed; z-index:5; left:0px; padding:0px; background-color:white;">
 
-<div class="like-box">
+     <%= render "sidebar" %>
 
-	<div id="like-link">
-		<% if !current_user?(@note.user) %>
-		<%= render 'likes/like_links', note:@note %>
-		<% end %>
+   </div>
+ <% end %>
+
+<div class="col-lg-2" >
+</div>
+
+<div class="col-lg-7" style="padding-top:20px;">
+
+	<%=render "show" %>
+
+</div>
+
+<div class="col-lg-3" style="padding-top:20px;">
+
+	<% @random_notes.limit(4).each do |random_note| %>
+
+	<div class="note-random" style="width:80%; height:280px; border:1px solid #808080; margin-bottom:40px;border-radius:5px 5px 10px 10px;">
+	<%=link_to image_tag(random_note.photo, {:style=>"width:100%; hegiht:200px; border-radius:5px 5px 0px 0px;"}), note_path(random_note) %>
+	<%=link_to random_note.title, note_path(random_note), :style=>"color:black; font-size:16px;" %><br>
+	<%=link_to random_note.content.truncate(50), note_path(random_note), :style=>"color:black; font-size:10px;" %>
 	</div>
 
-	<%=link_to @note.likes.count, liking_users_note_path(@note.id), id:'like-count' %>人がいいね！と言っています。
-
-</div>
-
-<ul>
-	<li>
-	  <h3>
-	  <%= @note.title %>
-	  </h3>
-	</li>
-	<li>
-	   <%= image_tag @note.photo.url(:large) %>
-	</li>
-
-	<li style ="padding-bottom:10px;">
-	  <%= @note.content %>
-	</li>
-
-	<li style = "font-size:9px; text-align:center;" >
-	  <%=link_to image_for(@note.user), user_path(@note.user) %><br><%=@note.user.name %>
-	</li>
-
-	<li>
-	<p style="text-align:center;"> コメント一覧　<%= @note.posts.count %>件</p>
-	<%= render @note.posts %>
-	</li>
-
-	<li>
-	<p>コメントを書く</p>
-	<%= render 'posts/form' %>
-	</li>
-
-
-	<li style = "text-align:right;" >
-	<a class="time-note-show" ><%= @note.created_at.to_formatted_s(:without_second) %></a>
-	<% if current_user?(@note.user) %>
-	<%= link_to 'Edit', edit_note_path(@note) %> |
-	<%= link_to 'Destroy', note_path(@note.id), method: :delete, data: { confirm: 'Are you sure?' } %> |
 	<% end %>
 
-	<%= link_to 'Back', notes_path %> 
-	</li>
-
-</ul>
-
 </div>
 
 </div>
-

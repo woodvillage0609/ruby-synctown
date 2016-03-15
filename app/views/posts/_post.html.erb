@@ -4,16 +4,16 @@
    <%= image_for(post.user) %><br>
    <%= post.user.name %>
 </td>
-<td style="width:650px; font-size:13px;">
+<td style="width:90%; font-size:13px;">
    <%= post.body %>
 </td>
+</tr>
 
-<td>
+<tr>
 <% if current_user?(post.user) %>
   <%= link_to 'Destroy', [post.note, post],
                method: :delete,
                data: { confirm: 'Are you sure?' } %>
 <% end %>
-</td>
 </tr>
 </table>

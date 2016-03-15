@@ -314,8 +314,9 @@ a {
 	border-radius:50%;
 }
 
+/* note show */
+
 .show-note-content{
-	width:820px;
 	display:block;
 	margin:0 auto;
 	margin-bottom:30px;
@@ -343,6 +344,8 @@ a {
 	left:10px;
 	bottom:15px;
 }
+
+/* user index */
 
 .post-list {
 	margin-bottom:10px;
@@ -431,7 +434,7 @@ a {
 	width:300px;
 	border:1px solid #808080;
 	display:inline-block;
-	margin:0px 10px 20px 20px; 
+	margin:0px 15px 20px 20px; 
 }
 
 
@@ -442,7 +445,6 @@ a {
 }
 
 .show-article-content{
-	width:80%;
 	display:block;
 	margin:0 auto;
 	margin-bottom:30px;

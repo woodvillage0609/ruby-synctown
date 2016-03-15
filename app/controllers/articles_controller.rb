@@ -10,6 +10,7 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
+    @random_articles = Article.where.not(id:@article).order("RANDOM()")
   end
 
   # GET /articles/new
