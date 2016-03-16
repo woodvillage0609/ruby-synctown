@@ -14,6 +14,7 @@ Rails.application.routes.draw do
       get:following
       get:followers
       get:subscribed
+      get:comment_articles
 
   end
     collection do 

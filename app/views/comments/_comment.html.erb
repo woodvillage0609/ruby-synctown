@@ -1,20 +1,24 @@
 <table class="post-list">
-<tr>
-<td style="font-size:9px; text-align:center; padding-right:10px">
-   <%= image_for(comment.user) %><br>
-   <%= comment.user.name %>
-</td>
-<td style="width:100%; font-size:13px;">
-   <%= comment.body %>
-</td>
-</tr>
 
 <tr>	
+<td style="text-align:center;">
 <% if current_user?(comment.user) %>
   <%= link_to 'Destroy', [comment.article, comment],
                method: :delete,
                data: { confirm: 'Are you sure?' } %>
 <% end %>
+</td>
 </tr>
+
+<tr>
+<td style="font-size:9px; text-align:center; margin:0 auto; padding:0px 10px;">
+   <%= image_for(comment.user) %><br>
+   <%= comment.user.name %>
+</td>
+<td style="width:90%; font-size:13px;">
+   <%= comment.body %>
+</td>
+</tr>
+
 
 </table>

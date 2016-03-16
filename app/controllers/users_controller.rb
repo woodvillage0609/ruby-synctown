@@ -1,34 +1,24 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :like_notes, :post_notes, :following, :followers, :subscribed]
+  before_action :set_user, only: [:show, :edit, :update, :like_notes, :post_notes, :following, :followers, :subscribed, :comment_articles]
   before_action :authenticate_user!
   before_action :correct_user, only: [:edit, :update]
 
-  # GET /users
-  # GET /users.json
+
   def index
     @users = User.all
   end
 
-  # GET /users/1
-  # GET /users/1.json
+
   def show
     @notes=@user.notes
     @title = "User's Note List"
   end
 
-  # GET /users/new
- 
 
-  # GET /users/1/edit
   def edit
   end
 
-  # POST /users
-  # POST /users.json
- 
 
-  # PATCH/PUT /users/1
-  # PATCH/PUT /users/1.json
   def update
     file=params[:user][:image]
     @user.set_image(file)
@@ -57,9 +47,6 @@ class UsersController < ApplicationController
 
     render :show
   end
-
-  # DELETE /users/1
-  # DELETE /users/1.json
   
   def following
     @title = "Following"
@@ -78,6 +65,13 @@ class UsersController < ApplicationController
     @title = "User's following notes"
     render :show 
   end
+
+  def comment_articles
+    @articles = @user.comment_articles
+    @title = "User's Pick articles"
+    render '_user_article'
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

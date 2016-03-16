@@ -1,6 +1,17 @@
 <table class="post-list">
+
 <tr>
-<td style="font-size:9px; text-align:center; padding-right:10px">
+<td style="text-align:center;">
+<% if current_user?(post.user) %>
+  <%= link_to 'Destroy', [post.note, post],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+<% end %>
+</td>
+</tr>
+
+<tr>
+<td style="font-size:9px; text-align:center; margin:0 auto; padding-right:0px 10px">
    <%= image_for(post.user) %><br>
    <%= post.user.name %>
 </td>
@@ -9,11 +20,4 @@
 </td>
 </tr>
 
-<tr>
-<% if current_user?(post.user) %>
-  <%= link_to 'Destroy', [post.note, post],
-               method: :delete,
-               data: { confirm: 'Are you sure?' } %>
-<% end %>
-</tr>
 </table>
