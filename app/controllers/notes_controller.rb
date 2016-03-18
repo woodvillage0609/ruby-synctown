@@ -20,6 +20,7 @@ class NotesController < ApplicationController
     @note = Note.new
   end
 
+
   # GET /notes/1/edit
   def edit
   end
@@ -77,7 +78,7 @@ class NotesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def note_params
-      params.require(:note).permit(:title, :content, :photo)
+      params.require(:note).permit(:title, :content, :photo, :option)
     end
 
     def correct_user

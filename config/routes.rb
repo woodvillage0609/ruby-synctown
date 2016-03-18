@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   resources :notes do
     member do
     get:liking_users
+    
   end
   resources :posts
   end

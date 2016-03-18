@@ -7,7 +7,7 @@
       <%=link_to current_user.name, user_path(current_user), :style=>"color:black;" %>
   </div>
 
-  <p style="padding:10px; text-align:center;"><strong>あなたのいいね！投稿一覧</strong></p>
+  <p style="padding:10px; text-align:center; border-bottom:1px solid #808080; "><strong>あなたのいいね！投稿一覧</strong></p>
 
     <div class="note-side-list" style="padding:0px 20px;">
      <% current_user.post_notes.limit(6).each do |note| %>
