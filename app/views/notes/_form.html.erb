@@ -24,6 +24,11 @@
     <%= f.file_field :photo %>
   </div>
 
+  <div class="field">
+    <%= f.label :category %><br>
+    <%= f.select :note_category_id, {"GOOD" => 1, "BAD" => 2}, {include_blank:"選択してください"} %>
+  </div>
+
   <div class="actions">
     <%= f.submit "投稿する", class:"form-control-icon" %>
   </div>

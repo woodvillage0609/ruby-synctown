@@ -1,5 +1,11 @@
 <a id="notice"><%= notice %></a>
 
+<div class="index-notes">
+<a><%=link_to_unless_current "ALL", notes_path %></a> |	
+<a><%=link_to_unless_current "GOOD", category_good_note_path(@notes) %></a> |
+<a><%=link_to_unless_current "BAD", category_bad_note_path(@notes) %></a> |
+<a><%=link_to "Articles", articles_path %></a>
+</div>
 
 <div class="contents">
 

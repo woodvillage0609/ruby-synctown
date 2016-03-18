@@ -27,6 +27,8 @@ Rails.application.routes.draw do
   resources :notes do
     member do
     get:liking_users
+    get:category_good
+    get:category_bad
     
   end
   resources :posts

@@ -9,8 +9,8 @@
 
   <p style="padding:10px; text-align:center; border-bottom:1px solid #808080; "><strong>あなたのいいね！投稿一覧</strong></p>
 
-    <div class="note-side-list" style="padding:0px 20px;">
-     <% current_user.post_notes.limit(6).each do |note| %>
+    <div class="note-side-list" style="padding:0px 20px; height:610px; overflow-y:scroll;">
+     <% current_user.like_notes.each do |note| %>
         <h5><strong><%=link_to note.title, note, :style=>"color:black;" %></strong></h5>
         <p style="font-size:12px; border-bottom:1px dotted #808080; margin-bottom:20px; padding-bottom:15px;">
           <%= note.content.truncate(30) %>

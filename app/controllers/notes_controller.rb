@@ -69,6 +69,14 @@ class NotesController < ApplicationController
     @users = @note.liking_users
   end
 
+  def category_good
+    @goods = Note.where(note_category_id:1).order(created_at: :desc)
+  end
+
+  def category_bad
+    @bads = Note.where(note_category_id:2).order(created_at: :desc)
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -78,7 +86,7 @@ class NotesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def note_params
-      params.require(:note).permit(:title, :content, :photo, :option)
+      params.require(:note).permit(:title, :content, :photo, :note_category_id)
     end
 
     def correct_user
