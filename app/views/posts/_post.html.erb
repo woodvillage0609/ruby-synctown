@@ -2,7 +2,7 @@
 
 <tr>
 <td style="text-align:center;">
-<% if current_user?(post.user) %>
+<% if user_signed_in? && current_user?(post.user) %>
   <%= link_to 'Destroy', [post.note, post],
                method: :delete,
                data: { confirm: 'Are you sure?' } %>

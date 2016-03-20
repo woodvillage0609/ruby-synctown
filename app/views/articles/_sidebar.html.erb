@@ -1,5 +1,8 @@
 
-<div class="article-sidebar"  style="height:890px; border-bottom:1px solid #808080; border-right:1px solid #808080;">
+<div class="article-sidebar" style="height:890px; border-bottom:1px solid #808080; border-right:1px solid #808080;">
+
+
+  <% if user_signed_in? %>
 
 
   <div class="article-side-photo" style="height:200px; padding-top:60px; ;border-bottom:1px solid #808080; text-align:center;">
@@ -18,5 +21,26 @@
      <% end %>
     </div>
 
-</div>
 
+<% else %>
+
+
+ <div class="article-side-photo" style="height:200px; padding-top:80px; border-bottom:1px solid #808080; text-align:center;">
+      <a><%=link_to "アカウントを作成する", new_user_registration_path, class: "btn btn-default" %></a>
+ </div>
+
+  <p style="padding:10px; text-align:center; border-bottom:1px solid #808080;"><strong>ランダム記事一覧</strong></p>
+
+    <div class="article-side-list" style="padding:0px 20px; height:610px; overflow-y:scroll;">
+     <% @random_articles.limit(8).each do |random_article| %>
+        <h5><strong><%=link_to random_article.title, article_path(random_article), :style=>"color:black;" %></strong></h5>
+        <p style="font-size:12px; border-bottom:1px dotted #808080; margin-bottom:20px; padding-bottom:15px;">
+          <%= random_article.content.truncate(30) %>
+        </p>
+     <% end %>
+    </div>
+
+
+ <% end %>
+
+</div>

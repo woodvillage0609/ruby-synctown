@@ -1,0 +1,16 @@
+
+<div class="btn-group" role="group" aria-label="...">
+
+  <button type="button" class="btn btn-default">
+  	<%=link_to_unless_current "ALL", notes_path %>
+  </button>
+
+  <button type="button" class="btn btn-default">
+  	<%=link_to_unless_current "GOOD", category_good_note_path(@notes) %>
+  </button>
+    
+  <button type="button" class="btn btn-default">
+  	<%=link_to_unless_current "BAD", category_bad_note_path(@notes) %>
+  </button>
+
+</div>

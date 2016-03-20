@@ -1,5 +1,3 @@
-<a id="notice"><%= notice %></a>
-
 <div class="sidebar">
 <a><%=link_to image_for(@user), user_path(@user.id) %></a>
 
@@ -10,7 +8,6 @@
 <a>
   <%= render 'users/follow_form' if user_signed_in? %>
 </a>
-
 
 <p>
   <strong>Name:</strong>
@@ -32,15 +29,10 @@
   <li><%= link_to 'Edit Profile', edit_user_path(current_user.id),:style=>"color:black;" %></li>
   <% end %>
   <li><%= link_to "Pick Notes", like_notes_user_path(@user.id),:style=>"color:black;" %></li>
-  <li><%= link_to "Pick Articles", comment_articles_user_path(@user.id),:style=>"color:black;" %></li>
-  <li><%= link_to "Following Lists", subscribed_user_path(@user.id),:style=>"color:black;" %></li>
+  <li><%= link_to "Following Lists", subscribed_user_path(@user.id),:style=>"color:black;" %>
+  </li>
+  <li><%= link_to "Pick Articles", comment_articles_user_path(@user.id),:style=>"color:black;" %>
+  </li>
 </ul>
-
-</div>
-
-
-<div class="contents">
-
-<%= render 'articles/article_user' %>
 
 </div>

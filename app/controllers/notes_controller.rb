@@ -1,12 +1,13 @@
 class NotesController < ApplicationController
   before_action :set_note, only: [:show, :edit, :update, :destroy, :liking_users]
-  before_action :authenticate_user!
+
   before_action :correct_user, only: [:edit, :update]
 
   # GET /notes
   # GET /notes.json
   def index
     @notes = Note.all.order(created_at: :desc)
+    @random_notes=Note.all.order("RANDOM()")
   end
 
   # GET /notes/1
@@ -70,11 +71,13 @@ class NotesController < ApplicationController
   end
 
   def category_good
-    @goods = Note.where(note_category_id:1).order(created_at: :desc)
+    @notes = Note.where(note_category_id:1).order(created_at: :desc)
+    render 'index'
   end
 
   def category_bad
-    @bads = Note.where(note_category_id:2).order(created_at: :desc)
+    @notes = Note.where(note_category_id:2).order(created_at: :desc)
+    render 'index'
   end
 
 

@@ -3,7 +3,7 @@
 <div class="like-box">
 
 	<div id="like-link">
-		<% if !current_user?(@note.user) %>
+		<% if user_signed_in? && !current_user?(@note.user) %>
 		<%= render 'likes/like_links', note:@note %>
 		<% end %>
 	</div>
@@ -43,7 +43,7 @@
 
 	<li style = "text-align:right;" >
 	<a class="time-note-show" ><%= @note.created_at.to_formatted_s(:without_second) %></a>
-	<% if current_user?(@note.user) %>
+	<% if user_signed_in? && current_user?(@note.user) %>
 	<%= link_to 'Edit', edit_note_path(@note) %> |
 	<%= link_to 'Destroy', note_path(@note.id), method: :delete, data: { confirm: 'Are you sure?' } %> |
 	<% end %>

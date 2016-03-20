@@ -17,46 +17,13 @@ a {
 	text-decoration:none;
 }
 
-/* header */
-
-.header {
-	height:60px;
-	border-bottom:1px solid #808080;
-	background-color:white;
-	position:fixed;
-	z-index:5;
-	width:100%;
-}
-
-.header-right{
-	float: right;
-}
-
-.header-right li{
-	float:right;
-	padding:17px 30px;
-	border-left:1px solid #808080;
-	font-size:18px;
-}
-
-.photo-user {
-	position:absolute;
-	top:5px;
-	right:610px;
-}
-
-.header-left{
-	float:left;
-	padding: 8px 3px 8px 0px;
-	font-size:30px;
-}
 
 /* top page */
 
 
 .fa-spinner{
 	font-size:30px;
-	padding-right:5px;
+	padding-right:10px;
 }
 
 .fa-facebook, .fa-twitter{
@@ -64,7 +31,6 @@ a {
 }
 
 .top-wrapper {
-    margin-top:60px;
 	background-image:url(https://upload.wikimedia.org/wikipedia/commons/a/a8/Serpentine_Gallery_Pavilion_2013.jpg);
 	height:700px;
 	width:100%;
@@ -74,10 +40,6 @@ a {
 	padding:200px 0px 70px 0px;
 	border-bottom:1px solid #808080;
 	opacity:0.9;
-}
-
-.container {
-	margin-bottom:60px;
 }
 
 .container h1 {
@@ -183,24 +145,22 @@ a {
 	font-size:15px;
 }
 
-/* contents */
+/* user show */
 
 .contents{
 	padding-top:20px;
 }
 
 .sidebar{
-	width:302px;
-	height:100%;
-	float:left;
+	width:100%;
 	margin:20px 0px 20px 10px;
 	border:1px solid #808080;
 	border-radius:5px 5px 0px 0px;
 }
 
 .sidebar img{
-	width:300px;
-	height: 220px;
+	width:100%;
+	height: 100%;
 	border-radius:5px 5px 0px 0px;
 
 }
@@ -222,7 +182,7 @@ a {
 }
 
 .stats td{
-	padding:0px 84px 0px 5px;
+	padding:0px 61px 0px 5px;
 	font-size:15px;
 }
 
@@ -433,7 +393,7 @@ a {
 	height:400px;
 	width:300px;
 	border:1px solid #808080;
-	display:inline-block;
+	float:left;
 	margin:0px 15px 20px 20px; 
 	border-radius:5px 5px 10px 10px;
 }

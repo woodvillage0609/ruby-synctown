@@ -2,8 +2,8 @@
 
 <tr>	
 <td style="text-align:center;">
-<% if current_user?(comment.user) %>
-  <%= link_to 'Destroy', [comment.article, comment],
+<% if user_signed_in? && current_user?(comment.user) %>
+<%= link_to 'Destroy', [comment.article, comment],
                method: :delete,
                data: { confirm: 'Are you sure?' } %>
 <% end %>

@@ -8,48 +8,69 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <body>
-	<div class = "header">
-		<a class = "header-left">
-		 <span class="fa fa-spinner">
-		 <%= link_to "Think Town", home_top_path, class: "header-left", :style=> "color:black" %>
-		 </span>
-	    </a>
 
-	    <div class = "header-right">
-			<% if user_signed_in? %>
-					<a>
-		             <%= link_to image_for(current_user), current_user, class: "photo-user" %>
-		            </a>
-		        <ul>    
-					<li>
-	                 <%= link_to "ログアウト", destroy_user_session_path, method: :delete, :style=>"color:#808080;" %>
-                    </li>
-                    <li>
-					 <%=link_to "ユーザー一覧", users_path, :style=>"color:#808080;" %>
-				    </li>
-				    <li>
-					 <%=link_to "投稿作成", new_note_path, :style=>"color:#808080;" %>
-				    </li>
-					<li>
-					 <%=link_to "投稿一覧", notes_path, :style=>"color:#808080;" %>
-					</li>
-				</ul>
+<div class = "header">
 
-				<% else %>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid" style="background-color:white;">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" style="font-size:25px;" ><span class="fa fa-spinner"> Think Town</span></a>
+    </div>
 
-		    	<ul>
-					<li>
-					<%=link_to "新規登録", new_user_registration_path, :style=>"color:#808080;" %>
-					</li>
-					<li>
-					<%=link_to "ログイン", new_user_session_path, :style=>"color:#808080;" %>
-				    </li>
-				</ul>
-			<% end %>
-	    </div>
-	</div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      
+      <ul class="nav navbar-nav navbar-right" style="padding-right:20px; font-size:15px;">
 
-<div class="container">
+<% if user_signed_in? %>
+
+ 		<li><%=link_to "Top", home_top_path %></li>
+
+      	<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lists <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><%=link_to "投稿一覧", notes_path %></li>
+            <li><%=link_to "記事一覧", articles_path %></li>
+            <li><%=link_to "ユーザー一覧", users_path %></li>
+            <li role="separator" class="divider"></li>
+            <li><%=link_to "New Note", new_note_path %></li>
+          </ul>
+        </li>
+
+        <li><%=link_to "User Page", current_user %></li>
+
+        <li><button type="button" class="btn btn-default navbar-btn">
+        	<%=link_to "Log Out", destroy_user_session_path, method: :delete %>
+        </button></li>
+
+<% else %>
+
+        <li><%=link_to "Top", home_top_path %></li>
+
+        <li><%=link_to "Register New", new_user_registration_path %></li>
+
+       	<li><button type="button" class="btn btn-default navbar-btn">
+        	<%=link_to "Sign In", new_user_session_path %>
+        </button></li>
+
+<% end %>
+
+      </ul>
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+			
+</div>
+
+<div class="container" style="padding-top:55px;">
 
 <a><%= alert %></a>
 
