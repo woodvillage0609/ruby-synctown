@@ -54,11 +54,14 @@
 
         <li><%=link_to "Top", home_top_path %></li>
 
-        <li><%=link_to "Register New", new_user_registration_path %></li>
+        <li  style="padding-right:15px;"> <button type="button" class="btn btn-default navbar-btn">
+          <%=link_to "Register", new_user_registration_path, :style=>"color:black;" %>
+         </button>
+        </li>
 
        	<li>
          <button type="button" class="btn btn-default navbar-btn">
-          <%=link_to "Sign In", new_user_session_path %>
+          <%=link_to "Sign In", new_user_session_path,  :style=>"color:black;" %>
          </button>
         </li>
 

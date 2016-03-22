@@ -1,15 +1,22 @@
 <a id="notice"><%= notice %></a>
 
 
-<div class="note-index" style="width:100%; padding-top:20px; text-align:center; ">
+<div class="row">
 
-<%= render "category" %>
+<div class="col-lg-12" style="background-color:#F0F0F0;">
+
+	<div class="note-index" style="width:100%; padding-top:20px; text-align:center; ">
+
+	<%= render "category" %>
+
+	</div>
+
+	<div class="contents">
+
+	<%= render @notes %>
+
+	</div>
 
 </div>
 
-<div class="contents">
-
-<%= render @notes %>
-
 </div>
-
