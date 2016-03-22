@@ -35,11 +35,30 @@ a {
 	height:700px;
 	width:100%;
 	background-size:cover;
+	border-bottom:1px solid #808080;
+	padding:200px 0px 70px 0px;
+	opacity:1;
+	position:relative;
+}
+
+.top-wrapper:before {
+    z-index:1;
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color:rgba(0,0,0,0.2);
+}
+
+.under-wrapper {
+    position:absolute;
+    width:100%;
 	color:white;
 	text-align:center;
-	padding:200px 0px 70px 0px;
-	border-bottom:1px solid #808080;
-	opacity:0.9;
+	z-index:2;
 }
 
 .container h1 {
@@ -85,44 +104,45 @@ a {
 	background-image:url(http://www.mca.com.au/media/uploads/images/GP361_The_Annunciation_of_the_Virgin_Deal_2012_FULL.jpg);
 	background-size:cover;
 	height:400px;
-	width:100%;
 	text-align:center;
-	opacity:0.8;
-	border-bottom:1px solid #808080;
-}
-
-.show-icon {
-	display:inline-block;
-	padding:25px 130px 25px 130px;
-	font-size:20px;
-	cursor:pointer;
-	border-radius:5px;
-	margin-top:60px;
-	color:#808080;
-	background-color:white;
-	border:1px solid #808080;
 	opacity:0.9;
+	border-bottom:1px solid #808080;
+    padding-top:110px;
+	position:relative;
 }
 
-.hint-contents {
-	padding:50px 200px 0px 200px;
-	text-align:center;
-	color:white;
+.hints::before {
+	z-index:1;
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color:rgba(0,0,0,0.4);
 }
-
 
 .ideas{
 	background-image:url(http://www.wallpaper-wallpaper.com/wp-content/uploads/images/art-illustration-paint/art-illustration-paint-photo-wallpaper-desktop-2.jpg);
 	background-size:cover;
 	height:400px;
 	text-align:center;
-	opacity:0.8;
+	opacity:1;
+	padding-top:110px;
+	position:relative;
 }
 
-.idea-contents {
-	padding:50px 200px 0px 200px;
-	text-align:center;
-	color:#808080;
+.ideas::before {
+	z-index:1;
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color:rgba(0,0,0,0.4);
 }
 
 
@@ -268,10 +288,11 @@ a {
 	float:left;
 }
 
-.image-index{
+.img-circle {
 	height:50px;
 	width:50px;
-	border-radius:50%;
+	overflow:hidden;
+
 }
 
 /* note show */
