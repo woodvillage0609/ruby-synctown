@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :microposts
+  
   resources :articles do
     resources :comments
   end

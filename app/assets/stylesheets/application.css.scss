@@ -101,11 +101,11 @@ a {
 }
 
 .hints {
-	background-image:url(http://www.mca.com.au/media/uploads/images/GP361_The_Annunciation_of_the_Virgin_Deal_2012_FULL.jpg);
+	background-image:url(http://image.shutterstock.com/z/stock-photo-colorful-grunge-art-wall-illustration-urban-art-wallpaper-background-135062777.jpg);
 	background-size:cover;
-	height:400px;
+	height:500px;
 	text-align:center;
-	opacity:0.9;
+	opacity:1;
 	border-bottom:1px solid #808080;
     padding-top:110px;
 	position:relative;
@@ -124,11 +124,12 @@ a {
 }
 
 .ideas{
-	background-image:url(http://www.wallpaper-wallpaper.com/wp-content/uploads/images/art-illustration-paint/art-illustration-paint-photo-wallpaper-desktop-2.jpg);
+	background-image:url(http://www.pageresource.com/wallpapers/wallpaper/howl-moving-castle-fan-art-wang-illustration_622636.jpg);
 	background-size:cover;
-	height:400px;
+	height:500px;
 	text-align:center;
 	opacity:1;
+	border-bottom:1px solid #808080;
 	padding-top:110px;
 	position:relative;
 }
@@ -145,6 +146,28 @@ a {
 	background-color:rgba(0,0,0,0.4);
 }
 
+.discussions {
+	background-image:url(http://www.wallpaper-wallpaper.com/wp-content/uploads/images/art-illustration-paint/art-illustration-paint-photo-wallpaper-desktop-32.jpg);
+	background-size:cover;
+	height:500px;
+	text-align:center;
+	opacity:1;
+	border-bottom:1px solid #808080;
+	padding-top:110px;
+	position:relative;
+}
+
+.discussions::before {
+	z-index:1;
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color:rgba(0,0,0,0.4);
+}
 
 /* footer */
 
@@ -442,6 +465,7 @@ a {
 	margin:10px;
 }
 
+/* micropost */
 
 
 

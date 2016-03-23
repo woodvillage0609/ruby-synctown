@@ -13,7 +13,7 @@
 			すでに登録済みの方は
 		</p>
 		<a>
-		 <%= link_to " Facebbokでログイン", new_user_session_path, class: "btn facebook fa fa-facebook", :style=>"color:white;" %>
+		 <%= link_to " Facebookでログイン", new_user_session_path, class: "btn facebook fa fa-facebook", :style=>"color:white;" %>
 		</a>
 		<a>
 		 <%= link_to " Twitterでログイン", new_user_session_path, class: "btn twitter fa fa-twitter", :style=>"color:white;" %>
@@ -25,14 +25,19 @@
 
 		<div class="heading">
 			<h2>まちづくりのヒント</h2>
-			<p>あなたの「いいなぁ」をもっとみんなに。</p>
+			<p>あなたの街の「いいね」/「残念」をみんなに共有しましょう。</p>
 		</div>
 		<div class="hints">
 			<div class="under-wrapper">
-				<h3>素敵なまちのアイディア。<br>そんな一瞬を切り取ってみんなに共有しませんか。</h3>
-				<p>例えば、ふとまちを歩いてる時に出会った素敵な瞬間、素敵なアイディア。初めての旅行先で見る少し日本ではあまり見られない素敵な粋なまちづくりの取り組み、発想など。そんな一瞬を切り取って是非みんなにシェアしましょう。</p>
-		
-				<br><br><br><button type="button" class="btn btn-default btn-lg"><%= link_to "投稿一覧を見る", notes_path, :style=>"color:black; " %></button>
+			  <ul>
+			   <li>
+				<h3>街への想いをもっと言葉に。<br>あなたの街への想いをみんなに共有しませんか。</h3>
+				<p>街を歩きながらいつも感じること。いつも考えること。いいことも悪いことも含めて、<br>そんな一瞬を切り取って是非みんなにシェアしましょう。</p>
+			   </li>
+
+			   <li style="margin-top:50px;"><button type="button" class="btn btn-default btn-lg"><%= link_to "投稿一覧を見る", notes_path, :style=>"color:black; " %></button>
+			   </li>
+			  </ul>
 	     	</div>
 		</div>
 
@@ -41,16 +46,42 @@
 <div class="idea-wrapper">
 
 		<div class="heading">
-			<h2>「いいね」な記事</h2>
-			<p>みんなの「いいね」な記事をもっとシェアしよう。</p>
+			<h2>まちづくりの記事</h2><br>
+			<p>「いいね」なまちづくり記事にみんなでコメントしよう。</p>
 		</div>
 		<div class="ideas">
 			<div class="under-wrapper">
-				<h3>世界中の素敵な取り組み<br>そんな「いいね」な記事をもっとみんなに共有しよう。</h3>
-				<p>建築、アート、デザイン、そんな切り口からユニークな取り組みを実践している人たち。暮らしの中のちょっとしたワンシーンに、いろどりを与えてくれる新しい取り組み。そんなみんなのアイディア、取り組み記事を是非みんなにもシェアしましょう。</p>
+			 <ul>
+			 	<li>
+				<h3>世界中の素敵な取り組み<br>そんな「いいね」なまち記事をみんなでコメントしよう。</h3>
+				<p>建築、アート、デザイン、そんな切り口からユニークな取り組みを実践している人たち。暮らしの中のちょっとしたワンシーンに、いろどりを与えてくれる新しい取り組み。<br>そんなみんなのアイディア、取り組み記事を是非みんなコメントして盛り上げましょう</p>
+				<li>
 			
-			   <br><br><br><button type="button" class="btn btn-default btn-lg"><%= link_to "記事一覧を見る", articles_path, :style=>"color:black;" %></button>
-				
+			   <li style="padding-top:50px;"><button type="button" class="btn btn-default btn-lg"><%= link_to "記事一覧を見る", articles_path, :style=>"color:black;" %></button>
+			   </li>
+			 </ul>
+		    </div>
+		</div>
+
+</div>
+
+<div class="discussion-wrapper">
+
+		<div class="heading">
+			<h2>まちづくりの「お題」</h2><br>
+			<p>毎週更新される街の「お題」にみんなの意見を載せてみよう。</p>
+		</div>
+		<div class="discussions">
+			<div class="under-wrapper">
+			  <ul>
+			    <li>
+				<h3>街に関する素朴な問い<br>毎週更新されるそんな街に関する「お題」にみんなで意見をぶつけ合おう。</h3>
+				<p>街に関する素朴な問い。そんな素朴な疑問や問いを毎週ぶつけています。お題に対してみんなで意見をぶつけ合い、熱く語り合おう。</p>
+				</li>
+
+				<li style="padding-top:50px;"><button type="button" class="btn btn-default btn-lg"><%= link_to "お題一覧を見る", microposts_path, :style=>"color:black;" %></button>
+				</li>
+			   </ul>
 		    </div>
 		</div>
 

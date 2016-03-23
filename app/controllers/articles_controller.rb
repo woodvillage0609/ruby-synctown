@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
+  before_action :super_user, only: [:new, :create, :edit, :update, :destroy]
 
   # GET /articles
   # GET /articles.json
@@ -75,4 +76,12 @@ class ArticlesController < ApplicationController
     def article_params
       params.require(:article).permit(:photo, :title, :content, :url, :source)
     end
+
+
+    def super_user
+      unless user_signed_in? && current_user.id == 7 
+        redirect_to root_path
+      end
+    end
+
 end
