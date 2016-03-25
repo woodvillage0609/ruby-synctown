@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  resources :microposts
+  resources :microposts do
+    resources :opinions
+  end
   
   resources :articles do
     resources :comments
@@ -43,7 +45,7 @@ resources :relationships, only: [:create, :destroy]
   post 'like/:note_id' => 'likes#like', as:'like'
   delete 'unlike/:note_id' => 'likes#unlike', as:'unlike'
 
-  get 'scrape_article' => 'application#scrape_article', as:'scrape_article'
+  
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,14 +1,42 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @micropost.title %>
-</p>
+<div class="row" style="background-color:#F0F0F0;">
 
-<p>
-  <strong>Content:</strong>
-  <%= @micropost.content %>
-</p>
+   <div class="col-lg-2" style="position:fixed; z-index:5; left:0px; padding:0px; background-color:white;">
 
-<%= link_to 'Edit', edit_micropost_path(@micropost) %> |
-<%= link_to 'Back', microposts_path %>
+
+
+   </div>
+
+   <div class="col-lg-2"></div>
+
+   <div class="col-lg-7" style="background-color:#F0F0F0;">
+
+	<p id="notice"><%= notice %></p>
+
+    <%= render "show" %>
+
+
+   </div>	
+
+
+ 
+
+<div class="col-lg-3" style="padding-top:20px;">
+
+<% @random_microposts.limit(2).each do |random_micropost| %>
+
+<div class="random-article" style="width:80%; height:280px; border:0px solid #808080; margin-bottom:40px; border-radius:5px 5px 10px 10px;">
+
+<ul>
+
+<li style="padding:5px; background-color:white;">
+<%= link_to random_micropost.title.truncate(50), micropost_path(random_micropost), :style=>"color:black; font-size:16px;" %>
+</li>
+
+</div>
+
+<% end %>
+
+</div>
+
+</div>

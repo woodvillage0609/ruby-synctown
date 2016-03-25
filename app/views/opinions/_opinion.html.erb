@@ -1,0 +1,24 @@
+<table class="post-list">
+
+<tr>	
+<td style="text-align:center;">
+<% if user_signed_in? && current_user?(opinion.user) %>
+<%= link_to 'Destroy', [opinion.article, opinion],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+<% end %>
+</td>
+</tr>
+
+<tr>
+<td style="font-size:9px; text-align:center; margin:0 auto; padding:0px 10px;">
+   <%= image_for(opinion.user) %><br>
+   <%= opinion.user.name %>
+</td>
+<td style="width:90%; font-size:13px;">
+   <%= opinion.body %>
+</td>
+</tr>
+
+
+</table>

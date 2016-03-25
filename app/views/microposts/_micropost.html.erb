@@ -1,0 +1,16 @@
+<div class="micropost-content" style="background-color:white; background-color:white;">
+
+<ul style="padding:0px 10px;">
+   <li>
+        <a>
+          <strong><%=link_to micropost.title, micropost, :style=>"font-size:18px; color:black;" %></strong>
+        </a>
+   </li>    
+
+        <a style="font-size:13px; color:#808080; position:absolute; bottom:5px; right:10px;">
+           <%= micropost.created_at.to_formatted_s(:without_second) %>
+        </a>
+
+</ul>
+
+</div>

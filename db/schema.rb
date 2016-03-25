@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160323224720) do
+ActiveRecord::Schema.define(version: 20160324231523) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "photo"
@@ -61,6 +61,17 @@ ActiveRecord::Schema.define(version: 20160323224720) do
     t.integer  "user_id"
     t.integer  "note_category_id"
   end
+
+  create_table "opinions", force: :cascade do |t|
+    t.text     "body"
+    t.integer  "micropost_id"
+    t.integer  "user_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "opinions", ["micropost_id"], name: "index_opinions_on_micropost_id"
+  add_index "opinions", ["user_id"], name: "index_opinions_on_user_id"
 
   create_table "posts", force: :cascade do |t|
     t.text     "body"

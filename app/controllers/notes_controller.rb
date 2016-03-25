@@ -7,7 +7,7 @@ class NotesController < ApplicationController
   # GET /notes.json
   def index
     @notes = Note.all.order(created_at: :desc)
-    @random_notes=Note.all.order("RANDOM()")
+    @random_notes = Note.all.order("RANDOM()")
   end
 
   # GET /notes/1

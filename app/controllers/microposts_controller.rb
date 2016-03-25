@@ -10,6 +10,7 @@ class MicropostsController < ApplicationController
   # GET /microposts/1
   # GET /microposts/1.json
   def show
+    @random_microposts = Micropost.where.not(id:@micropost).order("RANDOM()")
   end
 
   # GET /microposts/new
