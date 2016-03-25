@@ -1,18 +1,18 @@
-<div class="article-container" style="padding-top:20px;">
+<div class="micropost-container" style="padding-top:20px;">
 
-		<div class="show-article-content" style="width:85%;">
+		<div class="show-micropost-content" style="width:85%;">
 		  
-			<ul>
-			  <li>
-			   <p><strong><%= @micropost.title %></strong></p>
+		<ul>
+			  <li style="padding-bottom:30px;">
+			   <h3><strong><%= @micropost.title %></strong></h3>
 			  </li>
 
-			<li>
-			   <p><strong><%= @micropost.content %></strong></p>
+			<li style="padding-bottom:30px;">
+			   <p><%= @micropost.content %></p>
 			</li>
 
-			<li>
-			<p style="text-align:center;"> コメント一覧　<%= @micropost.opinions.count %>件</p>
+			<li style="padding-bottom:30px;">
+			<p style="text-align:center; font-size:15px;"> コメント一覧　<%= @micropost.opinions.count %>件</p>
 			<%= render @micropost.opinions %>
 			</li>
 
@@ -20,6 +20,8 @@
 			<p>コメントを書く</p>
 			<%= render 'opinions/form' %>
 			</li>
+
+		</ul>
 
 			<%= link_to 'Edit', edit_micropost_path(@micropost) %> |
 			<%= link_to 'Back', microposts_path %> |

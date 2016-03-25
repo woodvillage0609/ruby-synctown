@@ -43,6 +43,8 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 
 gem 'hirb', '~> 0.7.3'
 
+gem 'mysql', '~> 2.9', '>= 2.9.1'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

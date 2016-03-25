@@ -17,6 +17,10 @@
 
 	</div>
 
+	<% @notes_by_month.sort.reverse.each do |month, notes| %>
+    <h4><%=link_to month.strftime('%B %Y'), notes_by_month_path(:year => month.year, :month => month.month) %></h4>
+  <% end %>
+
 </div>
 
 </div>

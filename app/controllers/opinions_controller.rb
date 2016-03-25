@@ -1,6 +1,6 @@
 class OpinionsController < ApplicationController
 
-	before_action :authenticate_user!
+before_action :authenticate_user!
 
 def create
 
@@ -10,7 +10,7 @@ def create
 	@opinion.micropost_id = @micropost.id
 
 	if @opinion.save
-		redirect_to mircopost_path(@micropost)
+		redirect_to micropost_path(@micropost)
 	else
 		render 'new'
 	end

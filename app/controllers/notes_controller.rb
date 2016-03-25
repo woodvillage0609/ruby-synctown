@@ -8,6 +8,7 @@ class NotesController < ApplicationController
   def index
     @notes = Note.all.order(created_at: :desc)
     @random_notes = Note.all.order("RANDOM()")
+    @notes_by_month = Note.select(:title, :id, :created_at).order(created_at: :desc).group_by { |note| note.created_at.beginning_of_month }
   end
 
   # GET /notes/1
@@ -78,6 +79,10 @@ class NotesController < ApplicationController
   def category_bad
     @notes = Note.where(note_category_id:2).order(created_at: :desc)
     render 'index'
+  end
+
+  def notes_by_month
+    @notes = Note.where('extract(year from created_at) = ?', params[:year]).where('extract(month from created_at) = ?', params[:month]).order(created_at: :desc)
   end
 
 
