@@ -27,6 +27,7 @@ class User < ActiveRecord::Base
   has_many :comment_articles, through: :comments, source: :article
 
   has_many :opinions
+  has_many :opinion_microposts, through: :opinions, source: :micropost
 
 # ユーザーをフォローする
   def follow(other_user)

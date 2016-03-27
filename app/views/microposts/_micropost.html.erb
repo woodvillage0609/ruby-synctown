@@ -24,14 +24,14 @@
 		</td>
 		<% end %>
 
-		<% micropost.opinions.limit(1).offset(1).each do |opinion| %>
+		<% micropost.opinions.limit(1).offset(1).order(created_at: :desc).each do |opinion| %>
 		<td>
 			<%= image_for(opinion.user) %>
 			<%= opinion.user.name %>
 		</td>
 		<% end %>
 
-		<% micropost.opinions.limit(1).offset(2).each do |opinion| %>
+		<% micropost.opinions.limit(1).offset(2).order(created_at: :desc).each do |opinion| %>
 		<td>
 			<%= image_for(opinion.user) %>
 			<%= opinion.user.name %>
@@ -41,19 +41,19 @@
 	</tr>
 
 	<tr>
-	    <% micropost.opinions.limit(1).offset(0).each do |opinion| %>
+	    <% micropost.opinions.limit(1).offset(0).order(created_at: :desc).each do |opinion| %>
 		<td>
 			<%= opinion.body.truncate(100) %>
 		</td>
 		<% end %>
 
-	    <% micropost.opinions.limit(1).offset(1).each do |opinion| %>
+	    <% micropost.opinions.limit(1).offset(1).order(created_at: :desc).each do |opinion| %>
 		<td>
 			<%= opinion.body.truncate(100) %>
 		</td>
 		<% end %>
 
-		 <% micropost.opinions.limit(1).offset(2).each do |opinion| %>
+		 <% micropost.opinions.limit(1).offset(2).order(created_at: :desc).each do |opinion| %>
 		<td>
 			<%= opinion.body.truncate(100) %>
 		</td>

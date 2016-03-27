@@ -5,6 +5,7 @@ class MicropostsController < ApplicationController
   # GET /microposts.json
   def index
     @microposts = Micropost.all.order(created_at: :desc)
+    @random_microposts = Micropost.all.order("RANDOM()")
   end
 
   # GET /microposts/1

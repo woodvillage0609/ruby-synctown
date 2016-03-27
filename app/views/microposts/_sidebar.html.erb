@@ -1,0 +1,47 @@
+<div class="article-sidebar" style="height:890px; border-bottom:1px solid #808080; border-right:1px solid #808080;">
+
+
+  <% if user_signed_in? %>
+
+
+  <div class="article-side-photo" style="height:200px; padding-top:60px; ;border-bottom:1px solid #808080; text-align:center;">
+     <%=link_to image_for(current_user), user_path(current_user) %><br>
+      <%=link_to current_user.name, user_path(current_user), :style=>"color:black;" %>
+  </div>
+
+  <p style="padding:10px; text-align:center; border-bottom:1px solid #808080;"><strong>あなたのコメントテーマ一覧</strong></p>
+
+    <div class="article-side-list" style="padding:0px 20px; height:610px; overflow-y:scroll;">
+     <% current_user.opinion_microposts.each do |micropost| %>
+        <h5 style="font-size:12px; border-bottom:1px dotted #808080; margin-bottom:20px; padding-bottom:15px;">
+          <strong>
+            <%=link_to micropost.title, micropost, :style=>"color:black;" %>
+          </strong>
+        </h5>
+     <% end %>
+    </div>
+
+
+<% else %>
+
+
+ <div class="article-side-photo" style="height:200px; padding-top:80px; border-bottom:1px solid #808080; text-align:center;">
+      <a><%=link_to "アカウントを作成する", new_user_registration_path, class: "btn btn-default" %></a>
+ </div>
+
+  <p style="padding:10px; text-align:center; border-bottom:1px solid #808080;"><strong>ランダムテーマ一覧</strong></p>
+
+    <div class="article-side-list" style="padding:0px 20px; height:610px; overflow-y:scroll;">
+     <% @random_microposts.limit(8).each do |random_micropost| %>
+        <h5 style="font-size:12px; border-bottom:1px dotted #808080; margin-bottom:20px; padding-bottom:15px;">
+          <strong>
+            <%=link_to random_micropost.title, micropost_path(random_micropost), :style=>"color:black;" %>
+          </strong>
+        </h5>
+     <% end %>
+    </div>
+
+
+ <% end %>
+
+</div>

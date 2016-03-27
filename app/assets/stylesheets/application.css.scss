@@ -465,10 +465,10 @@ a {
 .micropost-content {
 	position:relative;
 	height:100%;
-	width:40%;
+	width:48%;
 	border:0px solid #808080;
 	float:left;
-	margin:0px 15px 20px 20px; 
+	margin:0px 0px 15px 15px; 
 	border-radius:5px 5px 10px 10px;
 }
 
@@ -482,7 +482,6 @@ a {
 }
 
 .show-micropost-content {
-	display:block;
 	margin:0 auto;
 	margin-bottom:30px;
 	border:0px solid #808080;
@@ -493,12 +492,35 @@ a {
 	
 }
 
+.jumbotron {
+	background-image:url(http://www.wallpaper-wallpaper.com/wp-content/uploads/images/art-illustration-paint/art-illustration-paint-photo-wallpaper-desktop-32.jpg);
+	background-size:cover;
+	height:400px;
+	width:100%;
+	position:relative;
+	color:white;
+}
 
+.jumbotron:before {
+    z-index:1;
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color:rgba(0,0,0,0.4);
+}
 
+.under-jumbotron {
+    position:absolute;
+    left:100px;
+    width:100%;
+	color:white;
+	z-index:2;
 
-
-
-
+}
 
 
 
