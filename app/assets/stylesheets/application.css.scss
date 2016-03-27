@@ -329,14 +329,9 @@ a {
 	position:relative;
 }
 
-.show-note-content li{
-	margin:10px;
-	border-bottom:1px dotted #808080;
-}
-
 .like-box{
 	position:absolute;
-	bottom:50px;
+	bottom:75px;
 	right:15px;
 	font-size:12px;
 }
@@ -346,7 +341,7 @@ a {
 	font-size:13px;
 	position:absolute;
 	left:10px;
-	bottom:15px;
+	bottom:5px;
 }
 
 /* user index */
@@ -469,12 +464,21 @@ a {
 
 .micropost-content {
 	position:relative;
-	height:200px;
+	height:100%;
 	width:40%;
 	border:0px solid #808080;
 	float:left;
 	margin:0px 15px 20px 20px; 
 	border-radius:5px 5px 10px 10px;
+}
+
+.micropost-content img {
+	width:30px;
+	height:30px;
+}
+
+.micropost-content table td {
+	padding:0px 5px;
 }
 
 .show-micropost-content {

@@ -12,8 +12,8 @@
 
 </div>
 
-<ul>
-	<li>
+<ul style="padding:0px 10px;">
+	<li style="border-bottom:1px dotted #808080; margin-bottom:10px;" >
 	  <h3>
 	  <%= @note.title %>
 	  </h3>
@@ -22,20 +22,20 @@
 	   <%= image_tag @note.photo.url(:large), :style=>"width:100%;" %>
 	</li>
 
-	<li style ="padding-bottom:10px;">
+	<li style ="padding:10px 10px; border-bottom:1px dotted #808080;">
 	  <%= @note.content %>
 	</li>
 
-	<li style = "font-size:9px; text-align:center;" >
+	<li style = "font-size:9px; text-align:center; border-bottom:1px dotted #808080; padding:10px 0px; " >
 	  <%=link_to image_for(@note.user), user_path(@note.user) %><br><%=@note.user.name %>
 	</li>
 
 	<li>
-	<p style="text-align:center;"> コメント一覧　<%= @note.posts.count %>件</p>
-	<%= render @note.posts %>
+	<p style="text-align:center; font-size:15px; padding:10px 10px 0px 10px;"> コメント一覧　<%= @note.posts.count %>件</p>
+	<%= render @note.posts.order(created_at: :desc) %>
 	</li>
 
-	<li>
+	<li style="padding-top:20px;">
 	<p>コメントを書く</p>
 	<%= render 'posts/form' %>
 	</li>

@@ -52,7 +52,7 @@
 
 <% else %>
 
-        <li><%=link_to "Top", home_top_path %></li>
+        <li style="padding-right:10px;"><%=link_to "Top", home_top_path %></li>
 
         <li  style="padding-right:15px;"> <button type="button" class="btn btn-default navbar-btn">
           <%=link_to "Register", new_user_registration_path, :style=>"color:black;" %>
@@ -60,8 +60,8 @@
         </li>
 
        	<li>
-         <button type="button" class="btn btn-default navbar-btn">
-          <%=link_to "Sign In", new_user_session_path,  :style=>"color:black;" %>
+         <button type="button" class="btn btn-success navbar-btn">
+          <%=link_to "Sign In", new_user_session_path, :style=>"color:white;" %>
          </button>
         </li>
 

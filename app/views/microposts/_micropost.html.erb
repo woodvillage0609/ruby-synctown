@@ -1,16 +1,67 @@
-<div class="micropost-content" style="background-color:white; background-color:white;">
+<div class="micropost-content" style="background-color:white; padding:10px;">
 
-<ul style="padding:0px 10px;">
-   <li>
-        <a>
-          <strong><%=link_to micropost.title, micropost, :style=>"font-size:18px; color:black;" %></strong>
-        </a>
-   </li>    
+<p style="padding-bottom:10px;">
+
+<strong><%=link_to micropost.title, micropost, :style=>"font-size:18px; color:black;" %></strong>
+
+</p>
+
 
         <a style="font-size:13px; color:#808080; position:absolute; bottom:5px; right:10px;">
            <%= micropost.created_at.to_formatted_s(:without_second) %>
         </a>
 
 </ul>
+
+
+<table style="width:100%; margin-bottom:40px;">
+	<tr>
+
+		<% micropost.opinions.limit(1).offset(0).order(created_at: :desc).each do |opinion| %>
+		<td>
+			<%= image_for(opinion.user) %>
+			<%= opinion.user.name %>
+		</td>
+		<% end %>
+
+		<% micropost.opinions.limit(1).offset(1).each do |opinion| %>
+		<td>
+			<%= image_for(opinion.user) %>
+			<%= opinion.user.name %>
+		</td>
+		<% end %>
+
+		<% micropost.opinions.limit(1).offset(2).each do |opinion| %>
+		<td>
+			<%= image_for(opinion.user) %>
+			<%= opinion.user.name %>
+		</td>
+		<% end %>
+
+	</tr>
+
+	<tr>
+	    <% micropost.opinions.limit(1).offset(0).each do |opinion| %>
+		<td>
+			<%= opinion.body.truncate(100) %>
+		</td>
+		<% end %>
+
+	    <% micropost.opinions.limit(1).offset(1).each do |opinion| %>
+		<td>
+			<%= opinion.body.truncate(100) %>
+		</td>
+		<% end %>
+
+		 <% micropost.opinions.limit(1).offset(2).each do |opinion| %>
+		<td>
+			<%= opinion.body.truncate(100) %>
+		</td>
+		<% end %>
+
+	</tr>	
+
+</table>
+
 
 </div>

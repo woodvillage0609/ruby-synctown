@@ -3,6 +3,7 @@
 		<div class="show-micropost-content" style="width:85%;">
 		  
 		<ul>
+
 			  <li style="padding-bottom:30px;">
 			   <h3><strong><%= @micropost.title %></strong></h3>
 			  </li>
@@ -12,8 +13,8 @@
 			</li>
 
 			<li style="padding-bottom:30px;">
-			<p style="text-align:center; font-size:15px;"> コメント一覧　<%= @micropost.opinions.count %>件</p>
-			<%= render @micropost.opinions %>
+			<p style="text-align:center; font-size:17px; width:100%; border-bottom:1px dotted #808080;"> コメント一覧　<%= @micropost.opinions.count %>件</p>
+			<%= render @micropost.opinions.order(created_at: :desc) %>
 			</li>
 
 			<li>
