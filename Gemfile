@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+#gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -43,7 +43,9 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 
 gem 'hirb', '~> 0.7.3'
 
-gem 'mysql', '~> 2.9', '>= 2.9.1'
+gem 'mysql2', '~> 0.3.20'
+
+gem 'yaml_db', '~> 0.3.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

@@ -6,13 +6,13 @@ class ArticlesController < ApplicationController
   # GET /articles.json
   def index
     @articles = Article.all.order(created_at: :desc)
-    @random_articles = Article.all.order("RANDOM()")
+    @random_articles = Article.all.order("RAND()")
   end
 
   # GET /articles/1
   # GET /articles/1.json
   def show
-    @random_articles = Article.where.not(id:@article).order("RANDOM()")
+    @random_articles = Article.where.not(id:@article).order("RAND()")
     @articles = Article.all.order(created_at: :desc)
 
   end

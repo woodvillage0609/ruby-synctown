@@ -331,7 +331,7 @@ a {
 
 .like-box{
 	position:absolute;
-	bottom:75px;
+	bottom:200px;
 	right:15px;
 	font-size:12px;
 }
@@ -489,8 +489,9 @@ a {
 	position:relative;
 	background-color:white;
 	padding:10px;
-	
 }
+
+/* micropost index*/
 
 .jumbotron {
 	background-image:url(http://www.wallpaper-wallpaper.com/wp-content/uploads/images/art-illustration-paint/art-illustration-paint-photo-wallpaper-desktop-32.jpg);
@@ -516,10 +517,10 @@ a {
 .under-jumbotron {
     position:absolute;
     left:100px;
+    top:100px;
     width:100%;
 	color:white;
 	z-index:2;
-
 }
 
 

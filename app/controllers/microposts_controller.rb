@@ -5,13 +5,13 @@ class MicropostsController < ApplicationController
   # GET /microposts.json
   def index
     @microposts = Micropost.all.order(created_at: :desc)
-    @random_microposts = Micropost.all.order("RANDOM()")
+    @random_microposts = Micropost.all.order("RAND()")
   end
 
   # GET /microposts/1
   # GET /microposts/1.json
   def show
-    @random_microposts = Micropost.where.not(id:@micropost).order("RANDOM()")
+    @random_microposts = Micropost.where.not(id:@micropost).order("RAND()")
   end
 
   # GET /microposts/new
@@ -71,6 +71,6 @@ class MicropostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def micropost_params
-      params.require(:micropost).permit(:title, :content)
+      params.require(:micropost).permit(:title, :content, :picture)
     end
 end

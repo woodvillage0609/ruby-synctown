@@ -30,16 +30,15 @@
 	  <%=link_to image_for(@note.user), user_path(@note.user) %><br><%=@note.user.name %>
 	</li>
 
-	<li>
-	<p style="text-align:center; font-size:15px; padding:10px 10px 0px 10px;"> コメント一覧　<%= @note.posts.count %>件</p>
-	<%= render @note.posts.order(created_at: :desc) %>
-	</li>
-
 	<li style="padding-top:20px;">
 	<p>コメントを書く</p>
 	<%= render 'posts/form' %>
 	</li>
 
+	<li>
+	<p style="text-align:center; font-size:15px; padding:10px 10px 0px 10px;"> コメント一覧　<%= @note.posts.count %>件</p>
+	<%= render @note.posts.order(created_at: :desc) %>
+	</li>
 
 	<li style = "text-align:right;" >
 	<a class="time-note-show" ><%= @note.created_at.to_formatted_s(:without_second) %></a>

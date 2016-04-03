@@ -7,14 +7,14 @@ class NotesController < ApplicationController
   # GET /notes.json
   def index
     @notes = Note.all.order(created_at: :desc)
-    @random_notes = Note.all.order("RANDOM()")
+    @random_notes = Note.all.order("RAND()")
     @notes_by_month = Note.all.order(created_at: :desc).group_by { |note| note.created_at.beginning_of_month }
   end
 
   # GET /notes/1
   # GET /notes/1.json
   def show
-    @random_notes=Note.where.not(id:@note).order("RANDOM()")
+    @random_notes=Note.where.not(id:@note).order("RAND()")
   end
 
   # GET /notes/new
@@ -73,16 +73,18 @@ class NotesController < ApplicationController
 
   def category_good
     @notes = Note.where(note_category_id:1).order(created_at: :desc)
-    render 'index'
+    @notes_by_month = @notes.order(created_at: :desc).group_by { |note| note.created_at.beginning_of_month }
+    render "index"
   end
 
   def category_bad
     @notes = Note.where(note_category_id:2).order(created_at: :desc)
-    render 'index'
+    @notes_by_month = @notes.order(created_at: :desc).group_by { |note| note.created_at.beginning_of_month }
+    render "index"
   end
 
   def notes_by_month
-    @notes = Note.where( ":year(created_at) = ? AND :month(created_at) = ? ", params[:year], params[:month]).order("created_at DESC")
+    @notes = Note.where( "YEAR(created_at) = ? AND MONTH(created_at) = ? ", params[:year], params[:month]).order("created_at DESC")
   end
 
 
