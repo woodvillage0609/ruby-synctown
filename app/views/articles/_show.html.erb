@@ -32,10 +32,12 @@
 			<%= render @article.comments.order(created_at: :desc) %>
 			</li>
 
-            <li style="text-align:right;">
+            <li style="text-align:right;padding:5px 5px;">
+            <%= link_to 'Back', articles_path %> |
+			<% if user_signed_in? && current_user.id == 1 %>
 			<%= link_to 'Edit', edit_article_path(@article) %> |
-			<%= link_to 'Back', articles_path %> |
 			<%= link_to 'Destroy', article_path(@article), method: :delete, data: { confirm: 'Are you sure?' } %>
+			<% end %>
 			</li>
 
 		</div>

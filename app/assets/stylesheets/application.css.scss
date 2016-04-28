@@ -221,11 +221,12 @@ a {
 }
 
 .stats {
+    width:100%;
 	border-bottom:1px solid #808080;
 }
 
 .stats td{
-	padding:0px 61px 0px 5px;
+	padding:0px 0px 0px 5px;
 	font-size:15px;
 }
 
@@ -254,7 +255,7 @@ a {
 	height:450px;
     border:1px solid #808080;
     padding:0px;
-    margin:0px 10px 20px 20px; 
+    margin:0px 10px 20px 10px; 
     position:relative;
     border-radius:5px 5px 10px 10px;
 }
@@ -327,13 +328,6 @@ a {
 	border:1px solid #F0F0F0;
 	border-radius:10px;
 	position:relative;
-}
-
-.like-box{
-	position:absolute;
-	bottom:200px;
-	right:15px;
-	font-size:12px;
 }
 
 .time-note-show{
@@ -441,8 +435,8 @@ a {
 
 
 .article-side-wrapper li{
+	position:relative;
     clear:left;
-    position:relative;
     margin-bottom:2px;
 }
 
@@ -465,7 +459,7 @@ a {
 .micropost-content {
 	position:relative;
 	height:100%;
-	width:48%;
+	width:95%;
 	border:0px solid #808080;
 	float:left;
 	margin:0px 0px 15px 15px; 

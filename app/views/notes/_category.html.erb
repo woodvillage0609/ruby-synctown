@@ -5,11 +5,11 @@
   </button>
 
   <button type="button" class="btn btn-default">
-  	<%=link_to_unless_current "GOOD", category_good_note_path(@notes), :style=>"color:black;" %>
+  	<%=link_to_unless_current "GOOD", category_notes_note_path(note_category_id = 1), :style=>"color:black;" %>
   </button>
     
   <button type="button" class="btn btn-default">
-  	<%=link_to_unless_current "BAD", category_bad_note_path(@notes), :style=>"color:black;" %>
+  	<%=link_to_unless_current "BAD", category_notes_note_path(note_category_id = 2), :style=>"color:black;" %>
   </button>
 
 </div>

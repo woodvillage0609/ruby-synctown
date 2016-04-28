@@ -71,14 +71,8 @@ class NotesController < ApplicationController
     @users = @note.liking_users
   end
 
-  def category_good
-    @notes = Note.where(note_category_id:1).order(created_at: :desc)
-    @notes_by_month = @notes.order(created_at: :desc).group_by { |note| note.created_at.beginning_of_month }
-    render "index"
-  end
-
-  def category_bad
-    @notes = Note.where(note_category_id:2).order(created_at: :desc)
+  def category_notes
+    @notes = Note.where("note_category_id = ?", params[:id]).order(created_at: :desc)
     @notes_by_month = @notes.order(created_at: :desc).group_by { |note| note.created_at.beginning_of_month }
     render "index"
   end
