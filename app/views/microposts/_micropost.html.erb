@@ -63,5 +63,53 @@
 
 </table>
 
+<table style="width:100%; margin-bottom:40px;">
+	<tr>
+
+		<% micropost.opinions.limit(1).offset(3).order(created_at: :desc).each do |opinion| %>
+		<td>
+			<%= image_for(opinion.user) %>
+			<%= opinion.user.name %>
+		</td>
+		<% end %>
+
+		<% micropost.opinions.limit(1).offset(4).order(created_at: :desc).each do |opinion| %>
+		<td>
+			<%= image_for(opinion.user) %>
+			<%= opinion.user.name %>
+		</td>
+		<% end %>
+
+		<% micropost.opinions.limit(1).offset(5).order(created_at: :desc).each do |opinion| %>
+		<td>
+			<%= image_for(opinion.user) %>
+			<%= opinion.user.name %>
+		</td>
+		<% end %>
+
+	</tr>
+
+	<tr>
+	    <% micropost.opinions.limit(1).offset(3).order(created_at: :desc).each do |opinion| %>
+		<td>
+			<%= opinion.body.truncate(80) %>
+		</td>
+		<% end %>
+
+	    <% micropost.opinions.limit(1).offset(4).order(created_at: :desc).each do |opinion| %>
+		<td>
+			<%= opinion.body.truncate(80) %>
+		</td>
+		<% end %>
+
+		 <% micropost.opinions.limit(1).offset(5).order(created_at: :desc).each do |opinion| %>
+		<td>
+			<%= opinion.body.truncate(80) %>
+		</td>
+		<% end %>
+
+	</tr>	
+
+</table>
 
 </div>

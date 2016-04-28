@@ -1,16 +1,6 @@
+
 <div class="show-note-content" style="width:85%; background-color:white;">
 
-<div class="like-box">
-
-	<div id="like-link">
-		<% if user_signed_in? && !current_user?(@note.user) %>
-		<%= render 'likes/like_links', note:@note %>
-		<% end %>
-	</div>
-
-	<%=link_to @note.likes.count, liking_users_note_path(@note.id), id:'like-count' %>人がいいね！と言っています。
-
-</div>
 
 <ul style="padding:0px 10px;">
 	<li style="border-bottom:1px dotted #808080; margin-bottom:10px;" >
@@ -23,7 +13,7 @@
 	</li>
 
 	<li style ="padding:10px 10px; border-bottom:1px dotted #808080;">
-	  <%= @note.content %>
+	  <%= simple_format(@note.content) %>
 	</li>
 
 	<li style = "font-size:9px; text-align:center; border-bottom:1px dotted #808080; padding:10px 0px; " >
@@ -35,12 +25,21 @@
 	<%= render 'posts/form' %>
 	</li>
 
+	<li style="text-align:right; font-size:12px;">
+	<div id="like-link">
+	    <% if user_signed_in? && !current_user?(@note.user) %>
+		<%= render 'likes/like_links', note:@note %>
+		<% end %>
+	</div>
+		<%=link_to @note.likes.count, liking_users_note_path(@note.id), id:'like-count' %>人がいいね！と言っています
+	</li>
+
 	<li>
 	<p style="text-align:center; font-size:15px; padding:10px 10px 0px 10px;"> コメント一覧　<%= @note.posts.count %>件</p>
 	<%= render @note.posts.order(created_at: :desc) %>
 	</li>
 
-	<li style = "text-align:right;" >
+	<li style = "text-align:right; padding:5px 5px;" >
 	<a class="time-note-show" ><%= @note.created_at.to_formatted_s(:without_second) %></a>
 	<% if user_signed_in? && current_user?(@note.user) %>
 	<%= link_to 'Edit', edit_note_path(@note) %> |

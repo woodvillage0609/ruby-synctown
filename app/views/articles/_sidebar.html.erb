@@ -12,7 +12,7 @@
 
   <p style="padding:10px; text-align:center; border-bottom:1px solid #808080;"><strong>あなたのPick記事一覧</strong></p>
 
-    <div class="article-side-list" style="padding:0px 20px; height:610px; overflow-y:scroll;">
+    <div class="article-side-list" style="padding:0px 20px; height:450px; overflow-y:scroll;">
      <% current_user.comment_articles.each do |article| %>
         <h5><strong><%=link_to article.title, article, :style=>"color:black;" %></strong></h5>
         <p style="font-size:12px; border-bottom:1px dotted #808080; margin-bottom:20px; padding-bottom:15px;">

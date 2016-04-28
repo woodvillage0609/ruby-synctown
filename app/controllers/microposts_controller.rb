@@ -1,6 +1,5 @@
 class MicropostsController < ApplicationController
   before_action :set_micropost, only: [:show, :edit, :update, :destroy]
-
   # GET /microposts
   # GET /microposts.json
   def index
@@ -73,4 +72,11 @@ class MicropostsController < ApplicationController
     def micropost_params
       params.require(:micropost).permit(:title, :content, :picture)
     end
+
+    def super_user
+      unless user_signed_in? && current_user.id == 1 
+        redirect_to root_path
+      end
+    end
+
 end

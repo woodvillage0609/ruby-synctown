@@ -21,7 +21,7 @@
 <td style="padding:10px 0px 0px 70px; width:100%;">
 	<ul>
 	 <li style="padding-bottom:5px; font-size:20px;color:#000080;"><%= comment.user.name %></li>
-	 <li style="font-size:15px; padding-bottom:10px;"><%= comment.body %></li>
+	 <li style="font-size:15px; padding-bottom:10px;"><%= simple_format(comment.body) %></li>
     </ul>
 </td>
 

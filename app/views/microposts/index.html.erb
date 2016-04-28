@@ -12,20 +12,24 @@
 
   <div class="col-lg-10 col-xs-12" style="background-color:#F0F0F0; padding:0px;">
 
-  <div class="jumbotron">
+    <div class="jumbotron">
 
-	  	<div class="under-jumbotron">
+  	  	<div class="under-jumbotron">
 
-	  	<h1>Theme of the week</h1>
-	  	<p>今週のテーマは<strong>「<%= @microposts.last.title %>」です。</strong></p><br><br>
-	  	<p><a class="btn btn-info btn-lg" role="button">詳細を見る</a></p>
+  	  	<h1>Theme of the week</h1>
+  	  	<p>今週のテーマは<strong>「<%= @microposts.last.title %>」です。</strong></p><br><br>
+  	  	<p><a class="btn btn-info btn-lg" role="button">詳細を見る</a></p>
 
-	    </div>
+  	    </div>
 
-  </div>
+    </div>
 
-    <%= render @microposts %>
-    <p style="text-align:center;"><%= link_to 'New Micropost', new_micropost_path %></p>
+
+      <%= render @microposts %>
+
+      <% if user_signed_in? && current_user.id == 1 %>
+      <p style="text-align:center; clear:left;"><%= link_to 'New Micropost', new_micropost_path %></p>
+      <% end %>
 
   </div>
 

@@ -54,7 +54,6 @@ ActiveRecord::Schema.define(version: 20160331230429) do
     t.text     "content",            limit: 65535
     t.datetime "created_at",                       null: false
     t.datetime "updated_at",                       null: false
-    t.string   "image",              limit: 255
     t.string   "photo_file_name",    limit: 255
     t.string   "photo_content_type", limit: 255
     t.integer  "photo_file_size",    limit: 4
@@ -103,8 +102,13 @@ ActiveRecord::Schema.define(version: 20160331230429) do
     t.datetime "updated_at",                                     null: false
     t.string   "image",              limit: 255
     t.string   "encrypted_password", limit: 255, default: "",    null: false
-    t.string   "user",               limit: 255
     t.boolean  "admin",                          default: false
   end
 
+  add_foreign_key "comments", "articles"
+  add_foreign_key "comments", "users"
+  add_foreign_key "opinions", "microposts"
+  add_foreign_key "opinions", "users"
+  add_foreign_key "posts", "notes"
+  add_foreign_key "posts", "users"
 end
