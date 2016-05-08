@@ -8,20 +8,15 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-
   def show
     @notes=@user.notes
     @title = "User's Note List"
   end
 
-
   def edit
   end
 
-
   def update
-    file=params[:user][:image]
-    @user.set_image(file)
 
     respond_to do |format|
       if @user.update(user_params)
@@ -81,7 +76,7 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :email)
+      params.require(:user).permit(:name, :email, :image)
     end
 
     def correct_user

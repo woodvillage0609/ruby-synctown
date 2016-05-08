@@ -1,5 +1,5 @@
 <div class="sidebar" style="background-color:white;">
-<a><%=link_to image_for(@user), user_path(@user.id) %></a>
+<a><%=link_to image_tag(@user.image), user_path(@user.id), class:"img-circle" %></a>
 
 <a>
   <%= render 'users/stats' %>
@@ -35,7 +35,7 @@
   <li><%= link_to "Pick Articles", comment_articles_user_path(@user.id), class:"black" %>
   </li>
   <% if user_signed_in? && current_user.id == 1 %>
-   <li><%= link_to 'New Article', new_particle_path, class:"black" %></li>
+   <li><%= link_to 'New Article', new_article_path, class:"black" %></li>
   <li><%= link_to 'New Micropost', new_micropost_path , class:"black" %></li>
   <% end %>
 </ul>

@@ -29,6 +29,9 @@ class User < ActiveRecord::Base
   has_many :opinions
   has_many :opinion_microposts, through: :opinions, source: :micropost
 
+  has_attached_file :image
+  validates_attachment :image, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
+
 # ユーザーをフォローする
   def follow(other_user)
     active_relationships.create(followed_id: other_user.id)
@@ -43,14 +46,6 @@ class User < ActiveRecord::Base
   def following?(other_user)
     following.include?(other_user)
   end
-
-  def set_image(file)
-  	if !file.nil?
-      file_name = file.original_filename
-      File.open("public/user_images/#{file_name}", 'wb'){|f|f.write(file.read)}
-      self.image = file_name
-    end
-    end
 
   def admin?
     admin
