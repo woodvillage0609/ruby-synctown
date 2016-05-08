@@ -1,5 +1,5 @@
 <div class="sidebar" style="background-color:white;">
-<a><%=link_to image_for(@user), user_path(@user.id) %></a>
+<a><%=link_to image_tag(@user.image), user_path(@user.id), class:"img-circle" %></a>
 
 <a>
   <%= render 'users/stats' %>
@@ -25,7 +25,8 @@
 
 <ul>
    <% if current_user?(@user) %>
-  <li><%= link_to 'New Note', new_note_path, class:"black" %></li>
+  <li><%= link_to 'New Note', new_note_path, class:"black" %>
+  </li>
   <li><%= link_to 'Edit Profile', edit_user_path(current_user.id), class:"black" %></li>
   <% end %>
   <li><%= link_to "Pick Notes", like_notes_user_path(@user.id), class:"black" %></li>
@@ -33,6 +34,10 @@
   </li>
   <li><%= link_to "Pick Articles", comment_articles_user_path(@user.id), class:"black" %>
   </li>
+  <% if user_signed_in? && current_user.id == 1 %>
+   <li><%= link_to 'New Article', new_article_path, class:"black" %></li>
+  <li><%= link_to 'New Micropost', new_micropost_path , class:"black" %></li>
+  <% end %>
 </ul>
 
 </div>

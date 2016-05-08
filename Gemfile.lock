@@ -39,6 +39,11 @@ GEM
     arel (6.0.3)
     autoprefixer-rails (6.3.3.1)
       execjs
+    aws-sdk (1.66.0)
+      aws-sdk-v1 (= 1.66.0)
+    aws-sdk-v1 (1.66.0)
+      json (~> 1.4)
+      nokogiri (>= 1.4.4)
     bcrypt (3.1.10)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
@@ -48,11 +53,6 @@ GEM
     builder (3.2.2)
     byebug (6.0.2)
     cancan (1.6.10)
-    carrierwave (0.10.0)
-      activemodel (>= 3.2.0)
-      activesupport (>= 3.2.0)
-      json (>= 1.7)
-      mime-types (>= 1.16)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.8)
@@ -215,10 +215,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  aws-sdk (< 2.0)
   bootstrap-sass (~> 3.3, >= 3.3.6)
   byebug
   cancan
-  carrierwave
   coffee-rails (~> 4.1.0)
   devise (= 3.5.6)
   hirb (~> 0.7.3)
@@ -231,7 +231,7 @@ DEPENDENCIES
   rails_12factor
   rails_admin
   rake (~> 10.5)
-  rmagick
+  rmagick (~> 2.15, >= 2.15.4)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
