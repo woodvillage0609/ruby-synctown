@@ -1,16 +1,18 @@
 <% @articles.limit(nil).offset(8).each do |article| %>
 
-<div class="article-content" style="background-color:white;">
+<div class="article-content">
+
+<div class="article-content-sub">
 
 <%= link_to image_tag(article.photo, {:style=> "height:180px; width: 100%; padding-bottom:15px; border-radius:5px 5px 0px 0px;"}), article %>
 
 <ul style="padding:0px 10px;">
    <li>
         <a>
-          <strong><%=link_to article.title, article, :style=>"font-size:18px; color:black;" %></strong>
+          <strong><%=link_to article.title, article, :style=>"font-size:18px;", class:"black" %></strong>
         </a><br><br>
         <a>
-          <%=link_to article.content.truncate(30), article, :style=>"color:black; font-size:13px; padding:0px 5px;" %>
+          <%=link_to article.content.truncate(30), article, :style=>"font-size:13px; padding:0px 5px;", class:"black" %>
         </a>
   </li>    
 
@@ -24,6 +26,8 @@
         </a>
 
 </ul>
+
+</div>
 
 </div>
 

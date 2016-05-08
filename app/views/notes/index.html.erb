@@ -19,10 +19,6 @@
 
 	</div>
 
-<% @notes_by_month.each do |month, notes| %>
-<%= link_to month.strftime('%B %Y'), notes_by_month_path(:year=> month.year, :month => month.month) %>
-<% end %>
-
 </div>
 
 </div>

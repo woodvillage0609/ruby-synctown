@@ -19,7 +19,7 @@
             <% @articles.limit(1).offset(0).each do |article| %>
             <%= link_to image_tag(article.photo, {:style=>"height:500px; width:100%;"}), article %>
             <div class="carousel-caption">
-              <h3><%=link_to article.title, article, :style=>"color:white;" %></h3>
+              <h3><%=link_to article.title, article, class:"white" %></h3>
             </div>
             <% end %>
           </div>
@@ -28,7 +28,7 @@
             <% @articles.limit(1).offset(1).each do |article| %>
             <%= link_to image_tag(article.photo, {:style=>"height:500px; width:100%;"}), article %>
             <div class="carousel-caption">
-              <h3><%= link_to article.title, article, :style=>"color:white;" %></h3>
+              <h3><%= link_to article.title, article, class:"white" %></h3>
             </div>
           <% end %>
           </div>
@@ -37,7 +37,7 @@
              <% @articles.limit(1).offset(2).each do |article| %>
              <%= link_to image_tag(article.photo, {:style=>"height:500px; width:100%;"}), article %>
               <div class="carousel-caption">
-                <h3><%= link_to article.title, article, :style=>"color:white;" %></h3>
+                <h3><%= link_to article.title, article, class:"white" %></h3>
               </div>
             <% end %>
           </div>
@@ -46,7 +46,7 @@
               <% @articles.limit(1).offset(3).each do |article| %>
               <%= link_to image_tag(article.photo, {:style=>"height:500px; width:100%;"}), article %>
                 <div class="carousel-caption">
-                  <h3><%= link_to article.title, article, :style=>"color:white;" %></h3>
+                  <h3><%= link_to article.title, article, class:"white" %></h3>
                 </div>
               <% end %>
             </div>
@@ -55,7 +55,7 @@
               <% @articles.limit(1).offset(4).each do |article| %>
               <%= link_to image_tag(article.photo, {:style=>"height:500px; width:100%;"}), article %>
                 <div class="carousel-caption">
-                  <h3><%= link_to article.title, article, :style=>"color:white;" %></h3>
+                  <h3><%= link_to article.title, article, class:"white" %></h3>
                 </div>
               <% end %>
             </div>
@@ -64,7 +64,7 @@
               <% @articles.limit(1).offset(5).each do |article| %>
               <%= link_to image_tag(article.photo, {:style=>"height:500px; width:100%;"}), article %>
                 <div class="carousel-caption">
-                  <h3><%= link_to article.title, article, :style=>"color:white;" %></h3>
+                  <h3><%= link_to article.title, article, class:"white" %></h3>
                 </div>
               <% end %>
             </div>
@@ -95,7 +95,7 @@
               <li>
                 <%= link_to image_tag(article.photo, {:style=> "height:249px; width:100%;"}), article %>
               </li>
-               <li><%= link_to article.title, article, :style=>"color:white; position:absolute; bottom:30px; padding:0px 18px; font-size:17px;" %>
+               <li><%= link_to article.title, article, :style=>"position:absolute; bottom:30px; padding:0px 18px; font-size:17px;", class:"white" %>
                </li>
               <% end %>
             </ul>

@@ -77,11 +77,6 @@ class NotesController < ApplicationController
     render "index"
   end
 
-  def notes_by_month
-    @notes = Note.where( "YEAR(created_at) = ? AND MONTH(created_at) = ? ", params[:year], params[:month]).order("created_at DESC")
-  end
-
-
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_note
