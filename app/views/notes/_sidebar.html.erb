@@ -7,14 +7,14 @@
 
   <div class="note-side-photo" style="height:200px; padding-top:60px; ;border-bottom:1px solid #808080; text-align:center;">
       <%=link_to image_for(current_user), user_path(current_user) %><br>
-      <%=link_to current_user.name, user_path(current_user), :style=>"color:black;" %>
+      <%=link_to current_user.name, user_path(current_user), class:"black" %>
   </div>
 
   <p style="padding:10px; text-align:center; border-bottom:1px solid #808080; "><strong>あなたのいいね！投稿一覧</strong></p>
 
     <div class="note-side-list" style="padding:0px 20px; height:610px; overflow-y:scroll;">
      <% current_user.like_notes.each do |note| %>
-        <h5><strong><%=link_to note.title, note, :style=>"color:black;" %></strong></h5>
+        <h5><strong><%=link_to note.title, note, class:"black" %></strong></h5>
         <p style="font-size:12px; border-bottom:1px dotted #808080; margin-bottom:20px; padding-bottom:15px;">
           <%= note.content.truncate(30) %>
         </p>

@@ -1,4 +1,6 @@
-<div class="note-content" style="background-color:white;">
+<div class="note-content">
+
+<div class="note-content-sub">
 
     <a>
     	<%=link_to image_tag(note.photo.url(:thumb), {:style=> "border-radius:5px 5px 0px 0px;width:100%; height:45%;"}), note_path(note) %>
@@ -6,11 +8,11 @@
      <ul>
     <li>
     	<span class="note-title">
-    	<%=link_to note.title, note_path(note), :style=> "color:#808080;" %>
+    	<%=link_to note.title, note_path(note), class:"grey" %>
     	</span>
     </li>
     <li>
-    	<%=link_to note.content.truncate(150), note_path(note), :style=> "color:black;" %>
+    	<%=link_to note.content.truncate(150), note_path(note), class:"black" %>
     </li>
  </ul>
 
@@ -36,6 +38,8 @@
 
 <div class="time">
   <%= note.created_at.to_formatted_s(:without_second) %>
+</div>
+
 </div>
 
 </div>

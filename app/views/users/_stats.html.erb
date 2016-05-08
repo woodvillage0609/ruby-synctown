@@ -4,14 +4,14 @@
   <tr>
   	<td style="border-right:1px solid #808080;">
   	 <a class="stat" >
-       <%=link_to @user.following.count, following_user_path(@user), id:"following", :style=>"color:#808080;" %>
+       <%=link_to @user.following.count, following_user_path(@user), id:"following", class:"grey" %>
      </a><br>
        <a>following</a>
     </td>
     
     <td>
      <a class="stat" >
-      <%=link_to @user.followers.count, followers_user_path(@user), id:"followers" , :style=>"color:#808080;" %>
+      <%=link_to @user.followers.count, followers_user_path(@user), id:"followers" , class:"grey" %>
      </a><br>
     <a>followers</a>
     </td>

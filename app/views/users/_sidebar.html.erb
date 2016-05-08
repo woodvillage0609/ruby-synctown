@@ -25,13 +25,13 @@
 
 <ul>
    <% if current_user?(@user) %>
-  <li><%= link_to 'New Note', new_note_path, :style=>"color:black;" %></li>
-  <li><%= link_to 'Edit Profile', edit_user_path(current_user.id),:style=>"color:black;" %></li>
+  <li><%= link_to 'New Note', new_note_path, class:"black" %></li>
+  <li><%= link_to 'Edit Profile', edit_user_path(current_user.id), class:"black" %></li>
   <% end %>
-  <li><%= link_to "Pick Notes", like_notes_user_path(@user.id),:style=>"color:black;" %></li>
-  <li><%= link_to "Following Lists", subscribed_user_path(@user.id),:style=>"color:black;" %>
+  <li><%= link_to "Pick Notes", like_notes_user_path(@user.id), class:"black" %></li>
+  <li><%= link_to "Following Lists", subscribed_user_path(@user.id), class:"black" %>
   </li>
-  <li><%= link_to "Pick Articles", comment_articles_user_path(@user.id),:style=>"color:black;" %>
+  <li><%= link_to "Pick Articles", comment_articles_user_path(@user.id), class:"black" %>
   </li>
 </ul>
 

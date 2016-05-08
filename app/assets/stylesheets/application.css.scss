@@ -2,6 +2,10 @@
 @import "bootstrap";
 
 
+* {
+	box-sizing: border-box;
+}
+
 li {
 	list-style:none;
 	margin:0px;
@@ -15,6 +19,25 @@ ul{
 
 a {
 	text-decoration:none;
+	transition:0.7s;
+}
+
+a:hover {
+	text-decoration:none;
+	color:#00F9A9;
+
+}
+
+.black {
+	color:black;
+}
+
+.grey {
+	color:#808080;
+}
+
+.white {
+	color:white;
 }
 
 
@@ -147,7 +170,7 @@ a {
 }
 
 .discussions {
-	background-image:url(http://www.wallpaper-wallpaper.com/wp-content/uploads/images/art-illustration-paint/art-illustration-paint-photo-wallpaper-desktop-32.jpg);
+	background-image:url(IMG_0100.jpg);
 	background-size:cover;
 	height:500px;
 	text-align:center;
@@ -251,13 +274,17 @@ a {
 
 .note-content {
 	float:left;
-	width:302px;
-	height:450px;
+	width:25%;
+    padding:0px 15px 20px 15px; 
+}
+
+.note-content-sub {
     border:1px solid #808080;
-    padding:0px;
-    margin:0px 10px 20px 10px; 
     position:relative;
     border-radius:5px 5px 10px 10px;
+    height:450px;
+    background-color:white;
+
 }
 
 .note-content li{
@@ -298,7 +325,7 @@ a {
 	position:absolute;
 	bottom:3px;
 	right:5px;
-	width:285px;
+	width:97%;
 	border-top:1px dotted #808080;
 	text-align:right;
 	padding-top:3px;
@@ -424,13 +451,17 @@ a {
 /* article content */
 
 .article-content {
-    position:relative;
-	height:400px;
-	width:300px;
-	border:0px solid #808080;
+	width:33.33%;
 	float:left;
-	margin:0px 15px 20px 20px; 
+	padding:0px 20px 30px 30px; 
+}
+
+.article-content-sub {
+	position:relative;
 	border-radius:5px 5px 10px 10px;
+	border:0px solid #808080;
+	height:400px;
+	background-color:white;
 }
 
 
@@ -457,13 +488,18 @@ a {
 /* micropost */
 
 .micropost-content {
+	width:90%;
+	padding:0px 0px 15px 15px;
+	margin:0 auto;
+}
+
+.micropost-content-sub {
 	position:relative;
 	height:100%;
-	width:95%;
 	border:0px solid #808080;
-	float:left;
-	margin:0px 0px 15px 15px; 
 	border-radius:5px 5px 10px 10px;
+	padding:10px;
+	background-color:white;
 }
 
 .micropost-content img {
@@ -488,7 +524,7 @@ a {
 /* micropost index*/
 
 .jumbotron {
-	background-image:url(http://www.wallpaper-wallpaper.com/wp-content/uploads/images/art-illustration-paint/art-illustration-paint-photo-wallpaper-desktop-32.jpg);
+	background-image:url(IMG_0100.jpg);
 	background-size:cover;
 	height:400px;
 	width:100%;
