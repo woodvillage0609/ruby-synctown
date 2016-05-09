@@ -34,7 +34,7 @@
   </li>
   <li><%= link_to "Pick Articles", comment_articles_user_path(@user.id), class:"black" %>
   </li>
-  <% if user_signed_in? && current_user.id == 1 %>
+  <% if user_signed_in? && current_user.email == "woodvillage0609@gmail.com" %>
    <li><%= link_to 'New Article', new_article_path, class:"black" %></li>
   <li><%= link_to 'New Micropost', new_micropost_path , class:"black" %></li>
   <% end %>
