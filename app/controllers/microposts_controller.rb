@@ -74,7 +74,7 @@ class MicropostsController < ApplicationController
     end
 
     def super_user
-      unless user_signed_in? && current_user.id == 1 
+      unless user_signed_in? && current_user.email == "woodvillage0609@gmail.com" 
         redirect_to root_path
       end
     end

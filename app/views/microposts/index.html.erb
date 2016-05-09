@@ -24,12 +24,7 @@
 
     </div>
 
-
       <%= render @microposts %>
-
-      <% if user_signed_in? && current_user.id == 1 %>
-      <p style="text-align:center; clear:left;"><%= link_to 'New Micropost', new_micropost_path %></p>
-      <% end %>
 
   </div>
 
