@@ -10,7 +10,7 @@
 			  </li>
 
 			<li>
-			  <%= @article.content.truncate(150) %>
+			  <%= simple_format(@article.content.truncate(150)) %>
 			</li>
 
 			<li style="text-align:center;">
@@ -33,11 +33,13 @@
 			</li>
 
             <li style="text-align:right;padding:5px 5px;">
-            <%= link_to 'Back', articles_path %> |
-			<% if user_signed_in? && current_user.id == 1 %>
+      
+			<% if user_signed_in? && current_user.email == "woodvillage0609@gmail.com" %>
 			<%= link_to 'Edit', edit_article_path(@article) %> |
-			<%= link_to 'Destroy', article_path(@article), method: :delete, data: { confirm: 'Are you sure?' } %>
+			<%= link_to 'Destroy', article_path(@article), method: :delete, data: { confirm: 'Are you sure?' } %> |
 			<% end %>
+
+			 <%= link_to 'Back', articles_path %>
 			</li>
 
 		</div>
