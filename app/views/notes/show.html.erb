@@ -2,17 +2,17 @@
 <div class="row" style="background-color:#F0F0F0;">
 
 
-<div class="col-lg-2" style="position:fixed; z-index:5; left:0px; padding:0px; background-color:white;">
+<div class="col-md-2 col-xs-0" style="position:fixed; z-index:5; left:0px; padding:0px; background-color:white;">
 
  <%= render "sidebar" %>
 
 </div>
 
 
-<div class="col-lg-2" >
+<div class="col-md-2 col-xs-0" >
 </div>
 
-<div class="col-lg-7" style="padding-top:20px;">
+<div class="col-md-7 col-xs-9" style="padding-top:20px;">
 	
 	<a id="notice"><%= notice %></a>
 
@@ -20,7 +20,7 @@
 
 </div>
 
-<div class="col-lg-3" style="padding-top:20px; background-color:#F0F0F0;">
+<div class="col-md-3" style="padding-top:20px; background-color:#F0F0F0;">
 
 	<% @random_notes.limit(4).each do |random_note| %>
 
