@@ -1,8 +1,6 @@
-<div class="col-lg-8" style="padding:0px 2px 0px 0px;">
+<div class="col-md-8 col-xs-12" style="padding:0px 2px 0px 0px;">
 
- <div class="article-top-wrapper" style="height:500px;">
-
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="height:500px; width:100%;">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
         <ol class="carousel-indicators">
           <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -15,54 +13,54 @@
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox">
 
-          <div class="item active">
+          <div class="item active article-slideshow">
             <% @articles.limit(1).offset(0).each do |article| %>
-            <%= link_to image_tag(article.photo, {:style=>"height:500px; width:100%;"}), article %>
+            <%= link_to image_tag(article.photo, {:style=>"height:100%; width:100%"}), article %>
             <div class="carousel-caption">
               <h3><%=link_to article.title, article, class:"white" %></h3>
             </div>
             <% end %>
           </div>
 
-          <div class="item">
+          <div class="item article-slideshow">
             <% @articles.limit(1).offset(1).each do |article| %>
-            <%= link_to image_tag(article.photo, {:style=>"height:500px; width:100%;"}), article %>
+            <%= link_to image_tag(article.photo, {:style=>"height:100%; width:100%"}), article %>
             <div class="carousel-caption">
               <h3><%= link_to article.title, article, class:"white" %></h3>
             </div>
           <% end %>
           </div>
 
-          <div class="item">
+          <div class="item article-slideshow">
              <% @articles.limit(1).offset(2).each do |article| %>
-             <%= link_to image_tag(article.photo, {:style=>"height:500px; width:100%;"}), article %>
+             <%= link_to image_tag(article.photo, {:style=>"height:100%; width:100%"}), article %>
               <div class="carousel-caption">
                 <h3><%= link_to article.title, article, class:"white" %></h3>
               </div>
             <% end %>
           </div>
 
-            <div class="item">
+            <div class="item article-slideshow">
               <% @articles.limit(1).offset(3).each do |article| %>
-              <%= link_to image_tag(article.photo, {:style=>"height:500px; width:100%;"}), article %>
+              <%= link_to image_tag(article.photo, {:style=>"height:100%; width:100%"}), article %>
                 <div class="carousel-caption">
                   <h3><%= link_to article.title, article, class:"white" %></h3>
                 </div>
               <% end %>
             </div>
 
-             <div class="item">
+             <div class="item article-slideshow">
               <% @articles.limit(1).offset(4).each do |article| %>
-              <%= link_to image_tag(article.photo, {:style=>"height:500px; width:100%;"}), article %>
+              <%= link_to image_tag(article.photo, {:style=>"height:100%; width:100%"}), article %>
                 <div class="carousel-caption">
                   <h3><%= link_to article.title, article, class:"white" %></h3>
                 </div>
               <% end %>
             </div>
 
-             <div class="item">
+             <div class="item article-slideshow">
               <% @articles.limit(1).offset(5).each do |article| %>
-              <%= link_to image_tag(article.photo, {:style=>"height:500px; width:100%;"}), article %>
+              <%= link_to image_tag(article.photo, {:style=>"height:100%; width:100%"}), article %>
                 <div class="carousel-caption">
                   <h3><%= link_to article.title, article, class:"white" %></h3>
                 </div>
@@ -84,16 +82,14 @@
     </div>
 
   </div>
-
- </div>
         
-    <div class="col-lg-4" style="padding:0px;">
+    <div class="col-md-4 col-xs-12" style="padding:0px;">
 
         <% @articles.limit(2).offset(6).each do |article| %>
-              <div class="article-side-wrapper" >
+              <div class="article-side-slideshow" >
               <ul>
               <li>
-                <%= link_to image_tag(article.photo, {:style=> "height:249px; width:100%;"}), article %>
+                <%= link_to image_tag(article.photo, {:style=> "height:100%; width:100%;"}), article %>
               </li>
                <li><%= link_to article.title, article, :style=>"position:absolute; bottom:30px; padding:0px 18px; font-size:17px;", class:"white" %>
                </li>

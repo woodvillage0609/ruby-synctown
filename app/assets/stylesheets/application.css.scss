@@ -461,6 +461,27 @@ a:hover {
 /* article content */
 
 .article-contents {
+	height:500px;
+}
+
+.article-slideshow {
+	height:500px;
+	width:100%;
+}
+
+.article-side-slideshow {
+	height:248px;
+	width:100%;
+	padding:0px;
+	float:left;
+}
+
+.article-side-slideshow li{
+	position:relative;
+    padding:0px;
+}
+
+.article-contents {
 	padding:10px;
 }
 
@@ -476,13 +497,6 @@ a:hover {
 	border:0px solid #808080;
 	height:400px;
 	background-color:white;
-}
-
-
-.article-side-wrapper li{
-	position:relative;
-    clear:left;
-    margin-bottom:2px;
 }
 
 .show-article-content{
@@ -592,9 +606,9 @@ a:hover {
 
   .article-sidebar {display:none;}
 
-  .article-side-wrapper {width:50%; float:left; padding:5px 5px 0px 0px;}
+  .article-side-slideshow {width:50%; float:left; padding:5px 5px 0px 0px;}
 
-  .article-side_wrapper ul {float:left;}
+  .article-side-slideshow ul {float:left;}
 
   .random-article {width:50%;float:left; padding:0px 20px; margin-bottom:0px;}
 
@@ -615,7 +629,7 @@ a:hover {
 
   .btn {width:100%;}
 
-  .btn-lg {width:50%;}
+  .btn-lg {width:70%;}
 
   .note-content {width:100%;}
 
@@ -631,7 +645,7 @@ a:hover {
 
   .article-sidebar {display:none;}
 
-  .article-side-wrapper {width:100%; float:left; padding-top:5px;}
+  .article-slideshow {height:300px;}
 
   .random-article {width:100%; padding:0px; margin-bottom:0px;}
 
