@@ -605,7 +605,17 @@ a:hover {
 /* ブレイクポイントをmax-width: 670pxに指定 */
 @media(max-width:670px){
 
-  .under-wrapper h1 {text-align:left;}
+  .top-wrapper h1 {font-size:24px;}
+
+  .hint-wrapper h2, h3 {font-size:18px;}
+
+  .idea-wrapper h2, h3 {font-size:18px;}
+
+  .discussion-wrapper h2, h3 {font-size:18px;}
+
+  .btn {width:100%;}
+
+  .btn-lg {width:50%;}
 
   .note-content {width:100%;}
 
