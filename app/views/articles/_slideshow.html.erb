@@ -1,6 +1,6 @@
 <div class="col-lg-8" style="padding:0px 2px 0px 0px;">
 
- <div class="article-top-wrapper" style="height:550px;">
+ <div class="article-top-wrapper" style="height:500px;">
 
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="height:500px; width:100%;">
       <!-- Indicators -->
@@ -89,15 +89,15 @@
         
     <div class="col-lg-4" style="padding:0px;">
 
-        <div class="article-side-wrapper" >
-            <ul>
-              <% @articles.limit(2).offset(6).each do |article| %>
+        <% @articles.limit(2).offset(6).each do |article| %>
+              <div class="article-side-wrapper" >
+              <ul>
               <li>
                 <%= link_to image_tag(article.photo, {:style=> "height:249px; width:100%;"}), article %>
               </li>
                <li><%= link_to article.title, article, :style=>"position:absolute; bottom:30px; padding:0px 18px; font-size:17px;", class:"white" %>
                </li>
-              <% end %>
-            </ul>
-        </div>
+              </ul>
+              </div>
+        <% end %>
     </div>

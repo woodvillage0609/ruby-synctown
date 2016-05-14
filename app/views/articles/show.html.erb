@@ -1,16 +1,16 @@
 
 <div class="row" style="background-color:#F0F0F0;">
 
-   <div class="col-lg-2" style="position:fixed; z-index:5; left:0px; padding:0px; background-color:white;">
+   <div class="col-md-2 col-xs-0" style="position:fixed; z-index:5; left:0px; padding:0px; background-color:white;">
 
      <%= render "sidebar" %>
 
    </div>
 
-   <div class="col-lg-2"></div>
+   <div class="col-md-2 col-xs-0"></div>
 
 
-<div class="col-lg-7" style="background-color:#F0F0F0;">
+<div class="col-md-7 col-xs-12" style="background-color:#F0F0F0;">
 
 	<p id="notice" style="margin-top:10px;"><%= notice %></p>
 
@@ -18,10 +18,10 @@
 
 </div>	
 
-<div class="col-lg-3" style="padding-top:20px;">
+<div class="col-md-3 col-xs-12">
 
 <% @random_articles.limit(4).each do |random_article| %>
-<div class="random-article" style="width:90%; height:280px; border:0px solid #808080; margin-bottom:40px; border-radius:5px 5px 10px 10px;">
+<div class="random-article">
 
 <ul>
 <li>	
@@ -29,7 +29,7 @@
 </li>
 
 <li style="padding:5px; background-color:white;">
-<%= link_to random_article.title.truncate(50), article_path(random_article), :style=>"color:black; font-size:16px;" %>
+<%= link_to random_article.title.truncate(50), article_path(random_article), class:"black", :style=>"font-size:16px;" %>
 </li>
 
 </div>
