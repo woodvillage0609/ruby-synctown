@@ -2,17 +2,17 @@
 <div class="row" style="background-color:#F0F0F0;">
 
 
-<div class="col-lg-2" style="position:fixed; z-index:5; left:0px; padding:0px; background-color:white;">
+<div class="col-md-2 col-xs-0" style="position:fixed; z-index:5; left:0px; padding:0px; background-color:white;">
 
  <%= render "sidebar" %>
 
 </div>
 
 
-<div class="col-lg-2" >
+<div class="col-md-2 col-xs-0" >
 </div>
 
-<div class="col-lg-7" style="padding-top:20px;">
+<div class="col-md-7 col-xs-12" style="padding-top:20px;">
 	
 	<a id="notice"><%= notice %></a>
 
@@ -20,12 +20,12 @@
 
 </div>
 
-<div class="col-lg-3" style="padding-top:20px; background-color:#F0F0F0;">
+<div class="col-md-3 col-xs-12" style="padding-top:20px; background-color:#F0F0F0;">
 
 	<% @random_notes.limit(4).each do |random_note| %>
 
-	<div class="note-random" style="width:90%; height:300px; border:0px solid #808080; margin-bottom:40px;border-radius:5px 5px 10px 10px; background-color:white;">
-	<ul>
+	<div class="note-random" >
+	<ul style="background-color:white;">
 		<li>
 			<%=link_to image_tag(random_note.photo.url(:thumb), {:style=>"width:100%; height:200px; border-radius:5px 5px 0px 0px;"}), note_path(random_note) %>
 		</li>

@@ -33,7 +33,7 @@
 
     <div class="article-side-list" style="padding:0px 20px; height:610px; overflow-y:scroll;">
      <% @random_articles.limit(8).each do |random_article| %>
-        <h5><strong><%=link_to random_article.title, article_path(random_article), :style=>"color:black;" %></strong></h5>
+        <h5><strong><%=link_to random_article.title, article_path(random_article), class:"black" %></strong></h5>
         <p style="font-size:12px; border-bottom:1px dotted #808080; margin-bottom:20px; padding-bottom:15px;">
           <%= random_article.content.truncate(30) %>
         </p>

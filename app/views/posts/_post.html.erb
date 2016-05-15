@@ -7,7 +7,7 @@
 <th style="font-size:9px;">
  <ul>
  	<li style="position:absolute; top:10px; left:5px; text-align:center;">
- 	<%= image_for(post.user) %><br>
+ 	<%= image_tag(post.user.image, {class: "img-circle" }) %><br>
 	<% if user_signed_in? && current_user?(post.user) %>
 	<%= link_to 'Destroy', [post.note, post],
 	               method: :delete,
@@ -20,7 +20,7 @@
 <td style="padding:10px 0px 0px 70px; width:100%;">
 	<ul>
 	 <li style="padding-bottom:10px; font-size:20px;color:#000080;"><%= post.user.name %></li>
-	 <li style="font-size:15px; padding-bottom:20px;"><%= post.body %></li>
+	 <li style="font-size:15px; padding-bottom:20px;"><%= simple_format(post.body) %></li>
     </ul>
 </td>
 

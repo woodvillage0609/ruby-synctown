@@ -355,6 +355,8 @@ a:hover {
 	border:1px solid #F0F0F0;
 	border-radius:10px;
 	position:relative;
+	width:85%; 
+	background-color:white;
 }
 
 .time-note-show{
@@ -363,6 +365,14 @@ a:hover {
 	position:absolute;
 	left:10px;
 	bottom:5px;
+}
+
+.note-random {
+	width:90%;
+	height:300px; 
+	border:0px solid #808080; 
+	margin-bottom:40px;
+	border-radius:5px 5px 10px 10px; 
 }
 
 /* user index */
@@ -450,10 +460,33 @@ a:hover {
 
 /* article content */
 
+.article-contents {
+	height:500px;
+}
+
+.article-slideshow {
+	height:500px;
+	width:100%;
+}
+
+.article-side-slideshow {
+	height:250px;
+	width:100%;
+	padding:2px;
+}
+
+.article-side-slideshow li{
+	position:relative;
+}
+
+.article-contents {
+	padding:10px;
+}
+
 .article-content {
 	width:33.33%;
 	float:left;
-	padding:0px 20px 30px 30px; 
+	padding:15px 20px 15px 20px; 
 }
 
 .article-content-sub {
@@ -464,17 +497,11 @@ a:hover {
 	background-color:white;
 }
 
-
-.article-side-wrapper li{
-	position:relative;
-    clear:left;
-    margin-bottom:2px;
-}
-
 .show-article-content{
+	width:85%;
 	display:block;
 	margin:0 auto;
-	margin-bottom:30px;
+	margin-top:20px;
 	border:0px solid #808080;
 	border-radius:5px;
 	position:relative;
@@ -482,7 +509,15 @@ a:hover {
 }
 
 .show-article-content li{
-	margin:10px;
+	padding:10px;
+}
+
+.random-article {
+	width:90%; 
+	height:280px; 
+	border:0px solid #808080;
+	margin-top:20px; 
+	border-radius:5px 5px 10px 10px;
 }
 
 /* micropost */
@@ -512,6 +547,7 @@ a:hover {
 }
 
 .show-micropost-content {
+	width:85%;
 	margin:0 auto;
 	margin-bottom:30px;
 	border:0px solid #808080;
@@ -554,14 +590,68 @@ a:hover {
 }
 
 
+/* タブレット向けレイアウト */
+/* ブレイクポイントをmax-width: 1000pxに指定 */
+@media(max-width:1000px){
+
+  .note-content {width:50%;}
+
+  .note-sidebar {display:none;}
+
+  .note-random {width:50%;float:left; padding:0px 20px; margin-bottom:0px;}
+
+  .article-content {width:50%;}
+
+  .article-sidebar {display:none;}
+
+  .article-side-slideshow {width:50%; float:left; padding:5px 5px 0px 0px;}
+
+  .article-side-slideshow ul {float:left;}
+
+  .random-article {width:50%;float:left; padding:0px 20px; margin-bottom:0px;}
 
 
+}
 
+/* スマートフォン向けレイアウト */
+/* ブレイクポイントをmax-width: 670pxに指定 */
+@media(max-width:670px){
 
+  .top-wrapper h1 {font-size:24px;}
 
+  .hint-wrapper h2, h3 {font-size:18px;}
 
+  .idea-wrapper h2, h3 {font-size:18px;}
 
+  .discussion-wrapper h2, h3 {font-size:18px;}
 
+  .btn {width:100%;}
 
+  .btn-lg {width:70%;}
+
+  .note-content {width:100%;}
+
+  .note-sidebar {display:none;}
+
+  .note-random {width:100%; padding:0px; margin-bottom:0px;}
+
+  .show-note-content {width:100%; border-radius:0px;}
+
+  .article-content {width:100%;}
+
+  .article-content-sub {height:350px;}
+
+  .article-sidebar {display:none;}
+
+  .article-slideshow {height:300px;}
+
+  .article-side-slideshow {width:100%; margin:5px 0px;}
+
+  .random-article {width:100%; padding:0px; margin-bottom:0px;}
+
+  .show-article-content {width:100%; margin-top:0px;}
+
+  .show-micropost-content {width:100%;border-radius:0px;}
+}
 
 

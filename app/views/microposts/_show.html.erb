@@ -1,6 +1,6 @@
 <div class="micropost-container" style="padding-top:20px;">
 
-		<div class="show-micropost-content" style="width:85%;">
+		<div class="show-micropost-content">
 
 			<div class="background-micropost">
 				<%= image_tag(@micropost.picture, {:style=>"width:100%; max-height:300px; border-radius:5px 5px 0px 0px;"}) %>
@@ -32,10 +32,11 @@
 			</li>
 
 		</ul>
-
+			<% if user_signed_in? && current_user.email == "woodvillage0609@gmail.com" %>
 			<%= link_to 'Edit', edit_micropost_path(@micropost) %> |
-			<%= link_to 'Back', microposts_path %> |
-			<%= link_to 'Destroy', micropost_path(@micropost), method: :delete, data: { confirm: 'Are you sure?' } %>
+			<%= link_to 'Destroy', micropost_path(@micropost), method: :delete, data: { confirm: 'Are you sure?' } %> |
+			<% end %>
+			<%= link_to 'Back', microposts_path %> 
 		</div>
 
 	</div>
