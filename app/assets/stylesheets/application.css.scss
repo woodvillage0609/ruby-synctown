@@ -470,15 +470,13 @@ a:hover {
 }
 
 .article-side-slideshow {
-	height:248px;
+	height:250px;
 	width:100%;
-	padding:0px;
-	float:left;
+	padding:2px;
 }
 
 .article-side-slideshow li{
 	position:relative;
-    padding:0px;
 }
 
 .article-contents {
@@ -511,7 +509,7 @@ a:hover {
 }
 
 .show-article-content li{
-	margin:10px;
+	padding:10px;
 }
 
 .random-article {
@@ -646,6 +644,10 @@ a:hover {
   .article-sidebar {display:none;}
 
   .article-slideshow {height:300px;}
+
+  .article-side-slideshow {width:100%; margin:5px 0px;}
+
+  .article-content-sub {height:450px;}
 
   .random-article {width:100%; padding:0px; margin-bottom:0px;}
 
