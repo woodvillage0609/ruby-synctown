@@ -211,34 +211,55 @@ a:hover {
 	font-size:15px;
 }
 
-/* user show */
+/* user index */
 
-.contents{
-	padding-top:20px;
+.post-list {
+	margin-bottom:10px;
 }
 
-.sidebar{
+.user-index-table tr{
+	padding:10px 5px 7px 5px;
+	border-top:1px dotted #808080;
+	display:block;
+}
+
+.user-index-email{
+	width:250px;
+}
+
+.user-index-name {
+	width:130px;
+}
+
+/* user show */
+
+.user-sidebar-wrapper {
 	width:100%;
-	margin:20px 0px 20px 10px;
+	margin:0 auto;
+	padding:20px 15px;
+}
+
+.user-sidebar {
+	width:95%;
+	margin:0 auto;
 	border:1px solid #808080;
 	border-radius:5px 5px 0px 0px;
 }
 
-.sidebar img{
+.user-sidebar img{
 	width:100%;
 	height: 100%;
 	border-radius:5px 5px 0px 0px;
-
 }
 
-.sidebar li{
+.user-sidebar li{
 	padding:12px 0px;
 	border-top:1px solid #808080;
 	text-align:center;
 	color:#808080;
 }
 
-.sidebar p{
+.user-sidebar p{
 	font-size:12px;
 	padding-left:5px;
 }
@@ -375,26 +396,6 @@ a:hover {
 	border-radius:5px 5px 10px 10px; 
 }
 
-/* user index */
-
-.post-list {
-	margin-bottom:10px;
-}
-
-.user-index-table tr{
-	padding:10px 5px 7px 5px;
-	border-top:1px dotted #808080;
-	display:block;
-}
-
-.user-index-email{
-	width:250px;
-}
-
-.user-index-name {
-	width:130px;
-}
-
 /* note login signin fotmat  */
 
 .note {
@@ -416,6 +417,7 @@ a:hover {
 .login-note {
 	width:60%;
 	margin:0 auto;
+	padding:25px 0px;
 }
 
 
@@ -566,7 +568,7 @@ a:hover {
 /* ブレイクポイントをmax-width: 1000pxに指定 */
 @media(max-width:1000px){
 
-  .note-content {width:50%;}
+  .note-content {width:50%; padding:15px 35px;}
 
   .note-sidebar {display:none;}
 
@@ -605,15 +607,15 @@ a:hover {
 
   .btn-lg {width:70%;}
 
-  .note-content {width:100%;}
+  .note-content {width:100%; padding:15px;}
 
   .note-sidebar {display:none;}
 
-  .note-random {width:100%; padding:0px; margin-bottom:0px;}
+  .note-random {width:100%; padding:0px 15px;}
 
   .show-note-content {width:100%; border-radius:0px;}
 
-  .article-content {width:100%;}
+  .article-content {width:100%; padding:15px 5px;}
 
   .article-content-sub {height:350px;}
 
@@ -623,9 +625,7 @@ a:hover {
 
   .article-side-slideshow {width:100%; margin:5px 0px;}
 
-  .random-article {width:100%; padding:0px; margin-bottom:0px;}
-
-  .random-article-photo {border-radius:0px;}
+  .random-article {width:100%; padding:0px 15px; margin-bottom:0px;}
 
   .show-article-content {width:100%; margin-top:0px;}
 
@@ -633,11 +633,19 @@ a:hover {
 
   .show-micropost-content {width:100%;border-radius:0px;}
 
-  .under-jumbotron {left:15px; top:20px; right:60px; text-align:center;}
+  .under-jumbotron {left:25px; top:20px; right:25px; text-align:center; }
+
+  .under-jumbotron h1 {font-size:30px;}
+
+  .under-jumbotron p {font-size:20px;}
 
   .note {width:90%;}
 
   .login-note {width:90%;}
+
+  .user-sidebar {width:100%;}
+
+  .user-sidebar-wrapper {padding:0px 25px;}
 
 
 }
