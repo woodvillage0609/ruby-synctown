@@ -1,4 +1,6 @@
-<div class="sidebar" style="background-color:white;">
+<div class="user-sidebar-wrapper">
+
+<div class="user-sidebar" style="background-color:white;">
 <a><%=link_to image_tag(@user.image), user_path(@user.id), class:"img-circle" %></a>
 
 <a>
@@ -39,5 +41,7 @@
   <li><%= link_to 'New Micropost', new_micropost_path , class:"black" %></li>
   <% end %>
 </ul>
+
+</div>
 
 </div>
