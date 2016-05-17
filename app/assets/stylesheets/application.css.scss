@@ -234,14 +234,11 @@ a:hover {
 /* user show */
 
 .user-sidebar-wrapper {
-	width:100%;
-	margin:0 auto;
-	padding:20px 15px;
+	
 }
 
 .user-sidebar {
-	width:95%;
-	margin:0 auto;
+	width:100%;
 	border:1px solid #808080;
 	border-radius:5px 5px 0px 0px;
 }
@@ -295,8 +292,8 @@ a:hover {
 
 .note-content {
 	float:left;
-	width:25%;
-    padding:0px 15px 20px 15px; 
+	width:33.33%;
+    padding:20px 20px 10px 20px; 
 }
 
 .note-content-sub {
@@ -373,6 +370,7 @@ a:hover {
 	display:block;
 	margin:0 auto;
 	margin-bottom:30px;
+	margin-top:20px;
 	border:1px solid #F0F0F0;
 	border-radius:10px;
 	position:relative;
@@ -392,8 +390,8 @@ a:hover {
 	width:90%;
 	height:300px; 
 	border:0px solid #808080; 
-	margin-bottom:40px;
-	border-radius:5px 5px 10px 10px; 
+	margin-bottom:30px;
+	border-radius:5px; 
 }
 
 /* note login signin fotmat  */
@@ -521,6 +519,7 @@ a:hover {
 	width:85%;
 	margin:0 auto;
 	margin-bottom:30px;
+	margin-top:20px;
 	border:0px solid #808080;
 	border-radius:5px;
 	position:relative;
@@ -537,6 +536,7 @@ a:hover {
 	width:100%;
 	position:relative;
 	color:white;
+	padding:50px 75px;
 }
 
 .jumbotron:before {
@@ -553,11 +553,9 @@ a:hover {
 
 .under-jumbotron {
     position:absolute;
-    left:100px;
-    top:100px;
     width:100%;
 	color:white;
-	z-index:2;
+	z-index:1;
 }
 
 
@@ -612,7 +610,7 @@ a:hover {
 
   .show-note-content {width:100%; border-radius:0px;}
 
-  .article-content {width:100%; padding:15px 5px;}
+  .article-content {width:100%; padding:15px 15px; margin-top:0px;}
 
   .article-content-sub {height:350px;}
 
@@ -635,6 +633,8 @@ a:hover {
   .under-jumbotron h1 {font-size:30px;}
 
   .under-jumbotron p {font-size:20px;}
+
+  .show-micropost-content {margin-top:0px;}
 
   .note {width:90%;}
 
