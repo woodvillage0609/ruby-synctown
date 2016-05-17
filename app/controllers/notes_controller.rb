@@ -74,6 +74,7 @@ class NotesController < ApplicationController
   def category_notes
     @notes = Note.where("note_category_id = ?", params[:id]).order(created_at: :desc)
     @notes_by_month = @notes.order(created_at: :desc).group_by { |note| note.created_at.beginning_of_month }
+    @random_notes = Note.all.order("RAND()")
     render "index"
   end
 
