@@ -1,16 +1,16 @@
 
 <div class="row" style="background-color:#F0F0F0;">
 
-   <div class="col-md-2" style="position:fixed; z-index:5; left:0px; padding:0px; background-color:white;">
+   <div class="col-md-2 col-xs-0" style="position:fixed; z-index:5; left:0px; padding:0px; background-color:white;">
 
    <%= render "sidebar" %>
 
    </div>
 
-   <div class="col-md-2">
+   <div class="col-md-2 col-xs-0">
    </div>
 
-   <div class="col-md-7" style="background-color:#F0F0F0;">
+   <div class="col-md-7 col-xs-12" style="background-color:#F0F0F0;">
 
 	<a id="notice"><%= notice %></a>
 
@@ -20,16 +20,18 @@
    </div>	
 
 
-<div class="col-md-3" style="padding-top:20px;">
+<div class="col-md-3 col-xs-12">
 
 <% @random_microposts.limit(2).each do |random_micropost| %>
 
-<div class="random-article" style="width:80%; height:280px; border:0px solid #808080; margin-bottom:40px; border-radius:5px 5px 10px 10px;">
+<div class="random-article" >
 
 <ul>
 
+<li><%=link_to image_tag(random_micropost.picture, {class:"random-article-photo"}), micropost_path(random_micropost) %></li>
+
 <li style="padding:5px; background-color:white;">
-<%= link_to random_micropost.title.truncate(50), micropost_path(random_micropost), :style=>"color:black; font-size:16px;" %>
+<%= link_to random_micropost.title.truncate(50), micropost_path(random_micropost), :style=>"font-size:20px;", class:"black" %>
 </li>
 
 </div>

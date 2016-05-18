@@ -49,17 +49,20 @@
 
         <li style="padding-right:15px;"><%=link_to "Profile", current_user %></li>
 
-        <li><button type="button" class="btn btn-default navbar-btn">
+        <li>
+        <button type="button" class="btn btn-default navbar-btn">
         	<%=link_to "Log Out", destroy_user_session_path, method: :delete, :style=>"color:black;" %>
-        </button></li>
+        </button>
+        </li>
 
 <% else %>
 
         <li style="padding-right:10px;"><%=link_to "Top", home_top_path %></li>
 
-        <li  style="padding-right:15px;"> <button type="button" class="btn btn-default navbar-btn">
-          <%=link_to "Register", new_user_registration_path, :style=>"color:black;" %>
-         </button>
+        <li  style="padding-right:15px;">
+        <button class="btn btn-default navbar-btn" style="display:inline-block;">
+          <%=link_to "Register", new_user_registration_path, :style=>"color:black;", :role=>"button" %>
+        </button>
         </li>
 
        	<li>

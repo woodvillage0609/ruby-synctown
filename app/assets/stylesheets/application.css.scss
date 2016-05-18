@@ -460,6 +460,7 @@ a:hover {
 	display:block;
 	margin:0 auto;
 	margin-top:20px;
+	margin-bottom:20px;
 	border:0px solid #808080;
 	border-radius:5px;
 	position:relative;
@@ -492,8 +493,8 @@ a:hover {
 /* micropost */
 
 .micropost-content {
-	width:90%;
-	padding:0px 0px 15px 15px;
+	width:100%;
+	padding:15px 20px;
 	margin:0 auto;
 }
 
@@ -536,7 +537,6 @@ a:hover {
 	width:100%;
 	position:relative;
 	color:white;
-	padding:50px 75px;
 }
 
 .jumbotron:before {
@@ -553,6 +553,7 @@ a:hover {
 
 .under-jumbotron {
     position:absolute;
+    text-align:center;
     width:100%;
 	color:white;
 	z-index:1;
@@ -628,11 +629,9 @@ a:hover {
 
   .show-micropost-content {width:100%;border-radius:0px;}
 
-  .under-jumbotron {left:25px; top:20px; right:25px; text-align:center; }
-
   .under-jumbotron h1 {font-size:30px;}
 
-  .under-jumbotron p {font-size:20px;}
+  .under-jumbotron p {font-size:18px;}
 
   .show-micropost-content {margin-top:0px;}
 
