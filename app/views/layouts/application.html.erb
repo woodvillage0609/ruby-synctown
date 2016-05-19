@@ -29,7 +29,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       
-      <ul class="nav navbar-nav navbar-right" style="padding-right:20px; font-size:15px;">
+      <ul class="nav navbar-nav navbar-right" style="font-size:15px;">
 
 <% if user_signed_in? %>
 
@@ -59,13 +59,13 @@
 
         <li style="padding-right:10px;"><%=link_to "Top", home_top_path %></li>
 
-        <li  style="padding-right:15px;">
+        <li  style="padding:0px 10px;">
         <button class="btn btn-default navbar-btn" style="display:inline-block;">
           <%=link_to "Register", new_user_registration_path, :style=>"color:black;", :role=>"button" %>
         </button>
         </li>
 
-       	<li>
+       	<li style="padding:0px 10px;">
          <button type="button" class="btn btn-success navbar-btn">
           <%=link_to "Sign In", new_user_session_path, :style=>"color:white;" %>
          </button>
@@ -85,6 +85,7 @@
 
 
 </div>
+
 
 <%= yield %>
 

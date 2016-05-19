@@ -15,7 +15,7 @@
      <% current_user.opinion_microposts.each do |micropost| %>
         <h5 style="font-size:12px; border-bottom:1px dotted #808080; margin-bottom:20px; padding-bottom:15px;">
           <strong>
-            <%=link_to micropost.title, micropost, :style=>"color:black;" %>
+            <%=link_to micropost.title, micropost, class:"black" %>
           </strong>
         </h5>
      <% end %>
@@ -35,7 +35,7 @@
      <% @random_microposts.limit(8).each do |random_micropost| %>
         <h5 style="font-size:12px; border-bottom:1px dotted #808080; margin-bottom:20px; padding-bottom:20px;">
           <strong>
-            <%=link_to random_micropost.title, micropost_path(random_micropost), :style=>"color:black;" %>
+            <%=link_to random_micropost.title, micropost_path(random_micropost), class:"black" %>
           </strong>
         </h5>
      <% end %>
