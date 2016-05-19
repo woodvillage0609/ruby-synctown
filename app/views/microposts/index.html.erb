@@ -17,8 +17,13 @@
   	  	<div class="under-jumbotron">
 
   	  	<h1>Theme of the week</h1>
-  	  	<p>今週のテーマは<strong>「<%= @microposts.last.title %>」です。</strong></p><br><br>
-  	  	<p><a class="btn btn-info btn-lg" role="button", style="margin:0 auto;">詳細を見る</a></p>
+
+        <% @microposts.limit(1).offset(0).each do |micropost| %>
+
+  	  	<p>今週のテーマは<strong>「<%= micropost.title %>」です。</strong></p><br><br>
+  	  	<p><a><%=link_to "詳細を見る", micropost_path(micropost), class:"btn btn-warning btn-lg", :role=>"button", :style=>"margin:0 auto;" %></a></p>
+
+        <% end %>
 
   	    </div>
 

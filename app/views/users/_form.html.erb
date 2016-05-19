@@ -25,6 +25,11 @@
     <%= f.label :image %>
     <%= f.file_field :image %>
   </div><br>
+
+   <div class="field">
+    <%= f.label :password %>
+    <p><%= link_to "Change your password", edit_user_registration_path, class:"grey" %></p>
+  </div>
   
   <div class="actions">
     <%= f.submit "更新する", class:"btn btn-success" %>
