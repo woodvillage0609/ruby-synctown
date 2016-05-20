@@ -30,14 +30,20 @@
 			<%= render @article.comments.order(created_at: :desc) %>
 			</li>
 
-            <li style="text-align:right;padding:5px 5px;">
+            <li style="text-align:left;padding:5px 10px;">
       
 			<% if user_signed_in? && current_user.email == "woodvillage0609@gmail.com" %>
+
+			<%= link_to 'Back', articles_path %> |
 			<%= link_to 'Edit', edit_article_path(@article) %> |
-			<%= link_to 'Destroy', article_path(@article), method: :delete, data: { confirm: 'Are you sure?' } %> |
-			<% end %>
+			<%= link_to 'Destroy', article_path(@article), method: :delete, data: { confirm: 'Are you sure?' } %> 
+
+			<% else %>
 
 			 <%= link_to 'Back', articles_path %>
+
+			 <% end %>
+
 			</li>
 
 		</div>

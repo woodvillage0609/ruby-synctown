@@ -6,9 +6,8 @@ class NotesController < ApplicationController
   # GET /notes
   # GET /notes.json
   def index
-    @notes = Note.all.order(created_at: :desc)
     @random_notes = Note.all.order("RAND()")
-    @notes_by_month = Note.all.order(created_at: :desc).group_by { |note| note.created_at.beginning_of_month }
+    @notes = Note.page(params[:page]).order(created_at: :desc)
   end
 
   # GET /notes/1
@@ -72,8 +71,7 @@ class NotesController < ApplicationController
   end
 
   def category_notes
-    @notes = Note.where("note_category_id = ?", params[:id]).order(created_at: :desc)
-    @notes_by_month = @notes.order(created_at: :desc).group_by { |note| note.created_at.beginning_of_month }
+    @notes = Note.page(params[:page]).where("note_category_id = ?", params[:id]).order(created_at: :desc)
     @random_notes = Note.all.order("RAND()")
     render "index"
   end

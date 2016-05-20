@@ -26,6 +26,11 @@ class ArticlesController < ApplicationController
   def edit
   end
 
+  def rest_article 
+    @articles = Article.page(params[:page]).order(created_at: :desc)
+    @random_articles = Article.where.not(id:@article).order("RAND()")
+  end
+
   # POST /articles
   # POST /articles.json
   def create

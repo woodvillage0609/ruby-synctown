@@ -12,25 +12,20 @@
 
   <div class="col-md-10 col-xs-12" style="background-color:#F0F0F0; padding:0px;">
 
-      <div class="row">
-
-         <%= render "slideshow" %>
-
-      </div> 
-
       <div class="article-contents">
 
-       <%= render "article" %>
+       <%= render 'article_rest' %>
 
       </div>
 
-      <div class="pagenation_bottom" style="clear:left;text-align:center;padding:10px 0px;">
-        <%=link_to "さらに記事を見る", article_rest_article_path(:id), class:"grey" %>
-      </div>
-      
+	<div class="pagenation_bottom" style="text-align:center;">
+
+  <%= will_paginate @articles, renderer: BootstrapPagination::Rails %>
+
+  <p><%= link_to 'Back', articles_path %></p>
+
+	</div>
 
   </div>
 
 </div>
-
-

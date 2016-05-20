@@ -84,6 +84,10 @@ a:hover {
 	z-index:2;
 }
 
+.under-wrapper li {
+	padding-bottom:50px;
+}
+
 .container h1 {
 	letter-spacing:6px;
 	font-size:40px;
@@ -130,7 +134,7 @@ a:hover {
 	text-align:center;
 	opacity:1;
 	border-bottom:1px solid #808080;
-    padding-top:110px;
+    padding-top:100px;
 	position:relative;
 }
 
@@ -153,7 +157,7 @@ a:hover {
 	text-align:center;
 	opacity:1;
 	border-bottom:1px solid #808080;
-	padding-top:110px;
+	padding-top:100px;
 	position:relative;
 }
 
@@ -176,7 +180,7 @@ a:hover {
 	text-align:center;
 	opacity:1;
 	border-bottom:1px solid #808080;
-	padding-top:110px;
+	padding-top:100px;
 	position:relative;
 }
 
@@ -361,7 +365,6 @@ a:hover {
 	height:50px;
 	width:50px;
 	overflow:hidden;
-
 }
 
 /* note show */
@@ -479,7 +482,7 @@ a:hover {
 
 .article-tab {
 	display:inline-block;
-	width:60%; 
+	width:70%; 
 	color:#239b76;
 	text-align:center; 
 	padding:15px; 
@@ -608,7 +611,11 @@ a:hover {
 /* ブレイクポイントをmax-width: 670pxに指定 */
 @media(max-width:670px){
 
+  .top-wrapper {height:500px; padding-top:75px;}
+
   .top-wrapper h1 {font-size:24px;}
+
+  .under-wrapper li {padding:20px 0px;}
 
   .hint-wrapper h2, h3 {font-size:18px;}
 

@@ -18,4 +18,6 @@ validates_attachment :photo, content_type: { content_type: ["image/jpg", "image/
 
 scope :subscribed, ->(followers) { where user_id: followers }
 
+self.per_page = 4
+
 end

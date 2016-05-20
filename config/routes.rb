@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   end
   
   resources :articles do
+    get:rest_article
     resources :comments
   end
   
