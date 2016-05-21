@@ -1,11 +1,15 @@
 <div class= "top-wrapper">
 	<div class="under-wrapper">
+	<ul>
+	<li>
 		<h1>
 			まちづくりをもっとみんなの手で
 		</h1>
 		<p>
 			このWebsiteは、まちづくりのアイディアや発想を共有するための投稿サイトです。まちづくりをもっと楽しく。まちづくりをもっとみんなの手で。
-		</p><br><br><br><br>
+		</p>
+	</li>
+	<li>
 		<a>
 			<%= link_to "新規登録はこちら", new_user_registration_path, class: "btn signup", :style=>"text-decoration:none; color:white;" %>
 		</a>
@@ -18,6 +22,8 @@
 		<a>
 		 <%= link_to " Twitterでログイン", new_user_session_path, class: "btn twitter fa fa-twitter", :style=>"color:white;" %>
 		</a>
+	</li>
+	</ul>
 	</div>
 </div>
 
@@ -30,12 +36,12 @@
 		<div class="hints">
 			<div class="under-wrapper">
 			  <ul>
-			   <li>
-				<h3>街への想いをもっと言葉に。<br>あなたの街への想いをみんなに共有しませんか。</h3>
+			  <li>
+				<h3>街への想いをもっと言葉に。<br>あなたの街への想いをみんなに共有しませんか。</h3><br>
 				<p>街を歩きながらいつも感じること。いつも考えること。いいことも悪いことも含めて、<br>そんな一瞬を切り取って是非みんなにシェアしましょう。</p>
 			   </li>
 
-			   <li style="padding-top:50px;"><%= link_to "投稿一覧を見る", notes_path, class:"btn btn-info btn-lg", :role=>"button" %>
+			   <li><%= link_to "投稿一覧を見る", notes_path, class:"btn btn-info btn-lg", :role=>"button" %>
 			   </li>
 			  </ul>
 	     	</div>
@@ -53,11 +59,12 @@
 			<div class="under-wrapper">
 			 <ul>
 			 	<li>
-				<h3>世界中の素敵な取り組み<br>そんな「いいね」なまち記事をみんなでコメントしよう。</h3>
+				<h3>世界中の素敵な取り組み<br>そんな「いいね」なまち記事をみんなでコメントしよう。</h3><br>
 				<p>建築、アート、デザイン、そんな切り口からユニークな取り組みを実践している人たち。暮らしの中のちょっとしたワンシーンに、いろどりを与えてくれる新しい取り組み。<br>そんなみんなのアイディア、取り組み記事を是非みんなコメントして盛り上げましょう</p>
-				<li>
-			
-			   <li style="padding-top:50px;"><%= link_to "記事一覧を見る", articles_path, class:"btn btn-success btn-lg", :role=>"button" %>
+				</li>
+				
+			   <li>
+			   <%= link_to "記事一覧を見る", articles_path, class:"btn btn-success btn-lg", :role=>"button" %>
 			   </li>
 			 </ul>
 		    </div>
@@ -75,11 +82,11 @@
 			<div class="under-wrapper">
 			  <ul>
 			    <li>
-				<h3>街に関する素朴な問い<br>毎週更新されるそんな街に関する「お題」にみんなで意見をぶつけ合おう。</h3>
+				<h3>街に関する素朴な問い<br>毎週更新されるそんな街に関する「お題」にみんなで意見をぶつけ合おう。</h3><br>
 				<p>街に関する素朴な問い。そんな素朴な疑問や問いを毎週ぶつけています。お題に対してみんなで意見をぶつけ合い、熱く語り合おう。</p>
 				</li>
 
-				<li style="padding-top:50px;"><%= link_to "テーマ一覧を見る", microposts_path, class:"btn btn-warning btn-lg", :role=>"button" %>
+				<li><%= link_to "テーマ一覧を見る", microposts_path, class:"btn btn-warning btn-lg", :role=>"button" %>
 				</li>
 			   </ul>
 		    </div>

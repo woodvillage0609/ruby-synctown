@@ -33,11 +33,11 @@ gem 'rails_admin'
 
 gem 'cancan'
 
-gem 'will_paginate', '~> 3.1'
-
 gem 'nokogiri', '~> 1.6', '>= 1.6.7.2'
 
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+
+gem 'will_paginate-bootstrap'
 
 gem 'hirb', '~> 0.7.3'
 
