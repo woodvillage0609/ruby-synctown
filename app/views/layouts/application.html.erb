@@ -47,9 +47,9 @@
           </ul>
         </li>
 
-        <li style="padding-right:15px;"><%=link_to "Profile", current_user %></li>
+        <li><%=link_to "Profile", current_user %></li>
 
-        <li style="padding-right:15px">
+        <li style="padding:0px 15px;">
         <button type="button" class="btn btn-default navbar-btn">
         	<%=link_to "Log Out", destroy_user_session_path, method: :delete, :style=>"color:black;" %>
         </button>
@@ -59,13 +59,13 @@
 
         <li style="padding-right:10px;"><%=link_to "Top", home_top_path %></li>
 
-        <li  style="padding-right:15px;">
-        <button class="btn btn-default navbar-btn" style="display:inline-block;">
+        <li class="top-icon-padding">
+        <button class="btn btn-default navbar-btn" >
           <%=link_to "Register", new_user_registration_path, :style=>"color:black;", :role=>"button" %>
         </button>
         </li>
 
-       	<li style="padding-right:15px;">
+       	<li class="top-icon-padding">
          <button type="button" class="btn btn-success navbar-btn">
           <%=link_to "Sign In", new_user_session_path, :style=>"color:white;" %>
          </button>

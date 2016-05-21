@@ -40,6 +40,9 @@ a:hover {
 	color:white;
 }
 
+.top-icon-padding {
+	padding-right:15px;
+}
 
 /* top page */
 
@@ -85,7 +88,7 @@ a:hover {
 }
 
 .under-wrapper li {
-	padding-bottom:50px;
+	padding:25px;
 }
 
 .container h1 {
@@ -611,7 +614,9 @@ a:hover {
 /* ブレイクポイントをmax-width: 670pxに指定 */
 @media(max-width:670px){
 
-  .top-wrapper {height:500px; padding-top:75px;}
+  .top-icon-padding {padding:0px 15px;}
+
+  .top-wrapper {height:550px; padding-top:50px;}
 
   .top-wrapper h1 {font-size:24px;}
 
