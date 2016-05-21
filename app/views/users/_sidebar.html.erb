@@ -27,18 +27,18 @@
 
 <ul>
    <% if current_user?(@user) %>
-  <li><%= link_to 'New Note', new_note_path, class:"black" %>
+  <li><a><%= link_to 'New Note', new_note_path, class:"user-sidebar-icon" %></a>
   </li>
-  <li><%= link_to 'Edit Profile', edit_user_path(current_user.id), class:"black" %></li>
+  <li><%= link_to 'Edit Profile', edit_user_path(current_user.id), class:"user-sidebar-icon"  %></li>
   <% end %>
-  <li><%= link_to "Pick Notes", like_notes_user_path(@user.id), class:"black" %></li>
-  <li><%= link_to "Following Lists", subscribed_user_path(@user.id), class:"black" %>
+  <li><%= link_to "Pick Notes", like_notes_user_path(@user.id), class:"user-sidebar-icon"  %></li>
+  <li><%= link_to "Following Lists", subscribed_user_path(@user.id), class:"user-sidebar-icon"  %>
   </li>
-  <li><%= link_to "Pick Articles", comment_articles_user_path(@user.id), class:"black" %>
+  <li><%= link_to "Pick Articles", comment_articles_user_path(@user.id), class:"user-sidebar-icon" %>
   </li>
   <% if current_user?(@user) && current_user.email == "woodvillage0609@gmail.com" %>
-   <li><%= link_to 'New Article', new_article_path, class:"black" %></li>
-  <li><%= link_to 'New Micropost', new_micropost_path , class:"black" %></li>
+   <li><%= link_to 'New Article', new_article_path, class:"user-sidebar-icon"  %></li>
+  <li><%= link_to 'New Micropost', new_micropost_path , class:"user-sidebar-icon" %></li>
   <% end %>
 </ul>
 

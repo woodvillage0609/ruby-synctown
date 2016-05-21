@@ -257,7 +257,7 @@ a:hover {
 }
 
 .user-sidebar li{
-	padding:12px 0px;
+	padding:0px 0px;
 	border-top:1px solid #808080;
 	text-align:center;
 	color:#808080;
@@ -293,6 +293,17 @@ a:hover {
 .unfollow{
 	background-color:#239b76;
 	opacity:0.8;
+}
+
+.user-sidebar-icon {
+	display:block;
+	color:black;
+	padding:10px 0px;
+}
+
+.user-sidebar-icon:hover {
+	background-color:#00F9A9;
+	color:black;
 }
 
 /* note index */
