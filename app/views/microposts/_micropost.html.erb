@@ -16,7 +16,7 @@
 </ul>
 
 
-<table style="width:100%; margin-bottom:40px;">
+<table style="width:100%; margin-bottom:20px;">
 	<tr>
 
 		<% micropost.opinions.limit(1).offset(0).order(created_at: :desc).each do |opinion| %>
@@ -65,7 +65,7 @@
 
 </table>
 
-<table style="width:100%; margin-bottom:40px;">
+<table style="width:100%; margin-bottom:20px;">
 	<tr>
 
 		<% micropost.opinions.limit(1).offset(3).order(created_at: :desc).each do |opinion| %>

@@ -302,7 +302,7 @@ a:hover {
 }
 
 .user-sidebar-icon:hover {
-	background-color:#00F9A9;
+	background-color:#AEFFBD;
 	color:black;
 }
 
@@ -526,6 +526,10 @@ a:hover {
 
 /* micropost */
 
+.micropost-contents {
+	padding-bottom:20px;
+}
+
 .micropost-content {
 	width:100%;
 	padding:25px 15px 0px 15px;
@@ -595,6 +599,7 @@ a:hover {
 }
 
 
+
 /* タブレット向けレイアウト */
 /* ブレイクポイントをmax-width: 1000pxに指定 */
 @media(max-width:1000px){
@@ -603,7 +608,7 @@ a:hover {
 
   .note-sidebar {display:none;}
 
-  .note-random {width:50%; float:left; padding:0px 20px;}
+  .note-random {width:50%; float:left; padding:0px 25px;}
 
   .article-content {width:50%;}
 
