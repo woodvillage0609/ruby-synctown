@@ -2,117 +2,44 @@
 
 <div class="micropost-content-sub">
 
-<p style="padding-bottom:10px;">
+<p style="padding-bottom:5px;">
 
 <strong><%=link_to micropost.title, micropost, :style=>"font-size:20px;", class:"black" %></strong>
 
 </p>
 
 
-        <a style="font-size:13px; color:#808080; position:absolute; bottom:5px; right:10px;">
-           <%= micropost.created_at.to_formatted_s(:without_second) %>
-        </a>
+<a style="font-size:13px; color:#808080; position:absolute; bottom:5px; right:10px;">
+   <%= micropost.created_at.to_formatted_s(:without_second) %>
+</a>
 
-</ul>
+<% micropost.opinions.limit(6).order(created_at: :desc).each do |opinion| %>
 
+<div class="micropost-table">
 
-<table style="width:100%; margin-bottom:20px;">
-	<tr>
+<div class="micropost-table-sub">
 
-		<% micropost.opinions.limit(1).offset(0).order(created_at: :desc).each do |opinion| %>
-		<td>
-			<%= image_tag(opinion.user.image, {class:"img-circle"}) %>
-			<%= opinion.user.name %>
-		</td>
-		<% end %>
+<table>
 
-		<% micropost.opinions.limit(1).offset(1).order(created_at: :desc).each do |opinion| %>
-		<td>
-			<%= image_tag(opinion.user.image, {class:"img-circle"}) %>
-			<%= opinion.user.name %>
-		</td>
-		<% end %>
-
-		<% micropost.opinions.limit(1).offset(2).order(created_at: :desc).each do |opinion| %>
-		<td>
-			<%= image_tag(opinion.user.image, {class:"img-circle"}) %>
-			<%= opinion.user.name %>
-		</td>
-		<% end %>
-
-	</tr>
-
-	<tr>
-	    <% micropost.opinions.limit(1).offset(0).order(created_at: :desc).each do |opinion| %>
-		<td>
-			<%= opinion.body.truncate(80) %>
-		</td>
-		<% end %>
-
-	    <% micropost.opinions.limit(1).offset(1).order(created_at: :desc).each do |opinion| %>
-		<td>
-			<%= opinion.body.truncate(80) %>
-		</td>
-		<% end %>
-
-		 <% micropost.opinions.limit(1).offset(2).order(created_at: :desc).each do |opinion| %>
-		<td>
-			<%= opinion.body.truncate(80) %>
-		</td>
-		<% end %>
-
-	</tr>	
+<tr>
+<td>
+<%= image_for(opinion.user) %>
+<a style="color:#000080;"><strong><%= opinion.user.name %></strong></a>
+</td>
+</tr>
+<tr>
+<td>
+<%= opinion.body.truncate(80) %>
+</td>
+</tr>
 
 </table>
 
-<table style="width:100%; margin-bottom:20px;">
-	<tr>
+</div>
 
-		<% micropost.opinions.limit(1).offset(3).order(created_at: :desc).each do |opinion| %>
-		<td>
-			<%= image_tag(opinion.user.image, {class:"img-circle"}) %>
-			<%= opinion.user.name %>
-		</td>
-		<% end %>
+</div>
 
-		<% micropost.opinions.limit(1).offset(4).order(created_at: :desc).each do |opinion| %>
-		<td>
-			<%= image_tag(opinion.user.image, {class:"img-circle"}) %>
-			<%= opinion.user.name %>
-		</td>
-		<% end %>
-
-		<% micropost.opinions.limit(1).offset(5).order(created_at: :desc).each do |opinion| %>
-		<td>
-			<%= image_tag(opinion.user.image, {class:"img-circle"}) %>
-			<%= opinion.user.name %>
-		</td>
-		<% end %>
-
-	</tr>
-
-	<tr>
-	    <% micropost.opinions.limit(1).offset(3).order(created_at: :desc).each do |opinion| %>
-		<td>
-			<%= opinion.body.truncate(80) %>
-		</td>
-		<% end %>
-
-	    <% micropost.opinions.limit(1).offset(4).order(created_at: :desc).each do |opinion| %>
-		<td>
-			<%= opinion.body.truncate(80) %>
-		</td>
-		<% end %>
-
-		 <% micropost.opinions.limit(1).offset(5).order(created_at: :desc).each do |opinion| %>
-		<td>
-			<%= opinion.body.truncate(80) %>
-		</td>
-		<% end %>
-
-	</tr>	
-
-</table>
+<% end %>
 
 </div>
 

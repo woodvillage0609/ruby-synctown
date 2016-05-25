@@ -218,6 +218,36 @@ a:hover {
 	font-size:15px;
 }
 
+/* side bar */
+
+.sidebar-all-photo {
+	height:200px;
+	width:100%; 
+	border-bottom:1px solid #808080; 
+	background-color:#F0F0F0;
+	position:relative; 
+	text-align:center;
+}
+.sidebar-all-photo:before {
+	z-index:1;
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color:rgba(0,0,0,0.5);
+}
+
+.sidebar-all-photo-sub {
+	position:absolute; 
+	top:85px; 
+	left:0px; 
+	right:0px; 
+	text-align:center;z-index:2;
+}
+
 /* user index */
 
 .post-list {
@@ -338,6 +368,12 @@ a:hover {
 	right:5px;
 	bottom:30px;
 	font-size:13px;
+}
+
+.fa-user-plus {
+		font-size:150px;
+		padding-top:30px; 
+		color:white; 
 }
 
 .time {
@@ -527,22 +563,25 @@ a:hover {
 /* micropost */
 
 .micropost-contents {
-	padding-bottom:20px;
+	padding-top:20px;
 }
 
 .micropost-content {
 	width:100%;
-	padding:25px 15px 0px 15px;
+	padding:0px 15px 20px 15px;
 	margin:0 auto;
+	float:left;
 }
 
 .micropost-content-sub {
+	padding:15px;
 	position:relative;
+	width:100%;
 	height:100%;
 	border:0px solid #808080;
 	border-radius:5px 5px 10px 10px;
-	padding:10px;
 	background-color:white;
+	float:left;
 }
 
 .micropost-content img {
@@ -550,8 +589,14 @@ a:hover {
 	height:30px;
 }
 
-.micropost-content table td {
-	padding:0px 5px;
+.micropost-table {
+	width:33.33%;
+	padding:5px;
+	float:left;
+}
+
+.micropost-table-sub {
+	
 }
 
 .show-micropost-content {
@@ -624,6 +669,8 @@ a:hover {
 
   .login-note {width:70%;}
 
+  .micropost-contents {float:left;background-color:#F0F0F0}
+
 
 }
 
@@ -689,6 +736,9 @@ a:hover {
 
   .user-sidebar-wrapper {padding:0px 25px;}
 
+  .micropost-contents {float:left;background-color:#F0F0F0}
+
+  .micropost-table {width:100%;}
 
 }
 
