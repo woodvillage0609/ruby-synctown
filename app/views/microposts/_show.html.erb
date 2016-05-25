@@ -30,11 +30,21 @@
 			</li>
 
 		</ul>
+
 			<% if user_signed_in? && current_user.email == "woodvillage0609@gmail.com" %>
-			<%= link_to 'Edit', edit_micropost_path(@micropost) %> |
-			<%= link_to 'Destroy', micropost_path(@micropost), method: :delete, data: { confirm: 'Are you sure?' } %> |
-			<% end %>
+
+			<li style="text-align:left;padding:0px;">
 			<%= link_to 'Back', microposts_path %> 
+			</li>
+
+			<li style="position:absolute; right:10px; bottom:10px;">
+			<%= link_to 'Edit', edit_micropost_path(@micropost) %> |
+			<%= link_to 'Destroy', micropost_path(@micropost), method: :delete, data: { confirm: 'Are you sure?' } %> 
+			</li>
+
+			<% else %>
+			<%= link_to 'Back', microposts_path %> 
+			<% end %>
 			
 </div>
 

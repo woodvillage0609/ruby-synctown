@@ -40,10 +40,13 @@ Rails.application.routes.draw do
 
 resources :relationships, only: [:create, :destroy]
 
-  root 'home#top'
+root 'home#top'
 
-  post 'like/:note_id' => 'likes#like', as:'like'
-  delete 'unlike/:note_id' => 'likes#unlike', as:'unlike'
+post 'like/:note_id' => 'likes#like', as:'like'
+delete 'unlike/:note_id' => 'likes#unlike', as:'unlike'
+
+get '/auth/:provider/callback',    to: 'users#create',       as: :auth_callback
+get '/auth/failure',               to: 'users#auth_failure', as: :auth_failure
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

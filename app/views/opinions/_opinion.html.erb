@@ -7,7 +7,7 @@
 <th style="font-size:9px;">
  <ul>
  	<li style="position:absolute; top:15px; left:5px; text-align:center;">
- 	<%= image_tag(opinion.user.image, {class:"img-circle"}) %><br>
+ 	<%= image_for(opinion.user) %><br>
 	<% if user_signed_in? && current_user?(opinion.user) %>
 	<%= link_to 'Destroy', [opinion.micropost, opinion],
 	               method: :delete,
