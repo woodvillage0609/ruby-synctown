@@ -9,6 +9,10 @@
 			このWebsiteは、まちづくりのアイディアや発想を共有するための投稿サイトです。まちづくりをもっと楽しく。まちづくりをもっとみんなの手で。
 		</p>
 	</li>
+
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
+
 	<li>
 		<a>
 			<%= link_to "新規登録はこちら", new_user_registration_path, class: "btn signup", :style=>"text-decoration:none; color:white;" %>
@@ -24,9 +28,6 @@
 		</a>
 	</li>
 	</ul>
-
-	<p class="notice"><%= notice %></p>
-	<p class="alert"><%= alert %></p>
 
 	</div>
 </div>
