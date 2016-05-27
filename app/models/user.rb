@@ -60,7 +60,7 @@ class User < ActiveRecord::Base
                           provider: auth.provider,
                           uid:      auth.uid,
                           email:    auth.info.email,
-                          image:    auth.info.image
+                          image:    auth.info.image,
                           token:    auth.credentials.token,
                           password: Devise.friendly_token[0,20] )
     end
