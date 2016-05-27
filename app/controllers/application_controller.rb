@@ -7,11 +7,6 @@ class ApplicationController < ActionController::Base
 
   include ApplicationHelper
 
-  def authenticate_user!
-    session[:user_return_to] = env['PATH_INFO']
-    redirect_to user_omniauth_authorize_path(:facebook) unless user_signed_in?
-  end
-
 
 private
 def configure_permitted_parameters
