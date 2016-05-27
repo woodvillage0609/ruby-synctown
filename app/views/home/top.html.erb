@@ -9,6 +9,10 @@
 			このWebsiteは、まちづくりのアイディアや発想を共有するための投稿サイトです。まちづくりをもっと楽しく。まちづくりをもっとみんなの手で。
 		</p>
 	</li>
+
+	<a class="notice white"><%= notice %></a>
+	<a class="alert white"><%= alert %></a>
+
 	<li>
 		<a>
 			<%= link_to "新規登録はこちら", new_user_registration_path, class: "btn signup", :style=>"text-decoration:none; color:white;" %>
@@ -17,16 +21,13 @@
 			すでに登録済みの方は
 		</p>
 		<a>
-		 <%= link_to " Facebookでログイン", new_user_session_path, class: "btn facebook fa fa-facebook", :style=>"color:white;" %>
+		 <%= link_to " Facebookでログイン", user_omniauth_authorize_path(:facebook), class: "btn facebook fa fa-facebook", :style=>"color:white;" %>
 		</a>
 		<a>
 		 <%= link_to " Twitterでログイン", new_user_session_path, class: "btn twitter fa fa-twitter", :style=>"color:white;" %>
 		</a>
 	</li>
 	</ul>
-
-	<p class="notice"><%= notice %></p>
-	<p class="alert"><%= alert %></p>
 
 	</div>
 </div>
