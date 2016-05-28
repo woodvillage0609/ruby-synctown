@@ -248,7 +248,7 @@ DEPENDENCIES
   jquery-rails
   mysql2 (~> 0.3.20)
   nokogiri (~> 1.6, >= 1.6.7.2)
-  omniauth-facebook (~> 3.0)
+  omniauth-facebook
   paperclip
   rails (= 4.2.4)
   rails_12factor

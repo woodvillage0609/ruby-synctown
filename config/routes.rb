@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   end
   
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
   devise_for :users
 
   resources :users, only:[:index, :show, :edit, :update] do
@@ -47,7 +48,7 @@ delete 'unlike/:note_id' => 'likes#unlike', as:'unlike'
 
 get '/auth/:provider/callback',    to: 'users#create',       as: :auth_callback
 get '/auth/failure',               to: 'users#auth_failure', as: :auth_failure
-  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

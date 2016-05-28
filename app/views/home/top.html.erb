@@ -21,7 +21,7 @@
 			すでに登録済みの方は
 		</p>
 		<a>
-		 <%= link_to " Facebookでログイン", user_omniauth_authorize_path(:facebook), class: "btn facebook fa fa-facebook", :style=>"color:white;" %>
+		 <%= link_to " Facebookでログイン", new_user_session_path, class: "btn facebook fa fa-facebook", :style=>"color:white;" %>
 		</a>
 		<a>
 		 <%= link_to " Twitterでログイン", new_user_session_path, class: "btn twitter fa fa-twitter", :style=>"color:white;" %>

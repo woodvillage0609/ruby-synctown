@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable, :validatable, :omniauthable, :omniauth_providers => [:facebook]
+  devise :database_authenticatable, :registerable, :validatable
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
 
@@ -52,20 +52,21 @@ class User < ActiveRecord::Base
   end
 
   #Facebookでログイン
-  def self.find_for_facebook_oauth(auth)
-    user = User.where(provider: auth.provider, uid: auth.uid).first
+  validates :password, presence: false, on: :facebook_login
 
-    unless user
-      user = User.create( name:     auth.extra.raw_info.name,
-                          provider: auth.provider,
-                          uid:      auth.uid,
-                          email:    auth.info.email,
-                          image:    auth.info.image,
-                          token:    auth.credentials.token,
-                          password: Devise.friendly_token[0,20] )
+    def self.from_omniauth(auth)
+        # emailの提供は必須とする
+        user = User.where('email = ?', auth.info.email).first
+      if user.blank?
+        user = User.new
+      end
+    user.uid   = auth.uid
+    user.name  = auth.info.name
+    user.email = auth.info.email
+    user.icon  = auth.info.image
+    user.oauth_token      = auth.credentials.token
+    user.oauth_expires_at = Time.at(auth.credentials.expires_at)
+    user
     end
-
-    return user
-end
 
 end
