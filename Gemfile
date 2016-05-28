@@ -51,7 +51,9 @@ gem 'rails_12factor', group: :production
 
 gem 'aws-sdk', '<2.0'
 
-gem 'omniauth-facebook'
+gem 'omniauth-facebook', '~> 3.0'
+
+gem 'omniauth', '~> 1.3', '>= 1.3.1'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
