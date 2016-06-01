@@ -54,7 +54,7 @@ class User < ActiveRecord::Base
   #Facebookでログイン
   validates :password, presence: false, on: :facebook_login
 
-    def self.from_omniauth(auth)
+  def self.from_omniauth(auth)
         # emailの提供は必須とする
         user = User.where('email = ?', auth.info.email).first
       if user.blank?
@@ -69,7 +69,7 @@ class User < ActiveRecord::Base
     user
     end
 
-    def self.find_for_oauth(auth)
+  def self.find_for_oauth(auth)
     user = User.where(uid: auth.uid, provider: auth.provider).first
 
     unless user
