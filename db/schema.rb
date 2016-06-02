@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160527133113) do
+ActiveRecord::Schema.define(version: 20160528220251) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "photo",      limit: 255
@@ -108,7 +108,6 @@ ActiveRecord::Schema.define(version: 20160527133113) do
     t.datetime "image_updated_at"
     t.string   "provider",           limit: 255
     t.string   "uid",                limit: 255
-    t.string   "token",              limit: 255
   end
 
   add_foreign_key "comments", "articles"
