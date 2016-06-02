@@ -25,7 +25,7 @@
 	<% @random_notes.limit(4).each do |random_note| %>
 
 	<div class="note-random" >
-	<ul style="background-color:white;">
+	<ul>
 		<li>
 			<%=link_to image_tag(random_note.photo.url(:thumb), {:style=>"width:100%; height:200px; border-radius:5px 5px 0px 0px;"}), note_path(random_note) %>
 		</li>

@@ -441,10 +441,11 @@ a:hover {
 
 .note-random {
 	width:90%;
-	height:300px; 
+	height:100%; 
 	border:0px solid #808080; 
 	margin-bottom:30px;
-	border-radius:5px; 
+	border-radius:5px;
+	background-color:white;
 }
 
 /* note login signin fotmat  */
@@ -549,9 +550,10 @@ a:hover {
 
 .random-article {
 	width:90%; 
-	height:280px; 
+	height:100%; 
 	border:0px solid #808080;
-	margin-top:20px; 
+	margin-top:20px;
+	margin-bottom:20px;
 }
 
 .random-article-photo {
