@@ -441,10 +441,14 @@ a:hover {
 
 .note-random {
 	width:90%;
-	height:300px; 
+	height:100%; 
 	border:0px solid #808080; 
 	margin-bottom:30px;
-	border-radius:5px; 
+	border-radius:5px;
+}
+
+.note-random-under {
+	background-color:white;
 }
 
 /* note login signin fotmat  */
@@ -549,9 +553,14 @@ a:hover {
 
 .random-article {
 	width:90%; 
-	height:280px; 
+	height:100%; 
 	border:0px solid #808080;
-	margin-top:20px; 
+	padding:20px 0px;
+}
+
+.random-article-under {
+	background-color:white;
+	border-radius:5px;
 }
 
 .random-article-photo {
@@ -663,7 +672,9 @@ a:hover {
 
   .article-side-slideshow ul {float:left;}
 
-  .random-article {width:50%;float:left; padding:0px 20px; margin-bottom:0px;}
+  .random-article {width:50%;float:left; padding:20px 15px;}
+
+  .random-article-under {height:260px;}
 
   .note {width:70%;}
 
@@ -720,7 +731,7 @@ a:hover {
 
   .article-side-slideshow {width:100%; margin:5px 0px;}
 
-  .random-article {width:100%; padding:0px 15px; margin-bottom:0px;}
+  .random-article {width:100%; padding:20px 15px;}
 
   .show-article-content {width:100%; margin-top:0px;}
 

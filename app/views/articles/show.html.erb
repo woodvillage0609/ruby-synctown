@@ -22,16 +22,19 @@
 
 <% @random_articles.limit(4).each do |random_article| %>
 <div class="random-article">
+<div class="random-article-under">
 
 <ul>
 <li>	
 <%=link_to image_tag(random_article.photo, {class:"random-article-photo"}), article_path(random_article) %>
 </li>
 
-<li style="padding:5px; background-color:white;">
+<li style="padding:5px;">
 <%= link_to random_article.title.truncate(50), article_path(random_article), class:"black", :style=>"font-size:16px;" %>
 </li>
+</ul>
 
+</div>
 </div>
 
 <% end %>
