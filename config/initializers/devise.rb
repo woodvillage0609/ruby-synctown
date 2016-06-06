@@ -11,7 +11,7 @@ Devise.setup do |config|
 
   #Facebookアカウントによるログイン機能
   require "omniauth-facebook"
-  config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_SECRET'], provider_ignores_state: true
+  config.omniauth :facebook, ENV["FACEBOOK_APP_ID"], ENV["FACEBOOK_SECRET"], provider_ignores_state: true
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
