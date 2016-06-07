@@ -1,11 +1,11 @@
 
-<div class="note-sidebar"  style="height:auto; border-bottom:1px solid #808080; border-right:1px solid #808080;">
+<div class="note-sidebar"  style="height:100%; border-bottom:1px solid #808080; border-right:1px solid #808080;">
 
 
   <% if user_signed_in? %>
 
   <div class="note-side-photo" style="height:200px; padding-top:60px; ;border-bottom:1px solid #808080; text-align:center;">
-      <%=link_to image_for(current_user), user_path(current_user) %><br>
+      <a><%=link_to image_for(current_user), user_path(current_user) %></a><br>
       <%=link_to current_user.name, user_path(current_user), class:"black" %>
   </div>
 
@@ -25,7 +25,7 @@
 
 
   <div class="sidebar-all-photo">
-  <%= image_tag("IMG_0100.jpg", {:style=>"height:100%; width:100%;"}) %>
+  <%= image_tag("https://azukichi.net/img/music/onpu402.jpg", {:style=>"height:100%; width:100%;"}) %>
  </div>
 
  <div class="sidebar-all-photo-sub" >
