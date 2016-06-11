@@ -318,6 +318,7 @@ a:hover {
 	color:white;
 	cursor:pointer;
 	border:0px solid white;
+	border-radius:0px;
 }
 
 .unfollow{
@@ -371,9 +372,9 @@ a:hover {
 }
 
 .fa-user-plus {
-		font-size:150px;
-		padding-top:30px; 
-		color:white; 
+	font-size:150px;
+	padding-top:30px; 
+	color:white; 
 }
 
 .time {
@@ -412,9 +413,13 @@ a:hover {
 }
 
 .img-circle {
-	height:50px;
-	width:50px;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
 }
+
+
+
 
 /* note show */
 
@@ -694,7 +699,7 @@ a:hover {
 
   .top-wrapper h1 {font-size:24px;}
 
-  .under-wrapper li {padding:20px 0px;}
+  .under-wrapper li {padding:10px 0px;}
 
   .hints {padding-top:50px;height:400px;}
 
