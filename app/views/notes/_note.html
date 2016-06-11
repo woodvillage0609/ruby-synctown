@@ -12,13 +12,13 @@
     	</span>
     </li>
     <li>
-    	<%=link_to note.content.truncate(150), note_path(note), class:"black" %>
+    	<%=link_to note.content.truncate(130), note_path(note), class:"black" %>
     </li>
  </ul>
 
 
  <div class="user-image-position">
- 	<a><%=link_to image_for(note.user), user_path(note.user) %></as>
+ 	<a><%=link_to image_for(note.user), user_path(note.user) %></a>
  	<a><%=link_to note.user.name, user_path(note.user), :style=>"color:black;" %></a>
  </div>
 

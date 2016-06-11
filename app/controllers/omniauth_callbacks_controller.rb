@@ -1,7 +1,6 @@
-class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
+class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
-
-  def facebook
+def facebook
     callback_from :facebook
   end
 
@@ -20,4 +19,5 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       redirect_to new_user_registration_url
     end
   end
+	
 end

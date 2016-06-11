@@ -372,9 +372,9 @@ a:hover {
 }
 
 .fa-user-plus {
-		font-size:150px;
-		padding-top:30px; 
-		color:white; 
+	font-size:150px;
+	padding-top:30px; 
+	color:white; 
 }
 
 .time {
@@ -413,9 +413,13 @@ a:hover {
 }
 
 .img-circle {
-	height:50px;
-	width:50px;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
 }
+
+
+
 
 /* note show */
 
