@@ -20,8 +20,8 @@
 
         <% @microposts.limit(1).offset(0).each do |micropost| %>
 
-  	  	<p>今週のテーマは<strong>「<%= micropost.title %>」です。</strong></p><br><br>
-  	  	<p><a><%=link_to "詳細を見る", micropost_path(micropost), class:"btn btn-warning btn-lg", :role=>"button", :style=>"margin:0 auto;" %></a></p>
+  	  	<p>今週のテーマは<strong>「<%= micropost.title %>」</strong>です。</p><br><br>
+  	  	<a><%=link_to "詳細を見る", micropost_path(micropost), class:"btn btn-warning btn-lg", :role=>"button", :style=>"margin:0 auto;" %></a>
 
         <% end %>
 
