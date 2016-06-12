@@ -206,8 +206,8 @@ a:hover {
 	display:block;
 	border-top:1px solid #808080;
 	clear:left;
-	padding-left:15px;
-	padding-top:15px;
+	padding:15px 0px 15px 15px;
+
 }
 
 .footer-left li{
@@ -221,7 +221,7 @@ a:hover {
 /* side bar */
 
 .sidebar-all-photo {
-	height:200px;
+	height:180px;
 	width:100%; 
 	border-bottom:1px solid #808080; 
 	background-color:#F0F0F0;
@@ -242,7 +242,7 @@ a:hover {
 
 .sidebar-all-photo-sub {
 	position:absolute; 
-	top:85px; 
+	top:75px; 
 	left:0px; 
 	right:0px; 
 	text-align:center;z-index:2;
@@ -346,7 +346,7 @@ a:hover {
 }
 
 .note-content-sub {
-    border:1px solid #808080;
+    border:0px solid #C0C0C0;
     position:relative;
     border-radius:5px 5px 10px 10px;
     height:450px;
