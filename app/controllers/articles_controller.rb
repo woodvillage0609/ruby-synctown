@@ -84,7 +84,7 @@ class ArticlesController < ApplicationController
 
 
     def super_user
-      unless user_signed_in? && current_user.email == "woodvillage0609@gmail.com" 
+      unless user_signed_in? && current_user.email == "woodvillage0525@gmail.com" 
         redirect_to root_path
       end
     end

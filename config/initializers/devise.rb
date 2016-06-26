@@ -11,8 +11,11 @@ Devise.setup do |config|
 
   #Facebookアカウントによるログイン機能
   require "omniauth-facebook"
-  config.omniauth :facebook, ENV["FACEBOOK_APP_ID"], ENV["FACEBOOK_SECRET"], provider_ignores_state: true
+  config.omniauth :facebook, ENV["FACEBOOK_APP_ID"], ENV["FACEBOOK_SECRET"], :image_size => "large", provider_ignores_state: true
 
+  #Twitterアカウントによるログイン機能
+  require "omniauth-twitter"
+  config.omniauth :twitter, ENV["TWITTER_CONSUMER_KEY"], ENV["TWITTER_CONSUMER_SECRET"], provider_ignores_state: true
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class

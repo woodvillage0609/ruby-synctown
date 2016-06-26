@@ -24,7 +24,7 @@
 		 <%= link_to " Facebookでログイン", user_omniauth_authorize_path(:facebook), class: "btn facebook fa fa-facebook", :style=>"color:white;" %>
 		</a>
 		<a>
-		 <%= link_to " Twitterでログイン", new_user_session_path, class: "btn twitter fa fa-twitter", :style=>"color:white;" %>
+		 <%= link_to " Twitterでログイン", user_omniauth_authorize_path(:twitter), class: "btn twitter fa fa-twitter", :style=>"color:white;" %>
 		</a>
 	</li>
 	</ul>
