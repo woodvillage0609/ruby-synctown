@@ -137,7 +137,7 @@ GEM
       omniauth-oauth (~> 1.1)
     open_uri_redirections (0.2.1)
     orm_adapter (0.5.0)
-    paperclip (4.3.4)
+    paperclip (4.3.6)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
       cocaine (~> 0.5.5)
@@ -260,7 +260,7 @@ DEPENDENCIES
   omniauth-facebook (~> 3.0)
   omniauth-twitter (~> 1.2, >= 1.2.1)
   open_uri_redirections (~> 0.2.1)
-  paperclip
+  paperclip (~> 4.3, >= 4.3.6)
   rails (= 4.2.4)
   rails_12factor
   rails_admin

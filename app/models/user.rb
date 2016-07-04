@@ -52,7 +52,7 @@ class User < ActiveRecord::Base
   end
 
   #Facebookでログイン
-  validates :password, presence: false, on: :facebook_login, on: :twitter_login
+  validates :password, presence: false, on: :facebook_login
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
@@ -67,6 +67,7 @@ class User < ActiveRecord::Base
           require 'open-uri'
           require 'open_uri_redirections'
           user.image = open(auth.info.image, :allow_redirections => :safe)
+          
         end
 
     end
