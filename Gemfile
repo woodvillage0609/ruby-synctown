@@ -25,7 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'rmagick', '~> 2.15', '>= 2.15.4'
 
-gem 'paperclip'
+gem 'paperclip', '~> 4.3', '>= 4.3.6'
 
 gem 'devise', '3.5.6'
 
@@ -53,7 +53,11 @@ gem 'aws-sdk', '<2.0'
 
 gem 'omniauth-facebook', '~> 3.0'
 
+gem 'omniauth-twitter', '~> 1.2', '>= 1.2.1'
+
 gem 'omniauth', '~> 1.3', '>= 1.3.1'
+
+gem 'open_uri_redirections', '~> 0.2.1'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

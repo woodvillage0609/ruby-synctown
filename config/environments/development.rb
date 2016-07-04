@@ -39,6 +39,9 @@ Rails.application.configure do
   ENV['FACEBOOK_APP_ID'] = "586490178186700";
   ENV['FACEBOOK_SECRET'] = "523cb9debc06a6cbd65224be43294604";
 
+  ENV['TWITTER_CONSUMER_KEY'] = "fpNquqZRZFiQHpbAp0rVhgEgD";
+  ENV['TWITTER_CONSUMER_SECRET'] = "KjDghqW2Jh8X5wgYHfIoqAFA3FkupnODLsZE63skkdxp1Yvx7D";
+
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 

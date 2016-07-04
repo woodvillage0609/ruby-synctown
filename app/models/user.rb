@@ -1,12 +1,12 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable, :validatable, :omniauthable, omniauth_providers: [:facebook]
+  devise :database_authenticatable, :registerable, :validatable, :omniauthable, omniauth_providers: [:facebook, :twitter]
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
 
 	validates :name, presence:true
-	validates :email, presence:true, uniqueness:true
+	validates :email, uniqueness:true
 	has_many :notes
   has_many :likes
   has_many :like_notes, through: :likes, source: :note
@@ -55,39 +55,45 @@ class User < ActiveRecord::Base
   validates :password, presence: false, on: :facebook_login
 
   def self.from_omniauth(auth)
-        # emailの提供は必須とする
-        user = User.where('email = ?', auth.info.email).first
-      if user.blank?
-        user = User.new
-      end
-    user.uid   = auth.uid
-    user.name  = auth.info.name
-    user.email = auth.info.email
-    user.image  = auth.info.image
-    user.oauth_token      = auth.credentials.token
-    user.oauth_expires_at = Time.at(auth.credentials.expires_at)
-    user
+    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+
+        user.provider = auth.provider
+        user.uid = auth.uid
+        user.email = auth.info.email
+        user.name = auth.info.nickname
+        user.name = auth.info.name
+
+        if auth.info.image.present?
+          require 'open-uri'
+          require 'open_uri_redirections'
+          user.image = open(auth.info.image, :allow_redirections => :safe)
+          
+        end
+
     end
-
-  def self.find_for_oauth(auth)
-    user = User.where(uid: auth.uid, provider: auth.provider).first
-
-    unless user
-      user = User.create(
-        uid:      auth.uid,
-        provider: auth.provider,
-        email:    User.dummy_email(auth),
-        password: Devise.friendly_token[0, 20]
-      )
-    end
-
-    user
   end
 
-  private
+  def self.new_with_session(params, session)
+    if session["devise.user_attributes"]
+      new(session["devise.user_attributes"], without_protection: true) do |user|
+      user.attributes = params
+      user.valid?
+      end
+      else
+      super 
+    end
+  end
 
-  def self.dummy_email(auth)
-    "#{auth.uid}-#{auth.provider}@example.com"
+  def password_required?
+    super && provider.blank?
+  end
+
+  def update_with_password(params, *options)
+    if encrypted_password.blank?
+      update_attributes(params, *options)
+    else
+      super
+    end
   end
 
 end

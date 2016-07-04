@@ -15,6 +15,8 @@
     <%= f.email_field :email, autofocus: true, class: "form-control" %>
   </div>
 
+  <% if f.object.password_required? %>
+
   <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
@@ -27,6 +29,8 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
   </div>
+
+ <% end %>
 
   <div class="actions">
     <%= f.submit "Sign up", class: "btn btn-success", :style=>"background-color:#239b76;" %>

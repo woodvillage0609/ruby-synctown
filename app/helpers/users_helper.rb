@@ -10,4 +10,14 @@ module UsersHelper
 
 	end
 
+	def portrait(size)
+
+    # Twitter
+    # mini (24x24)                                                                  
+    # normal (48x48)                                            
+    # bigger (73x73)                                                
+    # original (variable width x variable height)
+
+end
+
 end
