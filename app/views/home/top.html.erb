@@ -30,7 +30,8 @@
 	<% else %>
 
 	<li>
-	<%=link_to image_for(current_user), user_path(current_user) %>
+	<%=link_to image_for(current_user), user_path(current_user) %><br>
+	<%= current_user.name %>
 	</li>
 
 	<% end %>

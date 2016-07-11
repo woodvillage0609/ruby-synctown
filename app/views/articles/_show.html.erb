@@ -26,9 +26,10 @@
 			</li>
 
 			<li>
-			<p style="text-align:center;width:100%; border-bottom:1px dotted #808080; padding-bottom:10px; font-size:15px;"> コメント一覧　<%= @article.comments.count %>件</p>
+			<p style="text-align:center;width:100%; border-bottom:1px dotted #808080; font-size:15px;"> コメント一覧　<%= @article.comments.count %>件</p>
 			<%= render @article.comments.order(created_at: :desc) %>
 			</li>
+			
       
 			<% if user_signed_in? && current_user.email == "woodvillage0525@gmail.com" %>
 

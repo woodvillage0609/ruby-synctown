@@ -1,14 +1,13 @@
 <div class="show-micropost-content">
 
 			<div class="background-micropost">
-				<%= image_tag(@micropost.picture, {:style=>"width:100%; max-height:300px; border-radius:5px 5px 0px 0px;"}) %>
+				<%= image_tag(@micropost.picture, {:style=>"width:100%; height:auto; border-radius:5px 5px 0px 0px;"}) %>
 
 				<div class="under-micropost">
 				</div>
 
 			</div>
 		  
-
 			  <li style="padding-bottom:30px;">
 			   <h3><strong><%= @micropost.title %></strong></h3>
 			  </li>
@@ -24,7 +23,7 @@
 			<%= render 'opinions/form' %>
 			</li>
 
-			<li style="padding-bottom:30px;">
+			<li style="padding-bottom:10px;">
 			<p style="text-align:center; font-size:17px; width:100%; border-bottom:1px dotted #808080;"> コメント一覧　<%= @micropost.opinions.count %>件</p>
 			<%= render @micropost.opinions.order(created_at: :desc) %>
 			</li>
