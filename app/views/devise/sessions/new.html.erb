@@ -26,7 +26,9 @@
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<%= link_to " Facebookでログイン", user_omniauth_authorize_path(:facebook), class: "btn facebook fa fa-facebook", :style=>"color:white; width:100%; padding:10px 0px;" %>
+
+<%= link_to " Twitterでログイン", user_omniauth_authorize_path(:twitter), class: "btn twitter fa fa-twitter", :style=>"color:white; width:100%; padding:10px 0px;" %>
 
 </div>
 
