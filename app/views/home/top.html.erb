@@ -10,8 +10,7 @@
 		</p>
 	</li>
 
-	<a class="notice white"><%= notice %></a>
-	<a class="alert white"><%= alert %></a>
+	<% if !user_signed_in? %>
 
 	<li>
 		<a>
@@ -27,6 +26,15 @@
 		 <%= link_to " Twitterでログイン", user_omniauth_authorize_path(:twitter), class: "btn twitter fa fa-twitter", :style=>"color:white;" %>
 		</a>
 	</li>
+
+	<% else %>
+
+	<li>
+	<%=link_to image_for(current_user), user_path(current_user) %>
+	</li>
+
+	<% end %>
+
 	</ul>
 
 	</div>
