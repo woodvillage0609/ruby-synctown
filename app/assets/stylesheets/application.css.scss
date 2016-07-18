@@ -309,6 +309,7 @@ a:hover {
 .stats {
     width:100%;
 	border-bottom:1px solid #808080;
+	border-top:1px solid #808080;
 }
 
 .stats td{
@@ -694,6 +695,8 @@ a:hover {
 
   .micropost-contents {float:left;background-color:#F0F0F0}
 
+  .user-sidebar img {width:150px;height:150px;border-radius:50%;border:1px solid #808080; margin:10px 0px;}
+
 
 }
 
@@ -707,7 +710,7 @@ a:hover {
 
   .top-wrapper h1 {font-size:24px;}
 
-  .under-wrapper li {padding:10px 0px;}
+  .under-wrapper li {padding:10px 10px;}
 
   .hints {padding-top:50px;height:400px;}
 
