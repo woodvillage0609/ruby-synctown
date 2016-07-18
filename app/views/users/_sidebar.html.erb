@@ -1,8 +1,9 @@
 
 <div class="user-sidebar" style="background-color:white;">
 
-
+<div class="user-sidebar-image" style="text-align:center;">
 <a><%=link_to image_for(@user), user_path(@user.id) %></a>
+</div>
 
 <a>
   <%= render 'users/stats' %>

@@ -309,6 +309,7 @@ a:hover {
 .stats {
     width:100%;
 	border-bottom:1px solid #808080;
+	border-top:1px solid #808080;
 }
 
 .stats td{
@@ -693,6 +694,8 @@ a:hover {
   .login-note {width:70%;}
 
   .micropost-contents {float:left;background-color:#F0F0F0}
+
+  .user-sidebar img {width:150px;height:150px;border-radius:50%;border:1px solid #808080; margin:10px 0px;}
 
 
 }
