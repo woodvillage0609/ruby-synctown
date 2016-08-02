@@ -23,7 +23,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" style="font-size:25px; color:white;" ><span class="fa fa-spinner"> Sync Town</span></a>
+      <a class="navbar-brand" style="font-size:25px; color:white;" ><span class="fa fa-spinner"> <%= link_to "SyncTown", home_top_path, class:"navbar-brand", :style=>"font-size:25px; color:white; padding-left:0px;" %></span></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -32,8 +32,6 @@
       <ul class="nav navbar-nav navbar-right" style="font-size:15px;">
 
 <% if user_signed_in? %>
-
- 		<li><%=link_to "Top", home_top_path %></li>
 
       	<li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lists <span class="caret"></span></a>
@@ -56,8 +54,6 @@
         </li>
 
 <% else %>
-
-        <li><%=link_to "Top", home_top_path %></li>
 
         <li class="dropdown" style="padding-right:10px;">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lists <span class="caret"></span></a>
