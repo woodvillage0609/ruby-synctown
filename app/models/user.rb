@@ -63,12 +63,11 @@ class User < ActiveRecord::Base
         user.name = auth.info.nickname
         user.name = auth.info.name
 
-        if auth.info.image.present?
+        if auth.info.image.present? 
           require 'open-uri'
           require 'open_uri_redirections'
-          puts auth.info.image
-          user.image = open(auth.info.image, :allow_redirections => :safe)
-          
+          file = open(auth.info.image, :allow_redirections => :safe)
+          user.image = file
         end
 
     end
