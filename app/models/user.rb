@@ -66,8 +66,7 @@ class User < ActiveRecord::Base
         if auth.info.image.present? 
           require 'open-uri'
           require 'open_uri_redirections'
-          file = open(auth.info.image, :allow_redirections => :safe)
-          user.image = file
+          user.image = open(auth.info.image, :allow_redirections => :safe)
         end
 
     end
