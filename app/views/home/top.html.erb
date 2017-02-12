@@ -41,71 +41,98 @@
 	</div>
 </div>
 
-<div class="hint-wrapper">
+<div class="heading">
 
-		<div class="heading">
-			<h2>まちづくりのヒント</h2>
-			<p>あなたの街の「いいね」/「残念」をみんなに共有しましょう。</p>
-		</div>
-		<div class="hints">
+<h3>まちを考え、まちとシンクロする。</h3>
+<p>まちづくりのヒントをみんなでシェアしよう。世界での取り組み記事にいいねしよう。まちの課題で問題についてみんなで活発な議論をしよう。</p>
+		
+</div>
+
+ <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+
+        <div class="item active hint-wrapper">
+           
+
+			<div class="hints">
 			<div class="under-wrapper">
 			  <ul>
 			  <li>
+			    <h2>まちづくりのヒント</h2>
 				<h3>街への想いをもっと言葉に。<br>あなたの街への想いをみんなに共有しませんか。</h3><br>
 				<p>街を歩きながらいつも感じること。いつも考えること。いいことも悪いことも含めて、<br>そんな一瞬を切り取って是非みんなにシェアしましょう。</p>
 			   </li>
-
-			   <li><%= link_to "投稿一覧を見る", notes_path, class:"btn btn-info btn-lg", :role=>"button" %>
-			   </li>
+			    <%= link_to "投稿一覧を見る", notes_path, class:"btn btn-info btn-lg", :role=>"button" %>
 			  </ul>
 	     	</div>
-		</div>
+		    </div>
 
-</div>
+        </div>
 
-<div class="idea-wrapper">
 
-		<div class="heading">
-			<h2>まちづくりの記事</h2><br>
-			<p>「いいね」なまちづくり記事にみんなでコメントしよう。</p>
-		</div>
-		<div class="ideas">
+		<div class="item idea-wrapper">
+            
+
+			<div class="ideas">
 			<div class="under-wrapper">
 			 <ul>
 			 	<li>
+			 	<h2>まちづくりの記事</h2>
 				<h3>世界中の素敵な取り組み<br>そんなまち記事にみんなでコメントしよう。</h3><br>
 				<p>建築、アート、デザイン、そんな切り口からユニークな取り組みが世界では実践されています。<br>世界の街づくりの取り組み記事を是非みんなコメントして盛り上げましょう</p>
 				</li>
-				
-			   <li>
-			   <%= link_to "記事一覧を見る", articles_path, class:"btn btn-success btn-lg", :role=>"button" %>
-			   </li>
+				 <%= link_to "記事一覧を見る", articles_path, class:"btn btn-success btn-lg", :role=>"button" %>
 			 </ul>
 		    </div>
-		</div>
+			</div>
 
-</div>
+        </div>
 
-<div class="discussion-wrapper">
 
-		<div class="heading">
-			<h2>まちづくりの「お題」</h2><br>
-			<p>毎週更新される街の「お題」にみんなの意見を載せてみよう。</p>
-		</div>
-		<div class="discussions">
+        <div class="item discussion-wrapper">
+
+
+		    <div class="discussions">
 			<div class="under-wrapper">
 			  <ul>
 			    <li>
+			    <h2>まちづくりの「お題」</h2>
 				<h3>街に関する問い<br>毎週更新される街に関する「お題」にみんなで意見をぶつけ合おう。</h3><br>
 				<p>街に関する素朴な疑問や問いを毎週ぶつけています。お題に対してみんなで意見をぶつけ合い、熱く語り合おう。</p>
 				</li>
-
 				<li><%= link_to "テーマ一覧を見る", microposts_path, class:"btn btn-warning btn-lg", :role=>"button" %>
 				</li>
 			   </ul>
 		    </div>
-		</div>
 
-</div>
+        </div>
+
+
+
+
+        </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+
+    </div>
+
+  </div>
+
 
 
