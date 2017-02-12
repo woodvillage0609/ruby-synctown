@@ -1,7 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-
 * {
 	box-sizing: border-box;
 }
@@ -137,7 +136,7 @@ a:hover {
 }
 
 .heading {
-	padding:50px 0px 50px 0px;
+	padding:50px 0px;
 	text-align:center;
 	color:#808080;
 }
@@ -149,7 +148,7 @@ a:hover {
 	text-align:center;
 	opacity:1;
 	border-bottom:1px solid #808080;
-    padding-top:100px;
+    padding-top:50px;
 	position:relative;
 }
 
@@ -172,7 +171,7 @@ a:hover {
 	text-align:center;
 	opacity:1;
 	border-bottom:1px solid #808080;
-	padding-top:100px;
+	padding-top:50px;
 	position:relative;
 }
 
@@ -189,13 +188,13 @@ a:hover {
 }
 
 .discussions {
-	background-image:url(https://cdn.suwalls.com/wallpapers/digital-art/riding-scooters-in-the-city-31429-1920x1200.jpg);
+	background-image:url(riding-scooters-in-the-city-31429-1920x1200.jpg);
 	background-size:cover;
 	height:500px;
 	text-align:center;
 	opacity:1;
 	border-bottom:1px solid #808080;
-	padding-top:100px;
+	padding-top:50px;
 	position:relative;
 }
 
@@ -744,6 +743,8 @@ a:hover {
   .article-side-slideshow {width:100%; margin:5px 0px;}
 
   .random-article {width:100%; padding:20px 15px;}
+
+  .random-article-under {height:100%;}
 
   .show-article-content {width:100%; margin-top:0px;}
 
