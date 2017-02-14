@@ -136,7 +136,7 @@ a:hover {
 }
 
 .heading {
-	padding:50px 0px;
+	padding:50px 25px;
 	text-align:center;
 	color:#808080;
 }
@@ -708,15 +708,17 @@ a:hover {
 
   .under-wrapper li {padding:10px 10px;}
 
-  .hints {padding-top:50px;height:400px;}
+  .under-wrapper p {padding:0px 35px;}
+
+  .hints {padding-top:30px;height:400px;}
 
   .hint-wrapper h2, h3 {font-size:18px;}
 
-  .ideas {padding-top:50px;height:400px;}
+  .ideas {padding-top:30px;height:400px;}
 
   .idea-wrapper h2, h3 {font-size:18px;}
 
-  .discussions {padding-top:50px;height:400px;}
+  .discussions {padding-top:30px;height:400px;}
 
   .discussion-wrapper h2, h3 {font-size:18px;}
 
