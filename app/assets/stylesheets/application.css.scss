@@ -632,7 +632,7 @@ a:hover {
 /* micropost index*/
 
 .jumbotron {
-	background-image:url(https://cdn.suwalls.com/wallpapers/digital-art/riding-scooters-in-the-city-31429-1920x1200.jpg);
+	background-image:url(riding-scooters-in-the-city-31429-1920x1200.jpg);
 	background-size:cover;
 	height:400px;
 	width:100%;
@@ -708,7 +708,7 @@ a:hover {
 
   .under-wrapper li {padding:10px 10px;}
 
-  .under-wrapper p {padding:0px 35px;}
+  .under-wrapper p {padding:0px 25px;}
 
   .under-wrapper h2 {font-size:22px;}
 
@@ -716,9 +716,15 @@ a:hover {
 
   .hints {padding-top:30px;height:400px;}
 
+  .hints p {padding:0px 40px;}
+
   .ideas {padding-top:30px;height:400px;}
 
+  .ideas p {padding:0px 40px;}
+
   .discussions {padding-top:30px;height:400px;}
+
+  .discussions p {padding:0px 40px;}
 
   .btn {width:100%;}
 
@@ -749,6 +755,8 @@ a:hover {
   .show-article-content {width:100%; margin-top:0px;}
 
   .show-article-content-image {height:auto; border-radius:0px;}
+
+  .carousel-caption h3 {font-size:22px;}
 
   .show-micropost-content {width:100%;border-radius:0px;}
 
