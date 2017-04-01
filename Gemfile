@@ -51,7 +51,7 @@ gem 'rails_12factor', group: :production
 
 gem 'aws-sdk', '<2.0'
 
-gem 'omniauth-facebook', '~> 3.0'
+gem 'omniauth-facebook', '~> 4.0'
 
 gem 'omniauth-twitter', '~> 1.2', '>= 1.2.1'
 
