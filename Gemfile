@@ -53,7 +53,7 @@ gem 'aws-sdk', '<2.0'
 
 gem 'omniauth-facebook', '~> 4.0'
 
-gem 'omniauth-twitter', '~> 1.2', '>= 1.2.1'
+gem 'omniauth-twitter', '~> 1.4'
 
 gem 'omniauth', '~> 1.3', '>= 1.3.1'
 
