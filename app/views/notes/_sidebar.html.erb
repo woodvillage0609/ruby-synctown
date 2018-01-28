@@ -11,7 +11,7 @@
 
   <p style="padding:10px; text-align:center; border-bottom:1px solid #808080; "><strong>あなたのいいね！投稿一覧</strong></p>
 
-    <div class="note-side-list" style="padding:0px 20px; height:630px; overflow-y:scroll;">
+    <div class="note-side-list" style="padding:0px 20px; height:100vh; overflow-y:scroll;">
      <% current_user.like_notes.each do |note| %>
         <h5><strong><%=link_to note.title, note, class:"black" %></strong></h5>
         <p style="font-size:12px; border-bottom:1px dotted #808080; margin-bottom:20px; padding-bottom:15px;">
@@ -35,7 +35,7 @@
 
   <p style="padding:10px; text-align:center; border-bottom:1px solid #808080;"><strong>ランダム投稿一覧</strong></p>
 
-     <div class="note-side-list" style="padding:0px 20px; height:630px; overflow-y:scroll;">
+     <div class="note-side-list" style="padding:0px 20px;height:100vh; overflow-y:scroll;" >
      <% @random_notes.limit(8).each do |random_note| %>
         <h5><strong><%=link_to random_note.title, note_path(random_note), class:"black" %></strong></h5>
         <p style="font-size:12px; border-bottom:1px dotted #808080; margin-bottom:20px; padding-bottom:15px;">
