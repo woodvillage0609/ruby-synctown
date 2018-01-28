@@ -10,7 +10,7 @@
 
   <p style="padding:10px; text-align:center; border-bottom:1px solid #808080;"><strong>あなたのコメントテーマ一覧</strong></p>
 
-    <div class="article-side-list" style="padding:0px 20px; height:630px; overflow-y:scroll;">
+    <div class="article-side-list" style="padding:0px 20px; height:100vh; overflow-y:scroll;">
      <% current_user.opinion_microposts.each do |micropost| %>
         <h5 style="font-size:12px; border-bottom:1px dotted #808080; margin-bottom:20px; padding-bottom:15px;">
           <strong>
@@ -35,7 +35,7 @@
 
   <p style="padding:10px; text-align:center; border-bottom:1px solid #808080;"><strong>ランダムテーマ一覧</strong></p>
 
-    <div class="article-side-list" style="padding:0px 20px; height:630px; overflow-y:scroll;">
+    <div class="article-side-list" style="padding:0px 20px; height:100vh; overflow-y:scroll;">
      <% @random_microposts.limit(8).each do |random_micropost| %>
         <h5 style="font-size:12px; border-bottom:1px dotted #808080; margin-bottom:20px; padding-bottom:20px;">
           <strong>
