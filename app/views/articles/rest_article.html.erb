@@ -21,7 +21,7 @@
 
 <div class="pagenation_bottom" style="clear:left;text-align:center;">
 
-  <%= will_paginate @articles, renderer: BootstrapPagination::Rails %>
+  <%= will_paginate @articles_rest, renderer: BootstrapPagination::Rails %>
 
   <p><%= link_to 'Back', articles_path %></p>
 
