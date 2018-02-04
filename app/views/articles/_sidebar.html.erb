@@ -35,7 +35,7 @@
   <p style="padding:10px; text-align:center; border-bottom:1px solid #808080;"><strong>ランダム記事一覧</strong></p>
 
     <div class="article-side-list" style="padding:0px 20px; height:100vh; overflow-y:scroll;">
-     <% @random_articles.limit(8).each do |random_article| %>
+     <% @random_articles.limit(20).each do |random_article| %>
         <h5><strong><%=link_to random_article.title, article_path(random_article), class:"black" %></strong></h5>
         <p style="font-size:12px; border-bottom:1px dotted #808080; margin-bottom:20px; padding-bottom:15px;">
           <%= random_article.content.truncate(30) %>
