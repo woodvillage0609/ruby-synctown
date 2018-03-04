@@ -633,9 +633,9 @@ a:hover {
 .jumbotron {
 	background-image:url(riding-scooters-in-the-city-31429-1920x1200.jpg);
 	background-size:cover;
-	height:400px;
+	height:600px;
 	width:100%;
-	padding-top:100px;
+	padding-top:30px;
 	position:relative;
 	color:white;
 }
@@ -691,6 +691,8 @@ a:hover {
   .micropost-contents {float:left;background-color:#F0F0F0}
 
   .user-sidebar img {width:150px;height:150px;border-radius:50%;border:1px solid #808080; margin:10px 0px;}
+
+  .jumbotron {height:650px;}
 
 
 }
@@ -758,6 +760,8 @@ a:hover {
   .carousel-caption h3 {font-size:22px;}
 
   .show-micropost-content {width:100%;border-radius:0px;}
+
+  .jumbotron {height:1100px;}
 
   .under-jumbotron h1 {font-size:30px;}
 
