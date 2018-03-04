@@ -16,12 +16,44 @@
 
   	  	<div class="under-jumbotron">
 
-  	  	<h1>Theme of the week</h1>
-
         <% @microposts.limit(1).offset(0).each do |micropost| %>
 
-  	  	<p>今週のテーマは<strong>「<%= micropost.title %>」</strong>です。</p><br><br>
-  	  	<a><%=link_to "詳細を見る", micropost_path(micropost), class:"btn btn-warning btn-lg", :role=>"button", :style=>"margin:0 auto;" %></a>
+        <h1>Theme of the week</h1>
+
+  	  	<p>今週のテーマは<strong>「<%= micropost.title %>」</strong>です。</p>
+        <br>
+
+        <% micropost.opinions.limit(6).order(created_at: :desc).each do |opinion| %>
+
+        <div class="micropost-table" style="padding:10px 15px;">
+
+        <table style="text-align:left;">
+
+        <tr>
+        <td>
+
+         <%= image_for(opinion.user) %>
+         <a style="color:white;"><strong><%= opinion.user.name %></strong></a>
+
+         </td>
+         </tr>
+
+         <tr>
+         <td>
+
+         <%= opinion.body.truncate(80) %>
+
+         </td>
+         </tr>
+
+         </table>
+
+         </div>
+
+         <% end %>
+
+        <br><br>
+  	  	<a><%=link_to "詳細を見る", micropost_path(micropost), class:"btn btn-warning btn-lg", :role=>"button", :style=>"margin:20px 0px;" %></a>
 
         <% end %>
 
@@ -30,7 +62,7 @@
     </div>
 
     <div class="micropost-contents">
-      <%= render @microposts %>
+      <%= render @microposts.offset(1) %>
     </div>
 
   </div>
