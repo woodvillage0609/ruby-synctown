@@ -28,7 +28,7 @@ class ArticlesController < ApplicationController
 
   def rest_article 
     @articles_rest = Article.offset(32).paginate(:page => params[:page], :per_page =>24).order(created_at: :desc)
-    @random_articles = Article.where.not(id:@article).order("RAND()")
+    @random_articles = Article.all.order("RAND()")
   end
 
   # POST /articles

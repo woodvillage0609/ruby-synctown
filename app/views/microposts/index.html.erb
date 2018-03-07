@@ -20,7 +20,7 @@
 
         <h1>Theme of the week</h1>
 
-  	  	<p>今週のテーマは<strong>「<%= micropost.title %>」</strong>です。</p>
+  	  	<p><strong>「<%= link_to micropost.title, micropost_path(micropost), :class=>"white" %>」</strong></p>
         <br>
 
         <% micropost.opinions.limit(6).order(created_at: :desc).each do |opinion| %>

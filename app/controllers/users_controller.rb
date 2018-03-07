@@ -89,7 +89,6 @@ class UsersController < ApplicationController
 
   def comment_articles
     @articles = @user.comment_articles
-    @title = "User's Pick articles"
     render 'comment_articles'
   end
 
