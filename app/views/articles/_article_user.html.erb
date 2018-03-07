@@ -1,4 +1,4 @@
-<% @articles.each do |article| %>
+<% @articles.order(created_at: :desc).each do |article| %>
 
 <div class="article-content">
 
