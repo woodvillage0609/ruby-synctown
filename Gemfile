@@ -39,8 +39,6 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 
 gem 'will_paginate-bootstrap'
 
-gem 'hirb', '~> 0.7.3'
-
 gem 'mysql2', '~> 0.3.20'
 
 gem 'yaml_db', '~> 0.3.0'
@@ -58,6 +56,10 @@ gem 'omniauth-twitter', '~> 1.4'
 gem 'omniauth', '~> 1.3', '>= 1.3.1'
 
 gem 'open_uri_redirections', '~> 0.2.1'
+
+gem 'hirb', '~> 0.7.3'
+
+gem 'hirb-unicode', '~> 0.0.5'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
