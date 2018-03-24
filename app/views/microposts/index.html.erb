@@ -12,11 +12,11 @@
 
   <div class="col-md-10" style="background-color:#F0F0F0; padding:0px;">
 
+    <% @microposts.limit(1).offset(0).each do |micropost| %>
+
     <div class="jumbotron" style="margin:0px;">
 
   	  	<div class="under-jumbotron">
-
-        <% @microposts.limit(1).offset(0).each do |micropost| %>
 
         <h1>Theme of the week</h1>
 
@@ -31,7 +31,6 @@
 
         <tr>
         <td>
-
          <%= image_for(opinion.user) %>
          <a style="color:white;"><strong><%= opinion.user.name %></strong></a>
 
@@ -55,11 +54,11 @@
         <br><br>
   	  	<a><%=link_to "詳細を見る", micropost_path(micropost), class:"btn btn-warning btn-lg", :role=>"button", :style=>"margin:20px 0px;" %></a>
 
-        <% end %>
-
   	    </div>
 
     </div>
+
+    <% end %>
 
     <div class="micropost-contents">
       <%= render @microposts.offset(1) %>
