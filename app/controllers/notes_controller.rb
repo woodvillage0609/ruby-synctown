@@ -73,7 +73,7 @@ class NotesController < ApplicationController
   def category_notes
     @notes = Note.page(params[:page]).where("note_category_id = ?", params[:id]).order(created_at: :desc)
     @random_notes = Note.all.order("RAND()")
-    render "index"
+    
   end
 
   private
