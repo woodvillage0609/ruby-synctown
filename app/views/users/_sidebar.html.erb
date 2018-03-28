@@ -9,23 +9,23 @@
   <%= render 'users/stats' %>
 </a>
 
-<a>
-  <%= render 'users/follow_form' if user_signed_in? %>
-</a>
-
 <p>
-  <strong>Name:</strong>
+  <span class="far fa-user"> :</span>
   <%= @user.name %>
 </p>
 
 <p>
-  <strong>Email:</strong>
-  <%= simple_format(@user.email) %>
+  <span class="far fa-envelope"> :</span> 
+  <%= @user.email %>
 </p>
 
 <p>
   <%= @user.likes.count %>個の投稿にいいね！しています。
 </p>
+
+<a style="text-align:center;">
+  <%= render 'users/follow_form' if user_signed_in? %>
+</a>
 
 <ul>
    <% if current_user?(@user) %>
