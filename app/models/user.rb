@@ -64,10 +64,16 @@ class User < ActiveRecord::Base
         user.name = auth.info.nickname
         user.name = auth.info.name
 
-        if auth.info.image.present? 
+        if auth.info.image.present? && auth.provider == 'facebook'
           require 'open-uri'
           require 'open_uri_redirections'
           user.image = open(auth.info.image, :allow_redirections => :safe)
+
+        elsif auth.info.image.present? && auth.provider == 'twitter'
+          require 'open-uri'
+          require 'open_uri_redirections'
+          user.image = auth.info.image.sub("_normal", "")
+
         end
 
     end
