@@ -70,8 +70,7 @@ class User < ActiveRecord::Base
           user.image = open(auth.info.image, :allow_redirections => :safe)
 
         elsif auth.info.image.present? && auth.provider == 'twitter'
-          require 'open-uri'
-          require 'open_uri_redirections'
+         
           user.image = auth.info.image.sub("_normal", "")
 
         end
