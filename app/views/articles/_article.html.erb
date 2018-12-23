@@ -9,10 +9,10 @@
 <ul style="padding:0px 10px;">
    <li>
         <a>
-          <strong><%=link_to article.title, article, :style=>"font-size:18px;", class:"black" %></strong>
+          <strong><%=link_to article.title.truncate(50), article, :style=>"font-size:18px;", class:"black" %></strong>
         </a><br><br>
         <a>
-          <%=link_to article.content.truncate(30), article, :style=>"font-size:13px; padding:0px 5px;", class:"black" %>
+          <%=link_to article.content.truncate(60), article, :style=>"font-size:13px; padding:0px 5px;", class:"black" %>
         </a>
   </li>    
 

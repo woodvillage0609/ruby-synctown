@@ -39,7 +39,7 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 
 gem 'will_paginate-bootstrap'
 
-gem 'mysql2', '~> 0.3.20'
+gem 'mysql2', '~> 0.4.10'
 
 gem 'yaml_db', '~> 0.3.0'
 

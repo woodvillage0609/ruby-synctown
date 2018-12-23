@@ -100,6 +100,7 @@ ActiveRecord::Schema.define(version: 20160528220251) do
     t.string   "email",              limit: 255
     t.datetime "created_at",                                     null: false
     t.datetime "updated_at",                                     null: false
+    t.string   "image",              limit: 255
     t.string   "encrypted_password", limit: 255, default: "",    null: false
     t.boolean  "admin",                          default: false
     t.string   "image_file_name",    limit: 255
