@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
-
+ruby "2.3.0"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '~> 5.0', '>= 5.0.7'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -23,9 +23,11 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'rmagick', '~> 2.15', '>= 2.15.4'
+#gem 'rmagick', '~> 2.15', '>= 2.15.4'
+gem 'rmagick', '~> 2.16'
 
-gem 'paperclip', '~> 4.3', '>= 4.3.6'
+#gem 'paperclip'
+gem 'paperclip', '~> 6.1'
 
 gem 'devise', '3.5.6'
 
@@ -47,7 +49,8 @@ gem 'rake', '~> 10.5'
 
 gem 'rails_12factor', group: :production
 
-gem 'aws-sdk', '<2.0'
+#gem 'aws-sdk', '<2.0'
+gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
 
 gem 'omniauth-facebook', '~> 4.0'
 
