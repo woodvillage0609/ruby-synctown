@@ -25,7 +25,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'rmagick', '~> 2.15', '>= 2.15.4'
 
-gem 'paperclip'
+#gem 'paperclip'
+gem 'paperclip', '~> 6.1'
 
 gem 'devise', '3.5.6'
 
