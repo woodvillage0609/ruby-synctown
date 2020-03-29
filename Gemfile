@@ -29,7 +29,8 @@ gem 'rmagick', '~> 2.16'
 #gem 'paperclip'
 gem 'paperclip', '~> 6.1'
 
-gem 'devise', '3.5.6'
+#gem 'devise', '3.5.6'
+gem 'devise', '~> 4.6', '>= 4.6.2'
 
 gem 'rails_admin'
 
