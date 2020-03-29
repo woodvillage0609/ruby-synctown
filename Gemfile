@@ -47,7 +47,7 @@ gem 'mysql2', '~> 0.4.10'
 
 gem 'yaml_db', '~> 0.3.0'
 
-gem 'rake', '~> 10.5'
+gem 'rake', '~> 12.3'
 
 gem 'rails_12factor', group: :production
 
