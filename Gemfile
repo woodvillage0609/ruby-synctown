@@ -58,7 +58,7 @@ gem 'omniauth-facebook', '~> 4.0'
 
 gem 'omniauth-twitter', '~> 1.4'
 
-gem 'omniauth', '~> 1.3', '>= 1.3.1'
+gem 'omniauth', '~> 1.9'
 
 gem 'open_uri_redirections', '~> 0.2.1'
 
