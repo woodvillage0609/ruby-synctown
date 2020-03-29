@@ -20,10 +20,10 @@
 			すでに登録済みの方は
 		</p>
 		<a>
-		 <%= link_to " Facebookでログイン", user_omniauth_authorize_path(:facebook), class: "btn facebook fab fa-facebook-f", :style=>"color:white;" %>
+		 <%= link_to " Facebookでログイン", user_facebook_omniauth_authorize_path, class: "btn facebook fab fa-facebook-f", :style=>"color:white;" %>
 		</a>
 		<a>
-		 <%= link_to " Twitterでログイン", user_omniauth_authorize_path(:twitter), class: "btn twitter fab fa-twitter", :style=>"color:white;" %>
+		 <%= link_to " Twitterでログイン", user_twitter_omniauth_authorize_path, class: "btn twitter fab fa-twitter", :style=>"color:white;" %>
 		</a>
 	</li>
 
