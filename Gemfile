@@ -36,7 +36,7 @@ gem 'rails_admin'
 
 gem 'cancan'
 
-gem 'nokogiri', '~> 1.6', '>= 1.6.7.2'
+gem 'nokogiri', '~> 1.11'
 
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 #gem 'bootstrap-sass', '~> 3.4'
